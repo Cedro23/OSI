@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Profil</title>
+        <title>Error !</title>
     </head>
     <body>
-        Ceci est un profil
+        Error 404 !
     </body>
 </html>

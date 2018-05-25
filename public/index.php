@@ -6,26 +6,12 @@
     }
 
     if ($url == '') {
-        print('Page d\'accueil');
+        require '../src/home.php';
     } elseif ($url[0] == 'list') {
-        print('List des profils');
+        require '../src/list.php';
     } elseif ($url[0] == 'profil') {
-        print('Profils');
+        require '../src/profil.php';
     } else {
-        print('Error 404');
+        require '../src/Error404.php';
     }
  ?>
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        <div class="">
-            <h1>CA MAAAAAAAAAAAAAAARCHE</h1>
-            <a href="../src/list.php">Oyo</a>
-        </div>
-    </body>
-</html>
