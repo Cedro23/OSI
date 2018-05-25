@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /tempo/
+Allow: http://www.ynov.com/profil
+Allow:http://www.ynov.com/list
+
+Sitemap:http://www.ynov.com/sitemap

@@ -1,3 +1,7 @@
+<?php
+    require_once("../src/class.php");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -6,7 +10,7 @@
     </head>
     <body>
         <div class="">
-            OUI
+            <h1>CA MAAAAAAAAAAAAAAARCHE</h1>
         </div>
     </body>
 </html>
