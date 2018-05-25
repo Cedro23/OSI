@@ -1,3 +1,7 @@
+<?php
+    require_once("../src/class.php");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
