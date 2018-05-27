@@ -56,3 +56,29 @@
     width: 40%;
     align-self: center;
 }
+
+/*------------------RESULTS----------------*/
+.results{
+    background-color: #ededed;
+}
+
+.results_list{
+    background-color: #fff;
+}
+
+.result{
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+.result_element{
+    flex: 1;
+}
+.result_title{
+    flex: 2;
+}
+
+/*------------------RESULTS----------------*/
+.filter{
+    background-color: #23b2a4;
+}
