@@ -1,0 +1,45 @@
+/*-------------------HEADER----------------*/
+.header{
+    height: 70vh;
+    background-image: url("../img/background_recruter.jpg");
+    background-size: cover;
+}
+
+/*ahead*/
+.header_ahead{
+    display: flex;
+    background: linear-gradient(to top,transparent 0,rgba(0,0,0,.6) 100%);
+    background-size: cover;
+}
+.header_ahead_element{
+    display: flex;
+    align-self: flex-start;
+    height: 15vh;
+}
+
+/*menu*/
+.header_ahead_menu{
+    flex-flow: row wrap;
+    flex: 7;
+    padding: 0% 3% 0% 3%;
+}
+.header_ahead_menu_element{
+    flex: 1;
+    list-style: none;
+    display: inline-flex;
+    justify-content: center;
+}
+.header_ahead_menu_title{
+    padding-bottom: 1em;
+    margin: auto 15px;
+}
+
+/*img*/
+.header_ahead_logo{
+    flex: 1;
+}
+
+.header_ahead_logo_img{
+    width: 100%;
+    align-self: center;
+}

@@ -1,0 +1,58 @@
+/*-------------------FLAP STORE----------------*/
+.flap_store{
+    display: flex;
+    height: 70vh;
+    align-content: center;
+}
+
+.flap_store_element{
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: flex;
+}
+.flap_store_element_content{
+    background :radial-gradient(ellipse at center,rgba(0,0,0,.3) 0,transparent 75%,transparent 100%);
+    align-self: center;
+    padding: 5%;
+}
+
+.flap_store_element_logo{
+    width: 80%;
+}
+.flap_store_element_title{
+    margin-top: 5%;
+}
+
+/*background*/
+.flap_store_element_ingesup{
+    background-image: url("../img/background_flap_ingesup.jpg");
+}
+.flap_store_element_audiovisuel{
+    background-image: url("../img/background_flap_audiovisuel.jpg");
+}
+.flap_store_element_business{
+    background-image: url("../img/background_flap_business.jpg");
+}
+.flap_store_element_jeuxvideo{
+    background-image: url("../img/background_flap_jeuxvideo.jpg");
+}
+.flap_store_element_web{
+    background-image: url("../img/background_flap_web.jpg");
+}
+
+/*------------------VISUAL----------------*/
+.section_visual{
+    background-image: url("../img/background_contacter.jpg");
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+}
+
+.section_visual_rect{
+    background-color: #fff;
+    height: 50vh;
+    width: 40%;
+    align-self: center;
+}
