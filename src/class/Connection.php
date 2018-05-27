@@ -10,5 +10,10 @@
         {
             $this->connection = new PDO($_dsn, $_user, $_pwd);
         }
+
+        function getConnection()
+        {
+            return $this->connection;
+        }
     }
  ?>
