@@ -39,8 +39,23 @@ $xml.='    <urlset>
             <lastmod>'.$date.'</lastmod>
             <changefreq>daily</changefreq>
         </url>';
+        ;
+    }
 
+    $statement =$connection->getConnection()->prepare('
+SELECT title
+FROM osi_skill
+');
+$statement->execute();
 
+$resultat = $statement->fetchAll();
+    foreach ($resultat as $field){
+        $xml.='
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list?skill='.$field['title'].'</loc>
+            <lastmod>'.$date.'</lastmod>
+            <changefreq>daily</changefreq>
+        </url>';
         ;
     }
 
@@ -63,4 +78,5 @@ foreach ($resultat as $offer){
 $file = fopen('sitemap.xml', 'r+');
 ftruncate($file,0);
 fputs($file, $xml);
+header('Location: sitemap.xml');
  ?>

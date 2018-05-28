@@ -1,6 +1,6 @@
 <?php
     require_once("../src/class.php");
-    
+
     $url = '';
     if (isset($_GET['url'])) {
         $url = explode('/',$_GET['url']);
@@ -12,6 +12,8 @@
         require '../src/list.php';
     } elseif ($url[0] == 'profil') {
         require '../src/profil.php';
+    } elseif ($url[0] == 'sitemap') {
+        require '../sitemap.php';
     } else {
         require '../src/Error404.php';
     }
