@@ -39,8 +39,23 @@ $xml.='    <urlset>
             <lastmod>'.$date.'</lastmod>
             <changefreq>daily</changefreq>
         </url>';
+        ;
+    }
 
+    $statement =$connection->getConnection()->prepare('
+SELECT title
+FROM osi_skill
+');
+$statement->execute();
 
+$resultat = $statement->fetchAll();
+    foreach ($resultat as $field){
+        $xml.='
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list?skill='.$field['title'].'</loc>
+            <lastmod>'.$date.'</lastmod>
+            <changefreq>daily</changefreq>
+        </url>';
         ;
     }
 
