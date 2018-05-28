@@ -106,17 +106,29 @@
 .result_widget{
     display: none;
 }
-/*------------------RESULTS----------------*/
+
+/*------------------FILTER----------------*/
 .filter{
     background-color: #23b2a4;
 }
 
-.filter_element{
+/*------------------FORM----------------*/
+.form{
+    display: flex;
+    flex-flow: column;
+}
+.form_element_fixed{
+    display: flex;
+    flex-flow: row;
+}
+.form_element{
+    flex: 1;
     display: flex;
     flex-flow: column;
     padding: 2%;
 }
-.filter_element_options{
+
+.form_element_options{
     display: flex;
     flex-flow: wrap;
 }
@@ -130,3 +142,5 @@
 .option_label{
 
 }
+
+/*------------------ADD OFFER----------------*/
