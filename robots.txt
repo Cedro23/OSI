@@ -1,6 +1,5 @@
 User-agent: *
-Disallow: /tempo/
-Allow: http://www.ynov.com/profil
-Allow:http://www.ynov.com/list
-
-Sitemap:http://www.ynov.com/sitemap
+Disallow:http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list/admin
+Allow: http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list/
+Allow: /public/img
+Sitemap:http://www.ynovlyon.com/sitemap.xml
