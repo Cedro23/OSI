@@ -1,0 +1,20 @@
+.btn{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    border-radius: 25px;
+}
+
+.btn_blue{
+    background-color: #23b2a4;
+}
+
+.btn_mobile{
+    display: none;
+}
+
+@media screen and (max-device-width: 1024px) {
+    .btn_mobile{
+        display: flex;
+    }
+}

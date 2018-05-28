@@ -24,10 +24,15 @@
 p{
     margin-bottom: 1%;
 }
+p.result_element{
+    margin-bottom: 0%;
+}
+
 a{
     color: inherit;
     text-decoration: inherit;
 }
+
 hr{
     color: inherit;
     background-color: #fff;
@@ -77,6 +82,7 @@ hr{
 .text_h3{
     font-size: 22px;
     font-size: 2.2rem;
+    margin-bottom: 1%;
 }
 
 @media screen and (max-device-width: 500px) {
