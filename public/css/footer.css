@@ -22,3 +22,13 @@
     align-self: center;
     margin-bottom: 5%;
 }
+
+@media screen and (max-device-width: 500px) {
+    .footer_section{
+        flex-flow: column;
+    }
+
+    .footer_section_element{
+        padding: 2%;
+    }
+}

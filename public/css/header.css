@@ -3,6 +3,8 @@
     height: 70vh;
     background-image: url("../img/background_recruter.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 /*ahead*/
@@ -10,6 +12,7 @@
     display: flex;
     background: linear-gradient(to top,transparent 0,rgba(0,0,0,.6) 100%);
     background-size: cover;
+    padding: 1% 10% 0% 10%;
 }
 .header_ahead_element{
     display: flex;
@@ -42,4 +45,24 @@
 .header_ahead_logo_img{
     width: 100%;
     align-self: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .header_ahead_menu{
+        visibility: hidden;
+        flex: 5;
+    }
+
+    .header_ahead_logo{
+        flex: 5;
+    }
+}
+
+@media screen and (max-device-width: 500px) {
+    .header{
+        height: 50vh;
+    }
+    .header_ahead{
+        padding: 1% 5% 0% 5%;
+    }
 }

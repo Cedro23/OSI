@@ -1,7 +1,6 @@
 /*-------------------FLAP STORE----------------*/
 .flap_store{
     display: flex;
-    height: 70vh;
     align-content: center;
 }
 
@@ -10,6 +9,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
+    height: 70vh;
     display: flex;
 }
 .flap_store_element_content{
@@ -42,10 +42,23 @@
     background-image: url("../img/background_flap_web.jpg");
 }
 
+@media screen and (max-device-width: 1024px) {
+    .flap_store{
+        flex-flow: column;
+    }
+
+    .flap_store_element{
+        height: 40vh;
+        justify-content: center;
+    }
+}
+
 /*------------------VISUAL----------------*/
 .section_visual{
     background-image: url("../img/background_contacter.jpg");
     background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
     height: 70vh;
     display: flex;
 }
@@ -55,6 +68,19 @@
     height: 50vh;
     width: 40%;
     align-self: center;
+}
+
+@media screen and (max-device-width: 1024px) {
+    .section_visual{
+        justify-content: center;
+        height: 50vh;
+    }
+
+    .section_visual_rect{
+        width: 100%;
+        height: 25vh;
+        align-self: flex-end;
+    }
 }
 
 /*------------------RESULTS----------------*/
