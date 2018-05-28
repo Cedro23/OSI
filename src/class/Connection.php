@@ -15,5 +15,15 @@
         {
             return $this->connection;
         }
+
+        function getTableOffer()
+        {
+            $statement = $this->connection->prepare("
+                SELECT * FROM osi_offer
+            ");
+            $statement->execute();
+            $profil = $statement->fetchAll();
+            return $profil;
+        }
     }
  ?>
