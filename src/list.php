@@ -59,7 +59,7 @@
 
          <section class="margin_section padding_side filter">
              <h2 class="text_h text_h2"> Filtrer les resultats</h2>
-             <form class="" action="index.html" method="post">
+             <form class="" action="list" method="post">
                  <div class="filter_element text_page_left">
                      <h3 class="text_h text_h3">Contrat</h3>
                      <div class="filter_element_options">
@@ -92,24 +92,14 @@
 
          <section class="margin_section padding_side results text_page_left">
              <ul class="results_list">
-                 <li class="result">
-                     <h3 class="text_h text_h3 text_h_grey result_element result_title">Profil Title</h3>
-                     <p class="result_element">Contrat</p>
-                     <p class="result_element">tag//tag//tag</p>
-                     <a href="" class=" result_element btn btn_blue text_btn"> button </a>
-                 </li>
-                 <li class="result">
-                     <h3 class="text_h text_h3 text_h_grey result_title">Profil Title</h3>
-                     <p class="result_element">Contrat</p>
-                     <p class="result_element">tag//tag//tag</p>
-                     <a href="" class=" result_element btn btn_blue text_btn"> button </a>
-                 </li>
-                 <li class="result">
-                     <h3 class="text_h text_h3 text_h_grey result_title">Profil Title</h3>
-                     <p class="result_element">Contrat</p>
-                     <p class="result_element">tag//tag//tag</p>
-                     <a href="" class=" result_element btn btn_blue text_btn"> button </a>
-                 </li>
+                 <?php foreach ($offer as $item): ?>
+                     <li class="result">
+                         <h3 class="text_h text_h3 text_h_grey result_element result_title"><?php print($item[1]) ?></h3>
+                         <p class="result_element"><?php print($item[2]) ?></p>
+                         <p class="result_element">tag//tag//tag</p>
+                         <a href="profil/<?php print($item[0]) ?>" class=" result_element btn btn_blue text_btn"> button </a>
+                     </li>
+                 <?php endforeach; ?>
              </ul>
          </section>
 
