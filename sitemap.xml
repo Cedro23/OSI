@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>    <urlset>
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/</loc>
+            <lastmod>2018-05-28</lastmod>
+        </url>
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/profil</loc>
+            <lastmod>2018-05-28</lastmod>
+            <priority>1</priority>
+        </url>
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list</loc>
+            <lastmod>2018-05-28</lastmod>
+            <changefreq>daily</changefreq>
+        </url>
+
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list/admin</loc>
+            <lastmod>2018-05-28</lastmod>
+            <changefreq>daily</changefreq>
+        </url>
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list?contract=Stage</loc>
+            <lastmod>2018-05-28</lastmod>
+            <changefreq>daily</changefreq>
+        </url>
+
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list?contract=Stage</loc>
+            <lastmod>2018-05-28</lastmod>
+            <changefreq>daily</changefreq>
+        </url>
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list?contract=Alternance</loc>
+            <lastmod>2018-05-28</lastmod>
+            <changefreq>daily</changefreq>
+        </url>
+
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list?contract=Alternance</loc>
+            <lastmod>2018-05-28</lastmod>
+            <changefreq>daily</changefreq>
+        </url>
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list?contract=Contrat pro</loc>
+            <lastmod>2018-05-28</lastmod>
+            <changefreq>daily</changefreq>
+        </url>
+
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list?contract=Contrat pro</loc>
+            <lastmod>2018-05-28</lastmod>
+            <changefreq>daily</changefreq>
+        </url>
+    <url>
+        <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/profil?id=1</loc>
+        <lastmod>2018-05-28</lastmod>
+    </url>
+    
+    <url>
+        <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/profil?id=2</loc>
+        <lastmod>2018-05-28</lastmod>
+    </url>
+     </urlset> 
