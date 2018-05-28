@@ -78,5 +78,5 @@ foreach ($resultat as $offer){
 $file = fopen('sitemap.xml', 'r+');
 ftruncate($file,0);
 fputs($file, $xml);
-require_once('sitemap.xml');
+header('Location: sitemap.xml');
  ?>
