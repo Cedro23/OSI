@@ -5,19 +5,9 @@
     class Profil
     {
 
-        function __construct(argument)
+        function __construct()
         {
-            
-        }
 
-        public function getTableOffer()
-        {
-            $statement = $this->connection->prepare("
-                SELECT * FROM osi_offer
-            ");
-            $statement->execute();
-            $offer = $statement->fetchAll();
-            return $offer;
         }
     }
 
