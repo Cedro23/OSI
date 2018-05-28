@@ -3,10 +3,14 @@
     require_once("functions.php");
  ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="noodp"/>
+<html lang="en">
+<head>
+    <!--Meta -- >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="noodp"/>
 	<link rel="canonical" href="http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/" />
 	<meta property="og:type" content=”website”>
 	<meta property="og:title" content="Recruter nos étudiants -Ynov Lyon">
@@ -18,7 +22,6 @@
 	<script type="text/javascript" async src=https://www.google-analytics.com/analytics.js></script>
 	<script type="text/javascript" async src=//www.googleadservices.com/pagead/conversion_async.js ></script>
 
-<<<<<<< HEAD
 
     <title>Portfolio</title>
 
@@ -157,11 +160,4 @@
         </section>
     </footer>
 </body>
-=======
-        <title>Home</title>
-    </head>
-    <body>
-        Home page
-    </body>
->>>>>>> parent of ac8eaee... Mise en place de l'html dans les fichier php home et list
 </html>
