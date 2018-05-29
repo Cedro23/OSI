@@ -16,32 +16,45 @@
 .form{
     display: flex;
     flex-flow: column;
+    padding: 5% 20% 0% 20%;
 }
 .form_element{
-    flex: 1;
-    padding: 2%;
+    padding: 5%;
 }
 .form_element_row{
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-.form_element_column{
+
+.form_select{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+.form_select_element{
+    margin: 0% 5% 5% 0%;
+    margin-right: 5%;
+    text-align: left;
+}
+
+
+.form_check{
     display: flex;
     flex-flow: column;
 }
-.form_element_options{
+.form_check_options{
     display: flex;
     flex-flow: wrap;
 }
-.form_element_title{
+.form_check_title{
     display: flex;
     justify-content: space-between;
 }
-.form_element_title_text{
+.form_check_title_text{
     flex: 7;
 }
-.form_element_title_btn{
+.form_check_title_btn{
     flex: 1;
     visibility: hidden;
 }
@@ -49,17 +62,8 @@
 .option{
     margin-right: 5%;
 }
-.option_checkbox{
-    background-color: #fff;
-}
-.option_label{
-
-}
 
 @media screen and (max-device-width: 900px) {
-    .form_element_check{
-
-    }
     .form_element_row{
         flex-flow: column;
     }
@@ -69,4 +73,30 @@
     .form_element_title_btn{
         visibility: visible;
     }
+
+}
+
+/*input*/
+input,textarea,select{
+    background-color: transparent;
+    border-width: 0px;
+    border-bottom: 5px solid white;
+    color: white;
+}
+
+
+label{
+    color: white;
+}
+
+option{
+    background-color: transparent;
+}
+
+
+[type="checkbox"] {
+    box-shadow: none;
+    border-radius: 25px;
+    border-color: white;
+    background-color: transparent;
 }

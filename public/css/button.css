@@ -8,19 +8,28 @@
     justify-content: center;
     padding: 2%;
     border-radius: 25px;
+    color: white;
 }
 
 .btn_blue:hover{
     color:#23b2a4;
     border-color: #23b2a4;
-
 }
 .btn_blue{
     background-color: #23b2a4;
 }
+.btn_red:hover{
+    color:#e94e6d;
+    border-color: #e94e6d;
+}
+.btn_red{
+    background-color: #e94e6d;
+}
 
 .btn_submit{
-
+    border-style: none;
+    padding: 5%;
+    border-width: 0px;
 }
 
 .btn_mobile{
