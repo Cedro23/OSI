@@ -26,18 +26,21 @@
     flex: 7;
     padding: 0% 3% 0% 3%;
 }
+
 .header_ahead_menu_element{
     flex: 1;
     list-style: none;
     display: flex;
     flex-flow: column;
     justify-content: center;
+    text-align: center;
 }
 .header_ahead_menu_title{
-    margin: auto 15px;
+    
 }
+
 .header_ahead_element_select{
-    visibility: hidden;
+
 }
 
 /*img*/
