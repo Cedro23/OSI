@@ -67,23 +67,37 @@
     .form_element_row{
         flex-flow: column;
     }
-    .form_element_options{
+    .form_check_options{
         display: none;
     }
-    .form_element_title_btn{
+    .form_check_title_btn{
         visibility: visible;
     }
 
 }
 
+@media screen and (max-device-width: 500px) {
+    .form{
+        padding: 5% 10% 0% 10%;
+    }
+}
+
+
 /*input*/
 input,textarea,select{
     background-color: transparent;
     border-width: 0px;
-    border-bottom: 5px solid white;
+    border-bottom: 3px solid white;
     color: white;
 }
 
+textarea{
+    box-sizing: border-box;
+    width: 100%;
+}
+textarea, input{
+    font-size: 1.8rem;
+}
 
 label{
     color: white;
