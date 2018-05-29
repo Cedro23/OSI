@@ -6,5 +6,7 @@
             "email": "cedric1lesueur@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "erusev/parsedown": "^1.7"
+    }
 }
