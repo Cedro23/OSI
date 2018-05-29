@@ -7,15 +7,6 @@
  <head>
      <!--Meta -- >
      <meta charset="utf-8">
-         <!-- Global site tag (gtag.js) - Google Analytics -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119962245-1"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-
-       gtag('config', 'UA-119962245-1');
-       </script>
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <meta name="description" content="">
      <meta name="author" content="">
@@ -67,48 +58,92 @@
          </section>
 
          <section class="margin_section padding_side filter">
-             <h2 class="text_h text_h2"> Filtrer les resultats</h2>
-             <form class="" action="list" method="post">
-                 <div class="filter_element text_page_left">
-                     <h3 class="text_h text_h3">Contrat</h3>
-                     <div class="filter_element_options">
-                         <div class="option">
-                             <input type="checkbox" id="CDI" name="contract" value="coding">
-                             <label for="CDI">CDI</label>
+
+             <form class="form margin_section padding_side filter" action="index.html" method="post">
+                 <h2 class="text_h text_h2"> Filtrer les resultats</h2>
+                 <div class=" form_element_fixed">
+                     <div class="form_element text_page_left">
+                         <h3 class="text_h text_h3">Contrat</h3>
+                         <div class="form_element_options">
+                             <div class="option">
+                                 <input type="checkbox" id="CDI" name="contract" value="coding">
+                                 <label for="CDI">CDI</label>
+                             </div>
+                             <div class="option">
+                                 <input type="checkbox" id="Stage" name="contract" value="coding">
+                                 <label for="Stage">Stage</label>
+                             </div>
+                             <div class="option">
+                                 <input type="checkbox" id="Alternance" name="contract" value="coding">
+                                 <label for="Alternance">Alternance</label>
+                             </div>
+                             <div class="option">
+                                 <input type="checkbox" id="Freelance" name="contract" value="coding">
+                                 <label for="Freelance">Freelance</label>
+                             </div>
                          </div>
-                         <div class="option">
-                             <input type="checkbox" id="Stage" name="contract" value="coding">
-                             <label for="Stage">Stage</label>
+                     </div>
+                     <div class="form_element text_page_left">
+                         <h3 class="text_h text_h3">Année</h3>
+                         <div class="form_element_options">
+                             <div class="option">
+                                 <input class="option_checkbox" type="checkbox" id="B1" name="contract" value="coding" >
+                                 <label for="B1">B1</label>
+                             </div>
+                             <div class="option">
+                                 <input type="checkbox" id="B2" name="contract" value="coding">
+                                 <label for="B2">B2</label>
+                             </div>
+                             <div class="option">
+                                 <input class="option_checkbox" type="checkbox" id="B3" name="contract" value="coding" >
+                                 <label for="B3">B3</label>
+                             </div>
+                             <div class="option">
+                                 <input class="option_checkbox" type="checkbox" id="M1" name="contract" value="coding" >
+                                 <label for="M1">M1</label>
+                             </div>
+                             <div class="option">
+                                 <input class="option_checkbox" type="checkbox" id="M2" name="contract" value="coding" >
+                                 <label for="M2">M2</label>
+                             </div>
                          </div>
                      </div>
                  </div>
-                 <div class="filter_element text_page_left">
-                     <h3 class="text_h text_h3">Année</h3>
-                     <div class="filter_element_options">
+                 <div class="form_element text_page_left">
+                     <h3 class="text_h text_h3">Compétences</h3>
+                     <div class="form_element_options">
                          <div class="option">
-                             <input class="option_checkbox" type="checkbox" id="B1" name="contract" value="coding" >
-                             <label for="B1">B1</label>
+                             <input type="checkbox" id="CSS" name="skill" value="coding">
+                             <label for="CSS">CSS</label>
                          </div>
                          <div class="option">
-                             <input type="checkbox" id="B2" name="contract" value="coding">
-                             <label for="B2">B2</label>
+                             <input type="checkbox" id="HTML" name="skill" value="coding">
+                             <label for="HTML">HTML</label>
                          </div>
                      </div>
                  </div>
-                 <button type="submit" class="btn btn_submit">Rechercher</button>
+                 <div class="form_element">
+                     <button type="submit" class="btn btn_submit">Rechercher</button>
+                 </div>
              </form>
          </section>
 
          <section class="margin_section padding_side results text_page_left">
              <ul class="results_list">
-                 <?php foreach ($offer as $item): ?>
-                     <li class="result">
-                         <h3 class="text_h text_h3 text_h_grey result_element result_title"><?php print($item[1]) ?></h3>
-                         <p class="result_element"><?php print($item[2]) ?></p>
-                         <p class="result_element">tag//tag//tag</p>
-                         <a href="profil/<?php print($item[0]) ?>" class=" result_element btn btn_blue text_btn"> button </a>
-                     </li>
-                 <?php endforeach; ?>
+                <?php foreach ($offer as $item): ?>
+                    <li class="result">
+                        <h3 class="text_h text_h3 text_h_grey result_element result_title"><?php print($item[1]) ?></h3>
+                        <p class="result_element"><?php print($contract[$item[2]-1][0]) ?></p>
+                        <?php $offerSkill = $connection->getTableOfferSkill($item[0]); ?>
+                        <p class="result_element"><?php for ($i=0; $i < sizeof($offerSkill); $i++) {
+                                                                 print($skill[$offerSkill[$i][0]-1][0]);
+                                                                 if ($i != sizeof($offerSkill)-1) {
+                                                                     printf('//');
+                                                                 }
+                                                             }?></p>
+                        <a href="profil/<?php print($item[0]) ?>" class=" result_element btn btn_blue text_btn"> button </a>
+                    </li>
+                <?php endforeach; ?>
              </ul>
          </section>
 

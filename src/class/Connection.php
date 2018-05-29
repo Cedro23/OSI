@@ -29,7 +29,7 @@
         function getTableSkill()
         {
             $statement = $this->connection->prepare("
-                SELECT * FROM osi_skill
+                SELECT title FROM osi_skill
             ");
             $statement->execute();
             $skill = $statement->fetchAll();
@@ -52,8 +52,18 @@
                 SELECT * FROM osi_formation
             ");
             $statement->execute();
-            $formation = $statement->fetchAll();
-            return $formation;
+            $offerSkill = $statement->fetchAll();
+            return $offerSkill;
+        }
+
+        function getTableOfferSkill($_id){
+            $statement = $this->connection->prepare("
+                SELECT skill_id FROM osi_offer_skill WHERE offer_id = :_id
+            ");
+            $statement->bindValue(':_id', $_id);
+            $statement->execute();
+            $offerSkill = $statement->fetchAll();
+            return $offerSkill;
         }
     }
  ?>
