@@ -10,7 +10,8 @@
         require '../src/home.php';
     } elseif ($url[0] == 'list') {
         require '../src/list.php';
-    } elseif ($url[0] == 'profil') {
+    } elseif ($url[0] == 'profil' and is_numeric($url[1]) and isset($url[1])) {
+        $idProfil = $url[1];
         require '../src/profil.php';
     } elseif ($url[0] == 'sitemap') {
         require '../sitemap.php';
