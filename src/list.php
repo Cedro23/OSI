@@ -2,12 +2,20 @@
     require_once("class.php");
     require_once("functions.php");
  ?>
-<<<<<<< HEAD
  <!doctype html>
  <html lang="en">
  <head>
      <!--Meta -- >
      <meta charset="utf-8">
+         <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119962245-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'UA-119962245-1');
+       </script>
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <meta name="description" content="">
      <meta name="author" content="">
@@ -108,15 +116,3 @@
 
  </body>
  </html>
-=======
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>List</title>
-    </head>
-    <body>
-        Liste des profils
-    </body>
-</html>
->>>>>>> parent of ac8eaee... Mise en place de l'html dans les fichier php home et list

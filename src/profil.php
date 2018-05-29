@@ -16,6 +16,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119962245-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-119962245-1');
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     	<meta name="robots" content="noodp"/>
         <link rel="canonical" href=<?php print($url) ?> />
