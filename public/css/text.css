@@ -5,7 +5,6 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     color: #000;
-    font-size: 18px;
     font-size: 1.8rem;
     text-align: center;
 }
@@ -17,16 +16,13 @@
 }
 
 .text_page_small{
-    font-size: 12px;
     font-size: 1.2rem;
 }
 
 p{
     margin-bottom: 1%;
 }
-p.result_element{
-    margin-bottom: 0%;
-}
+
 
 a{
     color: inherit;
@@ -63,24 +59,20 @@ hr{
 }
 
 .text_h1{
-    font-size: 36px;
     font-size: 3.6rem;
     margin-bottom: 3%;
 }
 
 .text_h2{
-    font-size: 30px;
     font-size: 3rem;
     margin-bottom: 2%;
 }
 
 .text_h2_small{
-    font-size: 20px;
     font-size: 2rem;
 }
 
 .text_h3{
-    font-size: 22px;
     font-size: 2.2rem;
     margin-bottom: 1%;
 }
@@ -102,7 +94,6 @@ hr{
 /*header-footer*/
 .text_headfoot{
     color: #fff;
-    font-size: 16px;
     font-size: 1.6rem;
 }
 
@@ -110,20 +101,17 @@ hr{
 /*header*/
 .text_header_title{
     white-space: nowrap;
-    font-size: 20px;
     font-size: 2rem;
 }
 
 
 /*footer*/
 .text_footer_title{
-    font-size: 25px;
     font-size: 2.5rem;
 }
 
 /*button*/
 .text_btn{
     color: #ffff;
-    font-size:12px;
     font-size: 1.2rem;
 }
