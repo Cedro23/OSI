@@ -1,0 +1,10 @@
+{
+    "name": "cedric/osi",
+    "authors": [
+        {
+            "name": "Cedro",
+            "email": "cedric1lesueur@gmail.com"
+        }
+    ],
+    "require": {}
+}
