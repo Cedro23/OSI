@@ -1,20 +1,38 @@
 <?php
     require_once("class.php");
     require_once("functions.php");
+
+    $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
  ?>
  <!doctype html>
  <html lang="en">
  <head>
-     <!--Meta -- >
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'UA-119962245-1');
+     </script>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <meta name="description" content="">
      <meta name="author" content="">
 
-     <title>Portfolio</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="robots" content="noodp"/>
+     <link rel="canonical" href=<?php print($url) ?> />
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="Listes des offres de Stage/CDI/Alternance par type de formation ">
+     <meta property="og :description" content="Liste des offres avec possibilité de filtrage par type de contrat(Stage,CDI,Alternance, Contrat professionnel) par année(B1,B2, B3, M1, M2) et par compétence selon la formation de l'étudiant. Recrutez le profil d'étudiant que vous cherchez">
+     <meta property="og:url"  content=<?php print($url)?>>
+     <meta property="og:locale" content="fr-FR">
+     <script type="text/javascript" async src=https://www.google-analytics.com/analytics.js></script>
+     <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+
+     <title>Liste des offres</title>
 
      <!-- CSS -->
-     <link rel="stylesheet" href="../css/style.css"/>
+     <link rel="stylesheet" href="../public/css/style.css"/>
  </head>
 
  <body>
@@ -52,7 +70,7 @@
      <!--- Main--------------------------->
      <main class="text_page">
          <section class="margin_section padding_side">
-             <h1 class="text_h text_h1"> Chercher le bon profil</h1>
+             <h1 class="text_h text_h1"> Recrutez nos étudiants</h1>
              <p> Toute l’année nos étudiants sont à l’écoute d’opportunités.</p>
              <p> Vous pouvez recruter des étudiants de Bachelor en stage temps complet de juin à septembre, et des étudiants de Mastère en alternance (contrat de professionnalisation) tout au long de l’année. </p>
          </section>
@@ -60,7 +78,7 @@
          <section class="margin_section padding_side filter">
 
              <form class="form margin_section padding_side filter" action="index.html" method="post">
-                 <h2 class="text_h text_h2"> Filtrer les resultats</h2>
+                 <h2 class="text_h text_h2"> Filtrer par</h2>
                  <div class=" form_element_fixed">
                      <div class="form_element text_page_left">
                          <h3 class="text_h text_h3">Contrat</h3>
