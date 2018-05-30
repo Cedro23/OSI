@@ -1,6 +1,7 @@
 <?php
 require_once('class.php');
 require_once("functions/dataFormManager.php");
+require_once("functions/sendMail.php");
 
 $connection = new Connection("mysql:dbname=osi;host=127.0.0.1", "root", "");
 $session = new Session();

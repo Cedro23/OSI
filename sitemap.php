@@ -73,7 +73,7 @@ $resultat = $statement->fetchAll();
 foreach ($resultat as $offer){
     $xml.='
     <url>
-        <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/profil?id='.$offer['id'].'</loc>
+        <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/profil/'.$offer['id'].'</loc>
         <lastmod>'.$date.'</lastmod>
     </url>
     ';
