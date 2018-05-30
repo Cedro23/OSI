@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 29 mai 2018 à 12:30
+-- Généré le :  mer. 30 mai 2018 à 13:18
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.1.9
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `osi_contract`;
 CREATE TABLE IF NOT EXISTS `osi_contract` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `type` varchar(11) NOT NULL,
+  `name` varchar(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `osi_contract` (
 -- Déchargement des données de la table `osi_contract`
 --
 
-INSERT INTO `osi_contract` (`id`, `type`) VALUES
+INSERT INTO `osi_contract` (`id`, `name`) VALUES
 (1, 'Stage'),
 (2, 'Alternance'),
 (3, 'Contrat pro');
@@ -77,7 +77,7 @@ INSERT INTO `osi_formation` (`id`, `name`) VALUES
 DROP TABLE IF EXISTS `osi_niveau_etude`;
 CREATE TABLE IF NOT EXISTS `osi_niveau_etude` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `niveau` varchar(255) COLLATE utf8_bin NOT NULL,
+  `name` varchar(255) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `osi_niveau_etude` (
 -- Déchargement des données de la table `osi_niveau_etude`
 --
 
-INSERT INTO `osi_niveau_etude` (`id`, `niveau`) VALUES
+INSERT INTO `osi_niveau_etude` (`id`, `name`) VALUES
 (1, 'B1'),
 (2, 'B2'),
 (3, 'B3'),
@@ -102,9 +102,9 @@ DROP TABLE IF EXISTS `osi_offer`;
 CREATE TABLE IF NOT EXISTS `osi_offer` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL DEFAULT '',
-  `class` int(10) NOT NULL,
+  `year` int(10) NOT NULL,
   `formation` int(11) NOT NULL,
-  `type` int(11) NOT NULL,
+  `contract` int(11) NOT NULL,
   `description` text NOT NULL,
   `period` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `osi_offer` (
 -- Déchargement des données de la table `osi_offer`
 --
 
-INSERT INTO `osi_offer` (`id`, `title`, `class`, `formation`, `type`, `description`, `period`) VALUES
+INSERT INTO `osi_offer` (`id`, `title`, `year`, `formation`, `contract`, `description`, `period`) VALUES
 (1, 'Dev Web', 1, 1, 1, '## Description\n\nLes Ã©tudiants de premiÃ¨re annÃ©e cherchent un stage. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.\n\n## CompÃ©tences acquises\n\nLes Ã©tudiants ont rÃ©alisÃ© un **projet transvesal**. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.', '4 semaines'),
 (2, 'Dev Web en Alternance', 2, 1, 2, '## Description\n\nLes Ã©tudiants de deuxiÃ¨me annÃ©e cherchent une alternance. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.\n\n## CompÃ©tences acquises\n\nLes Ã©tudiants ont rÃ©alisÃ© un **projet Symfony**. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.', 'une semaine sur deux');
 
@@ -153,7 +153,7 @@ INSERT INTO `osi_offer_skill` (`offer_id`, `skill_id`) VALUES
 DROP TABLE IF EXISTS `osi_skill`;
 CREATE TABLE IF NOT EXISTS `osi_skill` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL DEFAULT '',
+  `name` varchar(255) NOT NULL DEFAULT '',
   `formation` int(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -162,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `osi_skill` (
 -- Déchargement des données de la table `osi_skill`
 --
 
-INSERT INTO `osi_skill` (`id`, `title`, `formation`) VALUES
+INSERT INTO `osi_skill` (`id`, `name`, `formation`) VALUES
 (1, 'PHP', 1),
 (2, 'Ergonomie', 1),
 (3, 'SEO', 1),

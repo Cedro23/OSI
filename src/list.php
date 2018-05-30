@@ -1,5 +1,4 @@
 <?php
-    require_once("class.php");
     require_once("functions.php");
 
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
@@ -32,8 +31,9 @@
      <title>Liste des offres</title>
 
      <!-- CSS -->
-     <link rel="stylesheet" href="../public/css/style.css"/>
+     <link rel="stylesheet" href="../css/style.css"/>
  </head>
+
 
  <body>
      <!--- Header --------------------------->
@@ -51,12 +51,13 @@
                  </li>
                  <li class="header_ahead_menu_element">
                      <a class="header_ahead_menu_title" href="">ENTREPRISES</a>
+                     <hr class="header_ahead_element_select"></hr>
                  </li>
                  <li class="header_ahead_menu_element">
                      <a class="header_ahead_menu_title" href="">BLOG</a>
                  </li>
                  <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">CANDIDATER</a>
+                     <a class="header_ahead_menu_title btn btn_blue btn_header" href="">CANDIDATER</a>
                  </li>
                  <li class="header_ahead_menu_element">
                      <a class="header_ahead_menu_title" href="">CONTACT</a>
@@ -70,101 +71,144 @@
      <!--- Main--------------------------->
      <main class="text_page">
          <section class="margin_section padding_side">
-             <h1 class="text_h text_h1"> Recrutez nos étudiants</h1>
+             <h1 class="text_h "> Chercher le bon profil</h1>
              <p> Toute l’année nos étudiants sont à l’écoute d’opportunités.</p>
              <p> Vous pouvez recruter des étudiants de Bachelor en stage temps complet de juin à septembre, et des étudiants de Mastère en alternance (contrat de professionnalisation) tout au long de l’année. </p>
          </section>
 
+         <!---Filter--------------------->
          <section class="margin_section padding_side filter">
-
-             <form class="form margin_section padding_side filter" action="index.html" method="post">
-                 <h2 class="text_h text_h2"> Filtrer par</h2>
-                 <div class=" form_element_fixed">
-                     <div class="form_element text_page_left">
-                         <h3 class="text_h text_h3">Contrat</h3>
-                         <div class="form_element_options">
-                             <div class="option">
-                                 <input type="checkbox" id="CDI" name="contract" value="coding">
-                                 <label for="CDI">CDI</label>
-                             </div>
-                             <div class="option">
-                                 <input type="checkbox" id="Stage" name="contract" value="coding">
-                                 <label for="Stage">Stage</label>
-                             </div>
-                             <div class="option">
-                                 <input type="checkbox" id="Alternance" name="contract" value="coding">
-                                 <label for="Alternance">Alternance</label>
-                             </div>
-                             <div class="option">
-                                 <input type="checkbox" id="Freelance" name="contract" value="coding">
-                                 <label for="Freelance">Freelance</label>
-                             </div>
-                         </div>
+             <form class="form" action="index.html" method="post">
+                 <h2 class="text_h text_h_white"> Filtrer les resultats</h2>
+                 <div class="form_element">
+                     <input type="text" name="search" value="" placeholder="Rechercher">
+                 </div>
+                 <div class="form_element form_element_row">
+                     <div class="form_select">
+                         <h4 class="text_h text_h_form text_h_white form_select_element">Contrat</h4>
+                         <select class="form_select_element" name="contract">
+                             <option value=""> </option>
+                             <?php foreach ($contracts as $key=>$option ) {
+                                 echo '<option value="'.$key.'">'.$option["name"].'</option>';
+                             } ?>
+                         </select>
                      </div>
-                     <div class="form_element text_page_left">
-                         <h3 class="text_h text_h3">Année</h3>
-                         <div class="form_element_options">
-                             <div class="option">
-                                 <input class="option_checkbox" type="checkbox" id="B1" name="contract" value="coding" >
-                                 <label for="B1">B1</label>
-                             </div>
-                             <div class="option">
-                                 <input type="checkbox" id="B2" name="contract" value="coding">
-                                 <label for="B2">B2</label>
-                             </div>
-                             <div class="option">
-                                 <input class="option_checkbox" type="checkbox" id="B3" name="contract" value="coding" >
-                                 <label for="B3">B3</label>
-                             </div>
-                             <div class="option">
-                                 <input class="option_checkbox" type="checkbox" id="M1" name="contract" value="coding" >
-                                 <label for="M1">M1</label>
-                             </div>
-                             <div class="option">
-                                 <input class="option_checkbox" type="checkbox" id="M2" name="contract" value="coding" >
-                                 <label for="M2">M2</label>
-                             </div>
-                         </div>
+                     <div class="form_select">
+                         <h4 class="text_h text_h_form text_h_white form_select_element">Année</h4>
+                         <select class="form_select_element" name="year">
+                             <option value=""> </option>
+                             <?php foreach ($years as $key=>$option ) {
+                                 echo '<option value="'.$key.'">'.$option["name"].'</option>';
+                             } ?>
+                         </select>
                      </div>
                  </div>
-                 <div class="form_element text_page_left">
-                     <h3 class="text_h text_h3">Compétences</h3>
-                     <div class="form_element_options">
-                         <div class="option">
-                             <input type="checkbox" id="CSS" name="skill" value="coding">
-                             <label for="CSS">CSS</label>
-                         </div>
-                         <div class="option">
-                             <input type="checkbox" id="HTML" name="skill" value="coding">
-                             <label for="HTML">HTML</label>
-                         </div>
+                 <div class="form_element form_check text_page_left">
+                     <div class="form_check_title">
+                         <h4 class="form_check_title_text text_h_white title_text text_h text_h_form">Compétences</h4>
+                         <a href="" class="form_check_title_btn"><i class="fas fangle-down"></i></a>
+                     </div>
+                     <div class="form_check_options">
+                         <?php
+                            foreach ($skills as $key => $skill) {
+                                echo '<div class="option">
+                                    <input type="checkbox" id="'.$skill["name"].'" name="skills" value="'.$key.'">
+                                    <label for="'.$skill["name"].'">'.$skill["name"].'</label>
+                                </div>';
+                            }
+                          ?>
                      </div>
                  </div>
                  <div class="form_element">
-                     <button type="submit" class="btn btn_submit">Rechercher</button>
+                     <button type="submit" class="btn btn_red btn_submit">Rechercher</button>
                  </div>
              </form>
          </section>
 
-         <section class="margin_section padding_side results text_page_left">
-             <ul class="results_list">
-                <?php foreach ($offer as $item): ?>
-                    <li class="result">
-                        <h3 class="text_h text_h3 text_h_grey result_element result_title"><?php print($item[1]) ?></h3>
-                        <p class="result_element"><?php print($contract[$item[2]-1][0]) ?></p>
-                        <?php $offerSkill = $connection->getTableOfferSkill($item[0]); ?>
-                        <p class="result_element"><?php for ($i=0; $i < sizeof($offerSkill); $i++) {
-                                                                 print($skill[$offerSkill[$i][0]-1][0]);
-                                                                 if ($i != sizeof($offerSkill)-1) {
-                                                                     printf('//');
-                                                                 }
-                                                             }?></p>
-                        <a href="profil/<?php print($item[0]) ?>" class=" result_element btn btn_blue text_btn"> button </a>
-                    </li>
-                <?php endforeach; ?>
-             </ul>
+         <!---ADD--------------------->
+         <section class="margin_section padding_side add">
+             <form class="form" action="<?=getURL()?>" method="post">
+                 <input type="hidden" name="formSubmit" value="add">
+                 <input type="hidden" name="idForm" value="2">
+                 <input type="hidden" name="formation" value="1">
+                 <h2 class="text_h text_h_white"> Ajouter une offre</h2>
+                 <div class="form_element text_page_left">
+                     <h4 class="text_h text_h_form text_h_white">Titre</h4>
+                     <input type="text" name="title" value="" placeholder="Titre">
+                 </div>
+                 <div class="form_element text_page_left">
+                     <h4 class="text_h text_h_form text_h_white">Description</h4>
+                     <textarea name="description" rows="8" cols="80" placeholder="Description"></textarea>
+                 </div>
+                 <div class="form_element form_element_row">
+                     <div class="form_select">
+                         <h4 class="text_h text_h_form text_h_white form_select_element">Contrat</h4>
+                         <select class="form_select_element" name="contract">
+                             <option value=""> </option>
+                             <?php foreach ($contracts as $key=>$option ) {
+                                 echo '<option value="'.$key.'">'.$option["name"].'</option>';
+                             } ?>
+                         </select>
+                     </div>
+                     <div class="form_select">
+                         <h4 class="text_h text_h_form text_h_white form_select_element">Année</h4>
+                         <select class="form_select_element" name="year">
+                             <option value=""> </option>
+                             <?php foreach ($years as $key=>$option) {
+                                 echo '<option value="'.$key.'">'.$option["name"].'</option>';
+                             } ?>
+                         </select>
+                     </div>
+                 </div>
+                 <div class="form_element form_check text_page_left">
+                     <div class="form_check_title">
+                         <h4 class="form_check_title_text text_h text_h_form text_h_white">Compétences</h4>
+                         <a href="" class="form_check_title_btn"><i class="fas fa-angle-down"></i></a>
+                     </div>
+                     <div class="form_check_options">
+                         <?php
+                            foreach ($skills as $key => $skill) {
+                                echo '<div class="option">
+                                    <input type="checkbox" id="'.$skill["name"].'" name="skills[]" value="'.$key.'">
+                                    <label for="'.$skill["name"].'">'.$skill["name"].'</label>
+                                </div>';
+                            }
+
+                          ?>
+                     </div>
+                 </div>
+                 <div class="form_element text_page_left">
+                     <h4 class="text_h text_h_form text_h_white">Periode</h4>
+                     <input type="text" name="period" value="" placeholder="periode">
+                 </div>
+                 <div class="form_element">
+                     <button type="submit" class="btn btn_blue btn_submit">Ajouter</button>
+                 </div>
+             </form>
          </section>
 
+         <section class="padding_side results text_page_left">
+             <ul class="results_list">
+                 <?php foreach ($profils as $item): ?>
+                     <li class="result">
+                         <h3 class="text_h text_h3 text_h_grey result_element result_title"><?= $item->getTitle() ?></h3>
+                         <p class="result_element"><?= $item->getContract() ?></p>
+                         <p class="result_element">
+                            <?php     $i = 0;
+                                foreach ($item->getSkills() as $skill) {
+                                    print($skill);
+                                    $i++;
+                                    if ($i != sizeof($item->getSkills())) {
+                                        printf('//');
+                                    }
+                                }
+                            ?>
+                        </p>
+                        <a href="profil/<?php print($item->getId()) ?>" class=" result_element btn btn_blue text_btn"> button </a>
+                     </li>
+                 <?php endforeach; ?>
+             </ul>
+         </section>
      </main>
 
  </body>
