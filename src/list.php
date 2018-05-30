@@ -2,6 +2,22 @@
     require_once("functions.php");
 
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+
+    if (isset($_POST['contract']) or isset($_POST['year']) or isset($_POST['skills']) or isset($_POST['search'])) {
+        $contract = $_POST['contract'];
+        $year = $_POST['year'];
+        $comps = $_POST['skills'];
+        $search = $_POST['search'];
+        var_dump($contract);
+        var_dump($year);
+        var_dump($comps);
+        var_dump($search);
+    }
+
+    if (isset($_POST['search'])) {
+        searchProfils($_POST['search']);
+    }
+
  ?>
  <!doctype html>
  <html lang="en">
@@ -78,7 +94,7 @@
 
          <!---Filter--------------------->
          <section class="margin_section padding_side filter">
-             <form class="form" action="index.html" method="post">
+             <form class="form" action="" method="post">
                  <h2 class="text_h text_h_white"> Filtrer les resultats</h2>
                  <div class="form_element">
                      <input type="text" name="search" value="" placeholder="Rechercher">
@@ -112,7 +128,7 @@
                          <?php
                             foreach ($skills as $key => $skill) {
                                 echo '<div class="option">
-                                    <input type="checkbox" id="'.$skill["name"].'" name="skills" value="'.$key.'">
+                                    <input type="checkbox" id="'.$skill["name"].'" name="skills[]" value="'.$key.'">
                                     <label for="'.$skill["name"].'">'.$skill["name"].'</label>
                                 </div>';
                             }

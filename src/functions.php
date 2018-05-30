@@ -2,6 +2,8 @@
 require_once('class.php');
 require_once("functions/dataFormManager.php");
 require_once("functions/sendMail.php");
+require_once("functions/searchProfils.php");
+
 
 $connection = new Connection("mysql:dbname=osi;host=127.0.0.1", "root", "");
 $session = new Session();
@@ -40,6 +42,11 @@ function getYears(){
 function getFormations(){
     global $formations;
     return $formations;
+}
+
+function getProfils(){
+    global $profils;
+    return $profils;
 }
 
 function updateProfil($_offers, $_connection)

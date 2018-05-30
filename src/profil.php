@@ -3,10 +3,6 @@
     require_once("functions.php");
     require_once("../vendor/autoload.php");
 
-    if (isset($_POST['num']) and isset($_POST['mail']) and isset($_POST['firstName']) and isset($_POST['lastName'])) {
-        sendMail($profils[$idProfil-1]->getTitle(), $_POST['num'], $_POST['mail'], $_POST['firstName'], $_POST['lastName'], $_POST['comments']);
-    }
-
 
     $offer= $connection->getTableOffer();
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
@@ -104,6 +100,8 @@
                 <h2 class="text_h text_h2"> Contact</h2>
 
                 <form class="form" action="" method="post">
+                    <input type="hidden" name="formSubmit" value="mail">
+                    <input type="hidden" name="idForm" value="2">
                     <h4 class="text_h text_h_white text_page_left form_element"><?php print($profils[$idProfil-1]->getTitle()) ?></h4>
 
                     <div class=" form_element form_element_row">
