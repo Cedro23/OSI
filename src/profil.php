@@ -3,12 +3,12 @@
     require_once("functions.php");
 
     $offer= $connection->getTableOffer();
+    $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
     foreach ($offer as $field) {
         if ($field['id']==1){
             $description="Profil de l'offre: ".$field['description'];
             $title=$field['title'] ;
             $id=$field['id'];
-            $url="http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/profil?id=".$id;
         }
     }
  ?>

@@ -7,57 +7,61 @@ $xml.='    <urlset>
             <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/</loc>
             <lastmod>'.$date.'</lastmod>
         </url>
-        <url>
-            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/profil</loc>
-            <lastmod>'.$date.'</lastmod>
-            <priority>1</priority>
-        </url>
-        <url>
-            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list</loc>
-            <lastmod>'.$date.'</lastmod>
-            <changefreq>daily</changefreq>
-        </url>
-
-        <url>
-            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list/admin</loc>
-            <lastmod>'.$date.'</lastmod>
-            <changefreq>daily</changefreq>
-        </url>';
-
+        ';
+//nom des formations/type de contrat/niveau
         $statement =$connection->getConnection()->prepare('
-    SELECT type
-    FROM osi_contract
+    SELECT name,niveau,type
+    FROM osi_formation, osi_niveau_etude,osi_contract;
     ');
     $statement->execute();
 
     $resultat = $statement->fetchAll();
+    //nom des formations/type de contrat/niveau avec les skills associés a chaque formation
+    $allFilters =$connection->getConnection()->prepare('
+        SELECT name,type,title,niveau
+        FROM osi_formation, osi_niveau_etude,osi_contract,osi_skill
+        WHERE id_formation=formation;
+    ');
+    $allFilters->execute();
+
+    $results = $allFilters->fetchAll();
+//nom des formations
+    $formation =$connection->getConnection()->prepare('
+        SELECT name
+        FROM osi_formation
+    ');
+    $formation->execute();
+
+    $formation_name= $formation->fetchAll();
 
     foreach ($resultat as $field){
         $xml.='
         <url>
-            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list?contract='.$field['type'].'</loc>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list/'.$field['name'].'?type='.$field["type"].'&amp;niveau='.$field['niveau'].'</loc>
             <lastmod>'.$date.'</lastmod>
             <changefreq>daily</changefreq>
-        </url>';
-        ;
+        </url>
+        ';
     }
-
-    $statement =$connection->getConnection()->prepare('
-SELECT title
-FROM osi_skill
-');
-$statement->execute();
-
-$resultat = $statement->fetchAll();
-    foreach ($resultat as $field){
+    foreach ($formation_name as $name){
         $xml.='
         <url>
-            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list?skill='.$field['title'].'</loc>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list/'.$name['name'].'</loc>
             <lastmod>'.$date.'</lastmod>
             <changefreq>daily</changefreq>
-        </url>';
-        ;
+        </url>
+        ';
     }
+    foreach($results as $field){
+        $xml.='
+        <url>
+            <loc>http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list/'.$field['name'].'?type='.$field["type"].'&amp;niveau='.$field['niveau'].'&amp;skill='.$field['title'].'</loc>
+            <lastmod>'.$date.'</lastmod>
+            <changefreq>daily</changefreq>
+        </url>
+        ';
+    }
+
 
     $statement =$connection->getConnection()->prepare('
 SELECT *
@@ -78,5 +82,5 @@ foreach ($resultat as $offer){
 $file = fopen('sitemap.xml', 'r+');
 ftruncate($file,0);
 fputs($file, $xml);
-header('Location: sitemap.xml');
+//header('Location: sitemap.xml');
  ?>
