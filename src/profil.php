@@ -1,6 +1,7 @@
 <?php
     require_once("class.php");
     require_once("functions.php");
+    require_once("../vendor/autoload.php");
 
     if (isset($_POST['num']) and isset($_POST['mail']) and isset($_POST['firstName']) and isset($_POST['lastName'])) {
         sendMail($profils[$idProfil-1]->getTitle(), $_POST['num'], $_POST['mail'], $_POST['firstName'], $_POST['lastName'], $_POST['comments']);
@@ -89,8 +90,8 @@
             </section>
 
             <section class="margin_section padding_side text_page_left">
-                <h1 class="text_h text_h2"> Description</h1>
-                <p><?php print($profils[$idProfil-1]->getDescription()) ?></p>
+                <p><?php $parsedown = new Parsedown();
+                            print $parsedown->text($profils[$idProfil-1]->getDescription()) ?></p>
                 <p><?php for ($i=0; $i < sizeof($profils[$idProfil-1]->getSkills()); $i++) {
                         print($profils[$idProfil-1]->getSkills()[$i]);
                         if ($i != sizeof($profils[$idProfil-1]->getSkills())-1) {
