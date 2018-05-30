@@ -9,6 +9,7 @@
     if ($url == '' or $url[0] == 'home') {
         require '../src/home.php';
     } elseif ($url[0] == 'list') {
+        $idFormation = (isset($url[1]) and is_numeric($url[1]))? $url[1] : 0 ;
         require '../src/list.php';
     } elseif ($url[0] == 'profil' and is_numeric($url[1]) and isset($url[1])) {
         $idProfil = $url[1];

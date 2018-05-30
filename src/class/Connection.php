@@ -26,6 +26,16 @@
             return $offer;
         }
 
+        function getTableOfferFormation($_id){
+            $statement = $this->connection->prepare("
+                SELECT * FROM osi_offer WHERE osi_offer.formation = :_id
+            ");
+            $statement->bindValue(':_id', $_id);
+            $statement->execute();
+            $offer = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $offer;
+        }
+
         function getTableUniqSkill($_id)
         {
             $statement = $this->connection->prepare("

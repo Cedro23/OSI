@@ -7,22 +7,35 @@ require_once("functions/searchProfils.php");
 
 $connection = new Connection("mysql:dbname=osi;host=127.0.0.1", "root", "");
 $session = new Session();
-$offers = $connection->getTableOffer();
-$profils = updateProfil($offers, $connection);
+$offers;
+$profils;
+
+initProfils();
 
 checkURLForm();
 
-$offers = $connection->getTableOffer();
-$profils = updateProfil($offers, $connection);
+initProfils();
+
 
 $contracts = $connection->getTableContract();
 
 $formations = $connection->getTableFormation();
 $years = $connection->getTableYear();
-$skills = $connection->getTableSkill(1);
+$skills = $connection->getTableSkill($idFormation);
 
+function initProfils(){
+    global $offers;
+    global $profils;
+    global $idFormation;
+    $connection = getConnection();
 
-
+    if($idFormation > 0 ){
+        $offers = $connection->getTableOfferFormation($idFormation);
+    }else{
+        $offers = $connection->getTableOffer();
+    }
+    $profils = updateProfil($offers, $connection);
+}
 
 //get current URL page
 function getURL(){
