@@ -10,6 +10,12 @@ $session = new Session();
 $offers;
 $profils;
 
+$contracts = $connection->getTableContract();
+
+$formations = $connection->getTableFormation();
+$years = $connection->getTableYear();
+$skills = $connection->getTableSkill($idFormation);
+
 initProfils();
 
 checkURLForm();
@@ -17,11 +23,7 @@ checkURLForm();
 initProfils();
 
 
-$contracts = $connection->getTableContract();
 
-$formations = $connection->getTableFormation();
-$years = $connection->getTableYear();
-$skills = $connection->getTableSkill($idFormation);
 
 function initProfils(){
     global $offers;
@@ -75,16 +77,14 @@ function getProfils(){
 function updateProfil($_offers, $_connection)
 {
     $profils;
-    foreach ($_offers as $item) {
+    foreach ($_offers as $key=> $item) {
         $itemSkills = NULL;
-        $skills = $_connection->getTableUniqSkill($item["id"]);
-
+        $skills = $_connection->getTableUniqSkill($key);
         foreach ($skills as $skill) {
             $itemSkills[]=$skill['name'];
         }
-
-        $profils[] = new Profil(
-            $item["id"], $item["title"],
+        $profils[$key] = new Profil(
+            $key, $item["title"],
             getContracts()[$item["contract"]]['name'],
             getYears()[$item["year"]]['name'],
             getFormations()[$item["formation"]]["name"],

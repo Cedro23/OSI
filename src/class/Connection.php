@@ -22,7 +22,7 @@
                 SELECT * FROM osi_offer
             ");
             $statement->execute();
-            $offer = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $offer = $statement->fetchAll(PDO::FETCH_GROUP|PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE);
             return $offer;
         }
 
@@ -32,7 +32,7 @@
             ");
             $statement->bindValue(':_id', $_id);
             $statement->execute();
-            $offer = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $offer = $statement->fetchAll(PDO::FETCH_GROUP|PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE);
             return $offer;
         }
 

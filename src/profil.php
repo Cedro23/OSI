@@ -5,11 +5,11 @@
 
 
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
-    foreach ($offers as $field) {
-        if ($field['id']==1){
+    foreach ($offers as $key=>$field) {
+        if ($key==1){
             $description="Profil de l'offre: ".$field['description'];
             $title=$field['title'] ;
-            $id=$field['id'];
+            $id=$key;
         }
     }
  ?>
@@ -81,15 +81,15 @@
         <!--- Main--------------------------->
         <main class="text_page">
             <section class="margin_section padding_side">
-                <h1 class="text_h text_h1"> <?php print($profils[$idProfil-1]->getTitle()) ?></h1>
+                <h1 class="text_h text_h1"> <?=($profils[$idProfil]->getTitle()) ?></h1>
             </section>
 
             <section class="margin_section padding_side text_page_left">
                 <p><?php $parsedown = new Parsedown();
-                            print $parsedown->text($profils[$idProfil-1]->getDescription()) ?></p>
-                <p><?php for ($i=0; $i < sizeof($profils[$idProfil-1]->getSkills()); $i++) {
-                        print($profils[$idProfil-1]->getSkills()[$i]);
-                        if ($i != sizeof($profils[$idProfil-1]->getSkills())-1) {
+                            print $parsedown->text($profils[$idProfil]->getDescription()) ?></p>
+                <p><?php for ($i=0; $i < sizeof($profils[$idProfil]->getSkills()); $i++) {
+                        print($profils[$idProfil]->getSkills()[$i]);
+                        if ($i != sizeof($profils[$idProfil]->getSkills())-1) {
                             printf('//');
                         }
                     }?></p>
@@ -101,7 +101,7 @@
                 <form class="form" action="" method="post">
                     <input type="hidden" name="formSubmit" value="mail">
                     <input type="hidden" name="idForm" value="2">
-                    <h4 class="text_h  text_page_left form_element"><?php print($profils[$idProfil-1]->getTitle()) ?></h4>
+                    <h4 class="text_h  text_page_left form_element"><?=($profils[$idProfil]->getTitle()) ?></h4>
 
                     <div class=" form_element form_element_row">
                         <div class="form_check">

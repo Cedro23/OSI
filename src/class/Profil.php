@@ -66,6 +66,10 @@
         {
             return $this->year;
         }
+
+        function getPeriod(){
+            return $this->period;
+        }
     }
 
  ?>
