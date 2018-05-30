@@ -38,12 +38,12 @@ class Form
 class FormAdd extends Form
 {
     public function getPostData(){
-        if($this->checkPost("title")) return false;
-        if($this->checkPost("contract")) return false;
-        if($this->checkPost("class")) return false;
-        if($this->checkPost("formation")) return false;
-        if($this->checkPost("description")) return false;
-        if($this->checkPost("period")) return false;
+        if(!$this->checkPost("title")) return false;
+        if(!$this->checkPost("contract")) return false;
+        if(!$this->checkPost("year")) return false;
+        if(!$this->checkPost("formation")) return false;
+        if(!$this->checkPost("description")) return false;
+        if(!$this->checkPost("period")) return false;
 
     }
 }

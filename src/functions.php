@@ -47,13 +47,19 @@ function updateProfil($_offers, $_connection)
     foreach ($_offers as $item) {
         $itemSkills = NULL;
         $skills = $_connection->getTableUniqSkill($item["id"]);
-        var_dump($skills);
+
         foreach ($skills as $skill) {
             $itemSkills[]=$skill['name'];
         }
 
         $profils[] = new Profil(
-            $item["id"], $item["title"], getContracts()[$item["contract"]]['name'], getYears()[$item["year"]]['name'], getFormations()[$item["formation"]]["name"], $item["description"], $item["period"], $itemSkills
+            $item["id"], $item["title"],
+            getContracts()[$item["contract"]]['name'],
+            getYears()[$item["year"]]['name'],
+            getFormations()[$item["formation"]]["name"],
+            $item["description"], 
+            $item["period"],
+            $itemSkills
         );
     }
     return $profils;

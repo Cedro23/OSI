@@ -31,7 +31,7 @@
      <title>Liste des offres</title>
 
      <!-- CSS -->
-     <link rel="stylesheet" href="../public/css/style.css"/>
+     <link rel="stylesheet" href="../css/style.css"/>
  </head>
 
 
@@ -152,7 +152,7 @@
                      </div>
                      <div class="form_select">
                          <h4 class="text_h text_h_form text_h_white form_select_element">Année</h4>
-                         <select class="form_select_element" name="class">
+                         <select class="form_select_element" name="year">
                              <option value=""> </option>
                              <?php foreach ($years as $option) {
                                  echo '<option value="'.$option["id"].'">'.$option["name"].'</option>';

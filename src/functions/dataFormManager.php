@@ -1,6 +1,6 @@
 <?php
 
-require_once('./class.php');
+require_once(__DIR__.'/../class.php');
 
 //check url for form action
 function checkURLForm(){
