@@ -11,9 +11,7 @@ function checkURLForm(){
             $form = createForm();
             if(isset($form) == false) return;
             if($form->getPostData()){
-                var_dump("oh yeah");
-                $form->callBdd();
-                //$session->setFormID($id);
+                $form->callFormFunction();
             }
         }
     }
@@ -27,6 +25,10 @@ function createForm(){
 
         case 'update':
             return new FormUpdate();
+            break;
+
+        case 'mail':
+            return new FormMail();
             break;
 
         default:
