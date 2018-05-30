@@ -130,18 +130,19 @@
 
          <section class="margin_section padding_side results text_page_left">
              <ul class="results_list">
-                <?php foreach ($offer as $item): ?>
+                <?php foreach ($profils as $item): ?>
                     <li class="result">
-                        <h3 class="text_h text_h3 text_h_grey result_element result_title"><?php print($item[1]) ?></h3>
-                        <p class="result_element"><?php print($contract[$item[2]-1][0]) ?></p>
-                        <?php $offerSkill = $connection->getTableOfferSkill($item[0]); ?>
-                        <p class="result_element"><?php for ($i=0; $i < sizeof($offerSkill); $i++) {
-                                                                 print($skill[$offerSkill[$i][0]-1][0]);
-                                                                 if ($i != sizeof($offerSkill)-1) {
+                        <h3 class="text_h text_h3 text_h_grey result_element result_title"><?php print($item->getTitle()) ?></h3>
+                        <p class="result_element"><?php print($item->getContract()) ?></p>
+                        <p class="result_element"><?php     $i = 0;
+                                                            foreach ($item->getSkills() as $skill) {
+                                                                print($skill);
+                                                                $i++;
+                                                            if ($i != sizeof($item->getSkills())) {
                                                                      printf('//');
                                                                  }
                                                              }?></p>
-                        <a href="profil/<?php print($item[0]) ?>" class=" result_element btn btn_blue text_btn"> button </a>
+                        <a href="profil/<?php print($item->getId()) ?>" class=" result_element btn btn_blue text_btn"> button </a>
                     </li>
                 <?php endforeach; ?>
              </ul>

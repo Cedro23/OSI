@@ -26,6 +26,17 @@
             return $offer;
         }
 
+        function getTableUniqSkill($_id)
+        {
+            $statement = $this->connection->prepare("
+                SELECT `title` FROM `osi_skill`,`osi_offer_skill` WHERE osi_offer_skill.offer_id = :_id AND osi_offer_skill.skill_id = osi_skill.id
+            ");
+            $statement->bindValue(':_id', $_id);
+            $statement->execute();
+            $UniqSkill = $statement->fetchAll();
+            return $UniqSkill;
+        }
+
         function getTableSkill()
         {
             $statement = $this->connection->prepare("
@@ -36,11 +47,12 @@
             return $skill;
         }
 
-        function getTableContract()
+        function getTableContract($_id)
         {
             $statement = $this->connection->prepare("
-                SELECT type FROM osi_contract
+                SELECT type FROM osi_contract WHERE id = :_id
             ");
+            $statement->bindValue(':_id', $_id);
             $statement->execute();
             $contract = $statement->fetchAll();
             return $contract;
