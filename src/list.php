@@ -1,4 +1,5 @@
 <?php
+    if($idFormation <1) header('Location: home');
     require_once("functions.php");
 
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
@@ -87,7 +88,7 @@
      <!--- Main--------------------------->
      <main class="text_page">
          <section class="margin_section padding_side">
-             <h1 class="text_h "> Chercher le bon profil</h1>
+             <h1 class="text_h ">Chercher le bon profil - <?=getFormations()[$idFormation]["name"]?></h1>
              <p> Toute l’année nos étudiants sont à l’écoute d’opportunités.</p>
              <p> Vous pouvez recruter des étudiants de Bachelor en stage temps complet de juin à septembre, et des étudiants de Mastère en alternance (contrat de professionnalisation) tout au long de l’année. </p>
          </section>

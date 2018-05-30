@@ -101,30 +101,30 @@
                 <form class="form" action="" method="post">
                     <input type="hidden" name="formSubmit" value="mail">
                     <input type="hidden" name="idForm" value="2">
-                    <h4 class="text_h text_h_white text_page_left form_element"><?php print($profils[$idProfil-1]->getTitle()) ?></h4>
+                    <h4 class="text_h  text_page_left form_element"><?php print($profils[$idProfil-1]->getTitle()) ?></h4>
 
                     <div class=" form_element form_element_row">
                         <div class="form_check">
-                            <h4 class="text_h text_h_white text_page_left"> Mail</h4>
+                            <h4 class="text_h  text_page_left"> Mail</h4>
                             <input type="text" name="mail" value="" placeholder="Mail">
                         </div>
                         <div class="form_check">
-                            <h4 class="text_h text_h_white text_page_left"> Number</h4>
+                            <h4 class="text_h  text_page_left"> Number</h4>
                             <input type="text" name="num" value="" placeholder="Numero Telephone">
                         </div>
                     </div>
                     <div class=" form_element form_element_row">
                         <div class="form_check">
-                            <h4 class="text_h text_h_white text_page_left"> Prénom</h4>
+                            <h4 class="text_h  text_page_left"> Prénom</h4>
                             <input type="text" name="firstName" value="" placeholder="Prénom">
                         </div>
                         <div class="form_check">
-                            <h4 class="text_h text_h_white text_page_left"> Nom</h4>
+                            <h4 class="text_h  text_page_left"> Nom</h4>
                             <input type="text" name="lastName" value="" placeholder="Nom">
                         </div>
                     </div>
                     <div class="form_element text_page_left">
-                        <h4 class="text_h text_h_white text_page_left"> Commentaires</h4>
+                        <h4 class="text_h  text_page_left"> Commentaires</h4>
                         <textarea name="comments" rows="8" cols="80" placeholder="Commentaires"></textarea>
                     </div>
                     <div class="form_element">

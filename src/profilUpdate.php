@@ -66,8 +66,67 @@
          </div>
     </header>
 
-    <main>
-        
+    <main  class="text_page">
+        <section class="margin_section padding_side">
+            <form class="form update" action="list" method="post">
+                <input type="hidden" name="formSubmit" value="add">
+                <input type="hidden" name="idForm" value="2">
+                <input type="hidden" name="formation" value="1">
+                <h1 class="text_h"> Modifier l'offre</h1>
+                <div class="form_element text_page_left">
+                    <h4 class="text_h text_h_form ">Titre</h4>
+                    <input type="text" name="title" value="" placeholder="Titre">
+                </div>
+                <div class="form_element text_page_left">
+                    <h4 class="text_h text_h_form ">Description</h4>
+                    <textarea name="description" rows="8" cols="80" placeholder="Description"></textarea>
+                </div>
+                <div class="form_element form_element_row">
+                    <div class="form_select">
+                        <h4 class="text_h text_h_form  form_select_element">Contrat</h4>
+                        <select class="form_select_element" name="contract">
+                            <option value=""> </option>
+                            <?php foreach ($contracts as $key=>$option ) {
+                                echo '<option value="'.$key.'">'.$option["name"].'</option>';
+                            } ?>
+                        </select>
+                    </div>
+                    <div class="form_select">
+                        <h4 class="text_h text_h_form  form_select_element">Année</h4>
+                        <select class="form_select_element" name="year">
+                            <option value=""> </option>
+                            <?php foreach ($years as $key=>$option) {
+                                echo '<option value="'.$key.'">'.$option["name"].'</option>';
+                            } ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_element form_check text_page_left">
+                    <div class="form_check_title">
+                        <h4 class="form_check_title_text text_h text_h_form ">Compétences</h4>
+                        <a href="" class="form_check_title_btn"><i class="fas fa-angle-down"></i></a>
+                    </div>
+                    <div class="form_check_options">
+                        <?php
+                           foreach ($skills as $key => $skill) {
+                               echo '<div class="option">
+                                   <input type="checkbox" id="'.$skill["name"].'" name="skills[]" value="'.$key.'">
+                                   <label for="'.$skill["name"].'">'.$skill["name"].'</label>
+                               </div>';
+                           }
+
+                         ?>
+                    </div>
+                </div>
+                <div class="form_element text_page_left">
+                    <h4 class="text_h text_h_form ">Periode</h4>
+                    <input type="text" name="period" value="" placeholder="periode">
+                </div>
+                <div class="form_element">
+                    <button type="submit" class="btn btn_blue btn_submit">Ajouter</button>
+                </div>
+            </form>
+        </section>
     </main>
  </body>
 </html>

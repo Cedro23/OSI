@@ -9,13 +9,16 @@
     if ($url == '' or $url[0] == 'home') {
         require '../src/home.php';
     } elseif ($url[0] == 'list') {
-        $idFormation = (isset($url[1]) and is_numeric($url[1]))? $url[1] : 0 ;
+        $idFormation = (isset($url[1]) and is_numeric($url[1]))? $url[1] : 1 ;
         require '../src/list.php';
     } elseif ($url[0] == 'profil' and is_numeric($url[1]) and isset($url[1])) {
         $idProfil = $url[1];
         require '../src/profil.php';
     } elseif ($url[0] == 'sitemap') {
         require '../sitemap.php';
+    } elseif ($url[0] == 'profilUpdate'and is_numeric($url[1]) and isset($url[1])) {
+        $idProfil = $url[1];
+        require '../src/profilUpdate.php';
     } else {
         require '../src/Error404.php';
     }

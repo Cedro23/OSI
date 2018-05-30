@@ -12,12 +12,14 @@
     flex-flow: column;
 }
 
+
 /*------------------FORM----------------*/
 .form{
     display: flex;
     flex-flow: column;
     padding: 5% 20% 0% 20%;
 }
+
 .form_element{
     padding: 5%;
 }
@@ -63,6 +65,11 @@
     margin-right: 5%;
 }
 
+/*------------------UPDATE----------------*/
+.update{
+    padding: 0% 20% 0% 20%;
+}
+
 @media screen and (max-device-width: 900px) {
     .form_element_row{
         flex-flow: column;
@@ -87,8 +94,7 @@
 input,textarea,select{
     background-color: transparent;
     border-width: 0px;
-    border-bottom: 3px solid white;
-    color: white;
+    border-bottom-width: 3px;
 }
 
 textarea{
@@ -99,14 +105,22 @@ textarea, input{
     font-size: 1.8rem;
 }
 
-label{
+input,textarea,select,label{
     color: white;
+    border-color: white;
 }
 
 option{
     background-color: transparent;
 }
 
+/*.update textarea,input {
+    font-size: 2rem;
+}
+.update input,textarea,select,label {
+    color: black;
+    border-color: black;
+}*/
 
 [type="checkbox"] {
     box-shadow: none;
