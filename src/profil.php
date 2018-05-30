@@ -2,6 +2,11 @@
     require_once("class.php");
     require_once("functions.php");
 
+    if (isset($_POST['num']) and isset($_POST['mail']) and isset($_POST['firstName']) and isset($_POST['lastName'])) {
+        sendMail($profils[$idProfil-1]->getTitle(), $_POST['num'], $_POST['mail'], $_POST['firstName'], $_POST['lastName'], $_POST['comments']);
+    }
+
+
     $offer= $connection->getTableOffer();
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
     foreach ($offer as $field) {
@@ -80,16 +85,15 @@
         <!--- Main--------------------------->
         <main class="text_page">
             <section class="margin_section padding_side">
-                <h1 class="text_h text_h1"> <?php print($offer[$idProfil-1][1]) ?></h1>
+                <h1 class="text_h text_h1"> <?php print($profils[$idProfil-1]->getTitle()) ?></h1>
             </section>
 
             <section class="margin_section padding_side text_page_left">
                 <h1 class="text_h text_h2"> Description</h1>
-                <p><?php print($offer[$idProfil-1][5]) ?></p>
-                <?php $offerSkill = $connection->getTableOfferSkill($idProfil); ?>
-                <p><?php for ($i=0; $i < sizeof($offerSkill); $i++) {
-                        print($skill[$offerSkill[$i][0]-1][0]);
-                        if ($i != sizeof($offerSkill)-1) {
+                <p><?php print($profils[$idProfil-1]->getDescription()) ?></p>
+                <p><?php for ($i=0; $i < sizeof($profils[$idProfil-1]->getSkills()); $i++) {
+                        print($profils[$idProfil-1]->getSkills()[$i]);
+                        if ($i != sizeof($profils[$idProfil-1]->getSkills())-1) {
                             printf('//');
                         }
                     }?></p>
@@ -97,18 +101,36 @@
 
             <section class="margin_section padding_side filter">
                 <h2 class="text_h text_h2"> Contact</h2>
-                <h3 class="text_h text_h3 text_page_left form_element"><?php print($offer[$idProfil-1][1]) ?></h3>
 
-                <form class="form" action="index.html" method="post">
+                <form class="form" action="" method="post">
+                    <h4 class="text_h text_h_white text_page_left form_element"><?php print($profils[$idProfil-1]->getTitle()) ?></h4>
+
                     <div class=" form_element form_element_row">
-                        <input type="text" name="mail" value="" placeholder="Mail">
-                        <input type="text" name="num" value="" placeholder="Numero Telephone">
+                        <div class="form_check">
+                            <h4 class="text_h text_h_white text_page_left"> Mail</h4>
+                            <input type="text" name="mail" value="" placeholder="Mail">
+                        </div>
+                        <div class="form_check">
+                            <h4 class="text_h text_h_white text_page_left"> Number</h4>
+                            <input type="text" name="num" value="" placeholder="Numero Telephone">
+                        </div>
+                    </div>
+                    <div class=" form_element form_element_row">
+                        <div class="form_check">
+                            <h4 class="text_h text_h_white text_page_left"> Prénom</h4>
+                            <input type="text" name="firstName" value="" placeholder="Prénom">
+                        </div>
+                        <div class="form_check">
+                            <h4 class="text_h text_h_white text_page_left"> Nom</h4>
+                            <input type="text" name="lastName" value="" placeholder="Nom">
+                        </div>
+                    </div>
+                    <div class="form_element text_page_left">
+                        <h4 class="text_h text_h_white text_page_left"> Commentaires</h4>
+                        <textarea name="comments" rows="8" cols="80" placeholder="Commentaires"></textarea>
                     </div>
                     <div class="form_element">
-                        <textarea name="name" rows="8" cols="80" placeholder="Commentaires"></textarea>
-                    </div>
-                    <div class="form_element">
-                        <button type="submit" class="btn btn_submit">Rechercher</button>
+                        <button type="submit" class="btn btn_submit">Envoyer</button>
                     </div>
                 </form>
             </section>

@@ -57,6 +57,11 @@
             return $this->skills;
         }
 
+        function getDescription()
+        {
+            return $this->description;
+        }
+
         function getYear()
         {
             return $this->year;

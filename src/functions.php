@@ -1,6 +1,7 @@
 <?php
 require_once('class.php');
 require_once("functions/dataFormManager.php");
+require_once("functions/sendMail.php");
 
 $connection = new Connection("mysql:dbname=osi;host=127.0.0.1", "root", "");
 $session = new Session();
@@ -57,7 +58,7 @@ function updateProfil($_offers, $_connection)
             getContracts()[$item["contract"]]['name'],
             getYears()[$item["year"]]['name'],
             getFormations()[$item["formation"]]["name"],
-            $item["description"], 
+            $item["description"],
             $item["period"],
             $itemSkills
         );
