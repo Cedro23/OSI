@@ -63,12 +63,12 @@ class FormAdd extends Form
 class FormUpdate extends FormAdd
 {
     public function getPostData(){
-        checkPost("id");
-        parrent::getPostData();
+        if(!checkPost("id"))return false;
+        return parrent::getPostData();
     }
 
     public function callFormFunction(){
-        getConnection()->addOffer($this->posts);
+        getConnection()->updateOffer($this->posts);
     }
 }
 

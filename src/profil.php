@@ -105,11 +105,11 @@
 
                     <div class=" form_element form_element_row">
                         <div class="form_check">
-                            <h4 class="text_h  text_page_left"> Mail</h4>
+                            <h4 class="text_h text_page_left"> Mail</h4>
                             <input type="text" name="mail" value="" placeholder="Mail">
                         </div>
                         <div class="form_check">
-                            <h4 class="text_h  text_page_left"> Number</h4>
+                            <h4 class="text_h text_page_left"> Number</h4>
                             <input type="text" name="num" value="" placeholder="Numero Telephone">
                         </div>
                     </div>

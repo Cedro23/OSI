@@ -16,29 +16,44 @@ $formations = $connection->getTableFormation();
 $years = $connection->getTableYear();
 $skills = $connection->getTableSkill($idFormation);
 
-initProfils();
+if(isset($idFormation)){
+    initOffers();
+    initSkills();
+    initProfils();
 
-checkURLForm();
+    checkURLForm();
 
-initProfils();
+    initOffers();
+    initProfils();
+}
 
 
-
-
-function initProfils(){
+function initSkills(){
+    global $skills;
+    global $idFormation;
     global $offers;
-    global $profils;
+    global $idProfil;
+    $idFormation = ($idFormation>0)? $idFormation : $offers[$idProfil]["formation"];
+    $skills = getConnection()->getTableSkill($idFormation);
+
+}
+
+function initOffers(){
+    global $offers;
     global $idFormation;
     $connection = getConnection();
-
     if($idFormation > 0 ){
         $offers = $connection->getTableOfferFormation($idFormation);
     }else{
         $offers = $connection->getTableOffer();
     }
-    $profils = updateProfil($offers, $connection);
 }
 
+function initProfils(){
+    global $profils;
+    global $offers;
+    $profils = updateProfil($offers, getConnection());
+}
 //get current URL page
 function getURL(){
     return $_SERVER['REQUEST_URI'];

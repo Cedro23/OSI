@@ -73,6 +73,7 @@ h4{
 
 .form h4{
     color: #fff;
+    margin-bottom: 1%;
 }
 
 .update h4{
@@ -82,10 +83,6 @@ h4{
 
 .text_h2_small{
     font-size: 2rem;
-}
-
-.text_h_form{
-    margin-bottom: 1%;
 }
 
 @media screen and (max-device-width: 500px) {

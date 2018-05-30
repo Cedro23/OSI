@@ -101,19 +101,44 @@ textarea{
     box-sizing: border-box;
     width: 100%;
 }
+
 textarea, input{
     font-size: 1.8rem;
 }
 
 input,textarea,select,label{
-    color: white;
-    border-color: white;
+    color: #fff;
+    border-color: #fff;
 }
 
 option{
     background-color: transparent;
+    color: #000;
 }
 
+/*select*/
+.update select{
+    color: #000;
+    border-color: #000;
+}
+
+/*checkbox*/
+.update label{
+    color: #000;
+    border-color: #000;
+}
+
+/*textarea*/
+.update textarea{
+    color: #000;
+    border-color: #000;
+}
+
+/*input*/
+.update input{
+    color: #000;
+    border-color: #000;
+}
 /*.update textarea,input {
     font-size: 2rem;
 }

@@ -109,5 +109,9 @@
             }
             $statement->execute();
         }
+
+        function updateOffer($_posts){
+            
+        }
     }
  ?>

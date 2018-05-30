@@ -80,19 +80,19 @@
                 <h1 class="text_h"> Modifier l'offre</h1>
                 <!--title -->
                 <div class="form_element text_page_left">
-                    <h4 class="text_h text_h_form ">Titre</h4>
+                    <h4 class="text_h  ">Titre</h4>
                     <input type="text" name="title" value="<?= $profils[$idProfil]->getTitle()?>" placeholder="<?= $profils[$idProfil]->getTitle()?>">
                 </div>
                 <!--Description -->
                 <div class="form_element text_page_left">
-                    <h4 class="text_h text_h_form ">Description</h4>
+                    <h4 class="text_h  ">Description</h4>
                     <textarea name="description" rows="8" cols="80" placeholder="<?= $profils[$idProfil]->getDescription()?>"></textarea>
                 </div>
 
                 <div class="form_element form_element_row">
                     <!--Contract -->
                     <div class="form_select">
-                        <h4 class="text_h text_h_form  form_select_element">Contrat</h4>
+                        <h4 class="text_h   form_select_element">Contrat</h4>
                         <select class="form_select_element" name="contract">
 
                             <option value="<?= $offers[$idProfil]["contract"]?>"><?= $profils[$idProfil]->getContract()?> </option>
@@ -103,7 +103,7 @@
                     </div>
                     <!--year -->
                     <div class="form_select">
-                        <h4 class="text_h text_h_form  form_select_element">Année</h4>
+                        <h4 class="text_h   form_select_element">Année</h4>
                         <select class="form_select_element" name="year">
                             <option value="<?= $offers[$idProfil]["year"] ?>"> <?= $profils[$idProfil]->getYear()?></option>
                             <?php foreach ($years as $key=>$option) {
@@ -115,7 +115,7 @@
                 <!--Competence -->
                 <div class="form_element form_check text_page_left">
                     <div class="form_check_title">
-                        <h4 class="form_check_title_text text_h text_h_form ">Compétences</h4>
+                        <h4 class="form_check_title_text text_h  ">Compétences</h4>
                         <a href="" class="form_check_title_btn"><i class="fas fa-angle-down"></i></a>
                     </div>
                     <div class="form_check_options">
@@ -132,7 +132,7 @@
                 </div>
                 <!--Period -->
                 <div class="form_element text_page_left">
-                    <h4 class="text_h text_h_form ">Periode</h4>
+                    <h4 class="text_h  ">Periode</h4>
                     <input type="text" name="period" value="<?= $profils[$idProfil]->getPeriod() ?>" placeholder="periode">
                 </div>
                 <!--Submit -->

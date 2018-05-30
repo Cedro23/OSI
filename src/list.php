@@ -102,7 +102,7 @@
                  </div>
                  <div class="form_element form_element_row">
                      <div class="form_select">
-                         <h4 class="text_h text_h_form text_h_white form_select_element">Contrat</h4>
+                         <h4 class="text_h  text_h_white form_select_element">Contrat</h4>
                          <select class="form_select_element" name="contract">
                              <option value=""> </option>
                              <?php foreach ($contracts as $key=>$option ) {
@@ -111,7 +111,7 @@
                          </select>
                      </div>
                      <div class="form_select">
-                         <h4 class="text_h text_h_form text_h_white form_select_element">Année</h4>
+                         <h4 class="text_h  text_h_white form_select_element">Année</h4>
                          <select class="form_select_element" name="year">
                              <option value=""> </option>
                              <?php foreach ($years as $key=>$option ) {
@@ -122,7 +122,7 @@
                  </div>
                  <div class="form_element form_check text_page_left">
                      <div class="form_check_title">
-                         <h4 class="form_check_title_text text_h_white title_text text_h text_h_form">Compétences</h4>
+                         <h4 class="form_check_title_text text_h_white title_text text_h ">Compétences</h4>
                          <a href="" class="form_check_title_btn"><i class="fas fangle-down"></i></a>
                      </div>
                      <div class="form_check_options">
@@ -150,16 +150,16 @@
                  <input type="hidden" name="formation" value="1">
                  <h2 class="text_h text_h_white"> Ajouter une offre</h2>
                  <div class="form_element text_page_left">
-                     <h4 class="text_h text_h_form text_h_white">Titre</h4>
+                     <h4 class="text_h  text_h_white">Titre</h4>
                      <input type="text" name="title" value="" placeholder="Titre">
                  </div>
                  <div class="form_element text_page_left">
-                     <h4 class="text_h text_h_form text_h_white">Description</h4>
+                     <h4 class="text_h  text_h_white">Description</h4>
                      <textarea name="description" rows="8" cols="80" placeholder="Description"></textarea>
                  </div>
                  <div class="form_element form_element_row">
                      <div class="form_select">
-                         <h4 class="text_h text_h_form text_h_white form_select_element">Contrat</h4>
+                         <h4 class="text_h  text_h_white form_select_element">Contrat</h4>
                          <select class="form_select_element" name="contract">
                              <option value=""> </option>
                              <?php foreach ($contracts as $key=>$option ) {
@@ -168,7 +168,7 @@
                          </select>
                      </div>
                      <div class="form_select">
-                         <h4 class="text_h text_h_form text_h_white form_select_element">Année</h4>
+                         <h4 class="text_h  text_h_white form_select_element">Année</h4>
                          <select class="form_select_element" name="year">
                              <option value=""> </option>
                              <?php foreach ($years as $key=>$option) {
@@ -179,7 +179,7 @@
                  </div>
                  <div class="form_element form_check text_page_left">
                      <div class="form_check_title">
-                         <h4 class="form_check_title_text text_h text_h_form text_h_white">Compétences</h4>
+                         <h4 class="form_check_title_text text_h  text_h_white">Compétences</h4>
                          <a href="" class="form_check_title_btn"><i class="fas fa-angle-down"></i></a>
                      </div>
                      <div class="form_check_options">
@@ -195,7 +195,7 @@
                      </div>
                  </div>
                  <div class="form_element text_page_left">
-                     <h4 class="text_h text_h_form text_h_white">Periode</h4>
+                     <h4 class="text_h  text_h_white">Periode</h4>
                      <input type="text" name="period" value="" placeholder="periode">
                  </div>
                  <div class="form_element">
@@ -221,7 +221,7 @@
                                 }
                             ?>
                         </p>
-                        <a href="profil/<?php print($item->getId()) ?>" class=" result_element btn btn_blue text_btn"> button </a>
+                        <a href="profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
                      </li>
                  <?php endforeach; ?>
              </ul>
