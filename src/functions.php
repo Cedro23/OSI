@@ -9,10 +9,10 @@ $session = new Session();
 $offers = $connection->getTableOffer();
 
 $contracts = $connection->getTableContract();
+
 $formations = $connection->getTableFormation();
 $years = $connection->getTableYear();
 $skills = $connection->getTableSkill(1);
-
 
 $profils = updateProfil($offers, $connection);
 
