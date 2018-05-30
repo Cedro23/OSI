@@ -55,7 +55,7 @@ class FormAdd extends Form
         if(!$this->getSkills()) return false;
         return true;
     }
-    public function callBdd(){
+    public function callFormFunction(){
         getConnection()->addOffer($this->posts);
     }
 }
@@ -67,7 +67,7 @@ class FormUpdate extends FormAdd
         parrent::getPostData();
     }
 
-    public function callBdd(){
+    public function callFormFunction(){
         getConnection()->addOffer($this->posts);
     }
 }
@@ -85,7 +85,8 @@ class FormMail extends Form
 
     public function callFormFunction(){
         global $idProfil;
-        sendMail(getProfils()[$idProfil-1]->getTitle(), $this->posts['num'], $this->posts['mail'], $this->posts['firstName'], $this->posts['lastName'], $this->posts['comments']);
+        $comment = (isset($this->posts['comments']) == true)? $this->posts['comments'] : " ";
+        sendMail(getProfils()[$idProfil-1]->getTitle(), $this->posts['num'], $this->posts['mail'], $this->posts['firstName'], $this->posts['lastName'], $comment );
     }
 }
 
