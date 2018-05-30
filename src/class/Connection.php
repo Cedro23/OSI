@@ -77,5 +77,27 @@
             $years = $statement->fetchAll(PDO::FETCH_GROUP|PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE);
             return $years;
         }
+
+        function addOffer($_posts){
+            $statement = $this->connection->prepare("INSERT INTO osi_offer (title,year,formation,contract,description,period)
+                VALUES (:title,:year,:formation,:contract,:description,:period);
+            ");
+            foreach ($_posts as $key => $post) {
+                if($key != "skills")$statement->bindValue(':'.$key,$post);
+            }
+            $statement->execute();
+            $this->addOfferSkill($this->connection->lastInsertId(),$_posts["skills"]);
+        }
+
+        function addOfferSkill($_id, $_skills){
+            $statement = $this->connection->prepare("INSERT INTO osi_offer_skill (offer_id,skill_id)
+                VALUES (:offer_id,:skill_id);
+            ");
+            foreach ($_skills as $skill) {
+                $statement->bindValue(':offer_id',$_id);
+                $statement->bindValue(':skill_id',$skill);
+            }
+            $statement->execute();
+        }
     }
  ?>

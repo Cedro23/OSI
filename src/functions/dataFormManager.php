@@ -11,7 +11,9 @@ function checkURLForm(){
             $form = createForm();
             if(isset($form) == false) return;
             if($form->getPostData()){
-
+                var_dump("oh yeah");
+                $form->callBdd();
+                //$session->setFormID($id);
             }
         }
     }
