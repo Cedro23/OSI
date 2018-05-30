@@ -8,10 +8,10 @@ $session = new Session();
 $offers = $connection->getTableOffer();
 
 $contracts = $connection->getTableContract();
+
 $formations = $connection->getTableFormation();
 $years = $connection->getTableYear();
 $skills = $connection->getTableSkill(1);
-
 
 $profils = updateProfil($offers, $connection);
 
@@ -57,7 +57,7 @@ function updateProfil($_offers, $_connection)
             getContracts()[$item["contract"]]['name'],
             getYears()[$item["year"]]['name'],
             getFormations()[$item["formation"]]["name"],
-            $item["description"], 
+            $item["description"],
             $item["period"],
             $itemSkills
         );

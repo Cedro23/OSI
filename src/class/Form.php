@@ -9,7 +9,6 @@ class Form
     }
 
     protected function checkPost(string $_str){
-        var_dump($_str);
         if ($_POST[$_str] == "" || isset($_POST[$_str]) == false){
             return false;
         }else{
@@ -18,19 +17,23 @@ class Form
         }
     }
 
+    protected function getSkills(){
+        if ($_POST["skills"] == "" || isset($_POST["skills"]) == false){
+            return false;
+        }else{
+            $this->posts["skills"] = [];
+            foreach ($_POST["skills"] as $skill) {
+                $this->posts["skills"][]=$skill;
+            }
+        }
+    }
+
     public function getPostData(){
 
     }
 
     public function callBdd(){
-        switch ($this->formType) {
-            case 'Add':
-                $connection->addOffer($this->posts);
-                break;
-            case 'Modify':
-                $connection->addOffer($this->posts);
-                break;
-        }
+
     }
 }
 
@@ -44,7 +47,10 @@ class FormAdd extends Form
         if(!$this->checkPost("formation")) return false;
         if(!$this->checkPost("description")) return false;
         if(!$this->checkPost("period")) return false;
-
+        $this->getSkills();
+    }
+    public function callBdd(){
+        $connection->addOffer($this->posts);
     }
 }
 
@@ -53,6 +59,10 @@ class FormUpdate extends FormAdd
     public function getPostData(){
         checkPost("id");
         parrent::getPostData();
+    }
+
+    public function callBdd(){
+        $connection->addOffer($this->posts);
     }
 }
 

@@ -40,7 +40,7 @@
         function getTableSkill($_id)
         {
             $statement = $this->connection->prepare("
-                SELECT id, title FROM osi_skill WHERE osi_skill.formation = :_id;
+                SELECT id, name FROM osi_skill WHERE osi_skill.formation = :_id;
             ");
             $statement->bindValue(':_id', $_id);
             $statement->execute();

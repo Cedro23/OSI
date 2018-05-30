@@ -88,8 +88,8 @@
                          <h4 class="text_h text_h_form text_h_white form_select_element">Contrat</h4>
                          <select class="form_select_element" name="contract">
                              <option value=""> </option>
-                             <?php foreach ($contracts as $option ) {
-                                 echo '<option value="'.$option["id"].'">'.$option["name"].'</option>';
+                             <?php foreach ($contracts as $key=>$option ) {
+                                 echo '<option value="'.$key.'">'.$option["name"].'</option>';
                              } ?>
                          </select>
                      </div>
@@ -97,8 +97,8 @@
                          <h4 class="text_h text_h_form text_h_white form_select_element">Année</h4>
                          <select class="form_select_element" name="year">
                              <option value=""> </option>
-                             <?php foreach ($years as $option ) {
-                                 echo '<option value="'.$option["id"].'">'.$option["name"].'</option>';
+                             <?php foreach ($years as $key=>$option ) {
+                                 echo '<option value="'.$key.'">'.$option["name"].'</option>';
                              } ?>
                          </select>
                      </div>
@@ -109,14 +109,14 @@
                          <a href="" class="form_check_title_btn"><i class="fas fangle-down"></i></a>
                      </div>
                      <div class="form_check_options">
-                         <div class="option">
-                             <input type="checkbox" id="CSS" name="skill" value="coding">
-                             <label for="CSS">CSS</label>
-                         </div>
-                         <div class="option">
-                             <input type="checkbox" id="HTML" name="skill" value="coding">
-                             <label for="HTML">HTML</label>
-                         </div>
+                         <?php
+                            foreach ($skills as $key => $skill) {
+                                echo '<div class="option">
+                                    <input type="checkbox" id="'.$skill["name"].'" name="skills" value="'.$key.'">
+                                    <label for="'.$skill["name"].'">'.$skill["name"].'</label>
+                                </div>';
+                            }
+                          ?>
                      </div>
                  </div>
                  <div class="form_element">
@@ -127,7 +127,7 @@
 
          <!---ADD--------------------->
          <section class="margin_section padding_side add">
-             <form class="form" action="list.php" method="post">
+             <form class="form" action="<?=getURL()?>" method="post">
                  <input type="hidden" name="formSubmit" value="add">
                  <input type="hidden" name="idForm" value="2">
                  <input type="hidden" name="formation" value="1">
@@ -145,8 +145,8 @@
                          <h4 class="text_h text_h_form text_h_white form_select_element">Contrat</h4>
                          <select class="form_select_element" name="contract">
                              <option value=""> </option>
-                             <?php foreach ($contracts as $option ) {
-                                 echo '<option value="'.$option["id"].'">'.$option["name"].'</option>';
+                             <?php foreach ($contracts as $key=>$option ) {
+                                 echo '<option value="'.$key.'">'.$option["name"].'</option>';
                              } ?>
                          </select>
                      </div>
@@ -154,8 +154,8 @@
                          <h4 class="text_h text_h_form text_h_white form_select_element">Année</h4>
                          <select class="form_select_element" name="year">
                              <option value=""> </option>
-                             <?php foreach ($years as $option) {
-                                 echo '<option value="'.$option["id"].'">'.$option["name"].'</option>';
+                             <?php foreach ($years as $key=>$option) {
+                                 echo '<option value="'.$key.'">'.$option["name"].'</option>';
                              } ?>
                          </select>
                      </div>
@@ -166,18 +166,23 @@
                          <a href="" class="form_check_title_btn"><i class="fas fa-angle-down"></i></a>
                      </div>
                      <div class="form_check_options">
-                         <div class="option">
-                             <input type="checkbox" id="PHP" name="skills" value="coding">
-                             <label for="PHP">PHP</label>
-                         </div>
-                         <div class="option">
-                             <input type="checkbox" id="Node.js" name="skills" value="coding">
-                             <label for="Node.js">Node.js</label>
-                         </div>
+                         <?php
+                            foreach ($skills as $key => $skill) {
+                                echo '<div class="option">
+                                    <input type="checkbox" id="'.$skill["name"].'" name="skills[]" value="'.$key.'">
+                                    <label for="'.$skill["name"].'">'.$skill["name"].'</label>
+                                </div>';
+                            }
+
+                          ?>
                      </div>
                  </div>
+                 <div class="form_element text_page_left">
+                     <h4 class="text_h text_h_form text_h_white">Periode</h4>
+                     <input type="text" name="period" value="" placeholder="periode">
+                 </div>
                  <div class="form_element">
-                     <button type="submit" class="btn btn_blue btn_submit">Rechercher</button>
+                     <button type="submit" class="btn btn_blue btn_submit">Ajouter</button>
                  </div>
              </form>
          </section>
