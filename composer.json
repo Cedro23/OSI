@@ -7,6 +7,10 @@
         }
     ],
     "require": {
-        "erusev/parsedown": "^1.7"
+        "erusev/parsedown": "^1.7",
+        "swiftmailer/swiftmailer": "^6.0"
+    },
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0"
     }
 }
