@@ -8,6 +8,8 @@ require_once("functions/searchProfils.php");
 $connection = new Connection("mysql:dbname=osi;host=127.0.0.1", "root", "");
 $session = new Session();
 
+checkURLForm();
+
 $offers = $connection->getTableOffer();
 
 $contracts = $connection->getTableContract();
@@ -18,10 +20,15 @@ $skills = $connection->getTableSkill(1);
 
 $profils = updateProfil($offers, $connection);
 
-checkURLForm();
+
 //get current URL page
 function getURL(){
     return $_SERVER['REQUEST_URI'];
+}
+
+function getConnection(){
+    global $connection;
+    return $connection;
 }
 
 function getSession(){

@@ -25,6 +25,7 @@ class Form
             foreach ($_POST["skills"] as $skill) {
                 $this->posts["skills"][]=$skill;
             }
+            return true;
         }
     }
 
@@ -51,10 +52,11 @@ class FormAdd extends Form
         if(!$this->checkPost("formation")) return false;
         if(!$this->checkPost("description")) return false;
         if(!$this->checkPost("period")) return false;
-        $this->getSkills();
+        if(!$this->getSkills()) return false;
+        return true;
     }
     public function callBdd(){
-        $connection->addOffer($this->posts);
+        getConnection()->addOffer($this->posts);
     }
 }
 
@@ -66,7 +68,7 @@ class FormUpdate extends FormAdd
     }
 
     public function callBdd(){
-        $connection->addOffer($this->posts);
+        getConnection()->addOffer($this->posts);
     }
 }
 

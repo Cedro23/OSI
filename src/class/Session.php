@@ -17,5 +17,9 @@ class Session
         }
         return $_SESSION["formID"];
     }
+
+    public function setFormID($_id){
+        $_SESSION["formID"] = $_id;
+    }
 }
  ?>
