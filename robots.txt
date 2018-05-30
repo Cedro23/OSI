@@ -1,4 +1,5 @@
 User-agent: *
+Disallow:  http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/editProfil
 Allow: http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list/
 Allow: http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/
 Allow:http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/profil
