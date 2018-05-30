@@ -1,13 +1,21 @@
 <?php
 require_once('class.php');
 require_once("functions/dataFormManager.php");
-$offer = $connection->getTableOffer();
-$contract = $connection->getTableContract();
-$formation = $connection->getTableFormation();
-$skill = $connection->getTableSkill();
-$session = new Session();
-$profils = updateProfil($offer, $connection);
 
+$connection = new Connection("mysql:dbname=osi;host=127.0.0.1", "root", "");
+$session = new Session();
+
+$offers = $connection->getTableOffer();
+
+$contracts = $connection->getTableContract();
+$formations = $connection->getTableFormation();
+$years = $connection->getTableYear();
+$skills = $connection->getTableSkill(1);
+
+
+$profils = updateProfil($offers, $connection);
+
+checkURLForm();
 //get current URL page
 function getURL(){
     return $_SERVER['REQUEST_URI'];
@@ -18,18 +26,35 @@ function getSession(){
     return $session;
 }
 
-function updateProfil($_offer, $_connection)
+function getContracts(){
+    global $contracts;
+    return $contracts;
+}
+
+function getYears(){
+    global $years;
+    return $years;
+}
+
+function getFormations(){
+    global $formations;
+    return $formations;
+}
+
+function updateProfil($_offers, $_connection)
 {
     $profils;
-    foreach ($_offer as $item) {
-        $itemContract = $_connection-> getTableContract($item[0])[0][0];
+    foreach ($_offers as $item) {
         $itemSkills = NULL;
-        $skills = $_connection->getTableUniqSkill($item[0]);
-
+        $skills = $_connection->getTableUniqSkill($item["id"]);
+        var_dump($skills);
         foreach ($skills as $skill) {
-            $itemSkills[]=$skill['title'];
+            $itemSkills[]=$skill['name'];
         }
-        $profils[] = new Profil($item[0], $item[1], $itemContract, $item[2], $item[3], $item[5], $item[6], $itemSkills);
+
+        $profils[] = new Profil(
+            $item["id"], $item["title"], getContracts()[$item["contract"]]['name'], getYears()[$item["year"]]['name'], getFormations()[$item["formation"]]["name"], $item["description"], $item["period"], $itemSkills
+        );
     }
     return $profils;
 }

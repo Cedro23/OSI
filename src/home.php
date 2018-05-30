@@ -36,7 +36,7 @@
     <title>Recruter nos étudiants - Ynov Lyon</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../public/css/style.css"/>
 </head>
 
 <body>

@@ -9,10 +9,10 @@ class Form
     }
 
     protected function checkPost(string $_str){
+        var_dump($_str);
         if ($_POST[$_str] == "" || isset($_POST[$_str]) == false){
             return false;
         }else{
-            var_dump($_POST[$_str]);
             $this->posts[$_str] = $_POST[$_str];
             return true;
         }

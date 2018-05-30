@@ -2,15 +2,12 @@
 
 require_once('./class.php');
 
-checkURLForm();
 //check url for form action
 function checkURLForm(){
     $session = getSession();
-    var_dump($_POST["formSubmit"]);
     if (isset($_POST["formSubmit"])){
-
         $id = $_POST["idForm"];
-        if ($id != getSession()->getFormID()){
+        if ($id != $session->getFormID()){
             $form = createForm();
             if(isset($form) == false) return;
             if($form->getPostData()){

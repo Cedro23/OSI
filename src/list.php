@@ -1,5 +1,4 @@
 <?php
-    require_once("class.php");
     require_once("functions.php");
 
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
@@ -89,21 +88,18 @@
                          <h4 class="text_h text_h_form text_h_white form_select_element">Contrat</h4>
                          <select class="form_select_element" name="contract">
                              <option value=""> </option>
-                             <option value="">CDI</option>
-                             <option value="">Stage</option>
-                             <option value="">Alternance</option>
-                             <option value="">Freelance</option>
+                             <?php foreach ($contracts as $option ) {
+                                 echo '<option value="'.$option["id"].'">'.$option["name"].'</option>';
+                             } ?>
                          </select>
                      </div>
                      <div class="form_select">
                          <h4 class="text_h text_h_form text_h_white form_select_element">Année</h4>
-                         <select class="form_select_element" name="contract">
+                         <select class="form_select_element" name="year">
                              <option value=""> </option>
-                             <option value="">B1</option>
-                             <option value="">B2</option>
-                             <option value="">B3</option>
-                             <option value="">M1</option>
-                             <option value="">M2</option>
+                             <?php foreach ($years as $option ) {
+                                 echo '<option value="'.$option["id"].'">'.$option["name"].'</option>';
+                             } ?>
                          </select>
                      </div>
                  </div>
@@ -149,21 +145,18 @@
                          <h4 class="text_h text_h_form text_h_white form_select_element">Contrat</h4>
                          <select class="form_select_element" name="contract">
                              <option value=""> </option>
-                             <option value="1">CDI</option>
-                             <option value="1">Stage</option>
-                             <option value="2">Alternance</option>
-                             <option value="3">Freelance</option>
+                             <?php foreach ($contracts as $option ) {
+                                 echo '<option value="'.$option["id"].'">'.$option["name"].'</option>';
+                             } ?>
                          </select>
                      </div>
                      <div class="form_select">
                          <h4 class="text_h text_h_form text_h_white form_select_element">Année</h4>
                          <select class="form_select_element" name="class">
                              <option value=""> </option>
-                             <option value="1">B1</option>
-                             <option value="2">B2</option>
-                             <option value="3">B3</option>
-                             <option value="4">M1</option>
-                             <option value="5">M2</option>
+                             <?php foreach ($years as $option) {
+                                 echo '<option value="'.$option["id"].'">'.$option["name"].'</option>';
+                             } ?>
                          </select>
                      </div>
                  </div>
@@ -193,17 +186,20 @@
              <ul class="results_list">
                  <?php foreach ($profils as $item): ?>
                      <li class="result">
-                         <h3 class="text_h text_h3 text_h_grey result_element result_title"><?php print($item->getTitle()) ?></h3>
-                         <p class="result_element"><?php print($item->getContract()) ?></p>
-                         <p class="result_element"><?php     $i = 0;
-                                                             foreach ($item->getSkills() as $skill) {
-                                                                 print($skill);
-                                                                 $i++;
-                                                             if ($i != sizeof($item->getSkills())) {
-                                                                      printf('//');
-                                                                  }
-                                                              }?></p>
-                         <a href="profil/<?php print($item->getId()) ?>" class=" result_element btn btn_blue text_btn"> button </a>
+                         <h3 class="text_h text_h3 text_h_grey result_element result_title"><?= $item->getTitle() ?></h3>
+                         <p class="result_element"><?= $item->getContract() ?></p>
+                         <p class="result_element">
+                            <?php     $i = 0;
+                                foreach ($item->getSkills() as $skill) {
+                                    print($skill);
+                                    $i++;
+                                    if ($i != sizeof($item->getSkills())) {
+                                        printf('//');
+                                    }
+                                }
+                            ?>
+                        </p>
+                        <a href="profil/<?php print($item->getId()) ?>" class=" result_element btn btn_blue text_btn"> button </a>
                      </li>
                  <?php endforeach; ?>
              </ul>
