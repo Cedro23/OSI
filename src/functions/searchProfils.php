@@ -1,10 +1,9 @@
 <?php
-require_once(__DIR__.'/../class.php');
-    function searchProfils($_searchValue){
-        $profils;
-        $results = array_filter($profils, function($_show) use($_searchValue){
-        return (strpos($_show,$_searchValue)!== false)? true : false;
-        },ARRAY_FILTER_USE_KEY);
-        return $results;
-    }
+    function searchOffers($_searchValue){
+    global $offers;
+    $results = array_filter($offers, function($_offerId) use($_searchValue,$offers){
+        return (strpos($offers[$_offerId]["title"],$_searchValue)!== false)? true : false;
+    },ARRAY_FILTER_USE_KEY);
+    return $results;
+}
  ?>

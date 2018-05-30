@@ -21,7 +21,10 @@
         $idProfil = $url[1];
         $idFormation = 0;
         require '../src/profilUpdate.php';
-    } else {
+
+    } elseif ($url[0] == 'test') {
+        require '../src/testRecherche.php';
+    }else {
         require '../src/Error404.php';
     }
  ?>
