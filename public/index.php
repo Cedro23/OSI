@@ -15,8 +15,6 @@
         require '../src/profil.php';
     } elseif ($url[0] == 'sitemap') {
         require '../sitemap.php';
-    } elseif ($url[0] == 'message') {
-        require '../src/testMessage.php';
     } else {
         require '../src/Error404.php';
     }
