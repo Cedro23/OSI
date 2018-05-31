@@ -14,9 +14,10 @@
     //     var_dump($comps);
     // }
 
-    if (isset($_POST['search'])) {
-        $profils = searchOffers($_POST['search']);
-    }
+    // if (isset($_POST['search'])) {
+    //     $offersFilter = searchOffers($_POST['search']);
+    //     var_dump($profils);
+    // }
 
  ?>
  <!doctype html>
