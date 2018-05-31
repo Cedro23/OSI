@@ -2,12 +2,12 @@
 require_once('class.php');
 require_once("functions/dataFormManager.php");
 require_once("functions/sendMail.php");
-require_once("functions/searchProfils.php");
+require_once("functions/searchOffers.php");
 
 
 $connection = new Connection("mysql:dbname=osi;host=127.0.0.1", "root", "");
 $session = new Session();
-$offers;
+$offers = $connection->getTableOffer();
 $profils;
 
 $contracts = $connection->getTableContract();
