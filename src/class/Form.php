@@ -88,7 +88,7 @@ class FormMail extends Form
     public function callFormFunction(){
         global $idProfil;
         $comment = (isset($this->posts['comments']) == true)? $this->posts['comments'] : " ";
-        sendMail(getProfils()[$idProfil-1]->getTitle(), $this->posts['num'], $this->posts['mail'], $this->posts['firstName'], $this->posts['lastName'], $comment);
+        sendMail(getProfils()[$idProfil]->getTitle(), $this->posts['num'], $this->posts['mail'], $this->posts['firstName'], $this->posts['lastName'], $comment);
     }
 }
 

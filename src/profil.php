@@ -111,7 +111,7 @@
                     <h2 class="text_h text_h2"> Contact</h2>
                     <input type="hidden" name="formSubmit" value="mail">
                     <input type="hidden" name="idForm" value="2">
-                    <h4 class="text_h  text_page_left form_element"><?=($profils[$idProfil]->getTitle()) ?></h4>
+                    <h4 class="text_h  text_page_left form_element"><?=($profils[$idProfil]->getTitle()).' - ID : '.$idProfil ?></h4>
 
                     <div class=" form_element form_element_row">
                         <div class="form_check">
