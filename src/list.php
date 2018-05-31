@@ -208,19 +208,24 @@
              <ul class="results_list">
                  <?php foreach ($profils as $item): ?>
                      <li class="result">
-                         <h3 class="text_h text_h3 text_h_grey result_element result_title"><?= $item->getTitle() ?></h3>
+                         <h3 class="text_h result_element result_element_2"><a href="profil/<?=$item->getId()?>"><?= $item->getTitle()?></a></h3>
                          <p class="result_element"><?= $item->getContract() ?></p>
-                         <p class="result_element">
-                            <?php     $i = 0;
+                         <p class="result_element result_element_2">
+                            <?php
+                                $i = 0;
+                                $output ="";
                                 foreach ($item->getSkills() as $skill) {
-                                    print($skill);
+                                    $output.=$skill;
                                     $i++;
                                     if ($i != sizeof($item->getSkills())) {
-                                        printf('//');
+                                        $output.='<span> // </span>';
                                     }
                                 }
+                                echo $output;
                             ?>
                         </p>
+                        <a href="profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
+                        <a href="profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
                         <a href="profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
                      </li>
                  <?php endforeach; ?>

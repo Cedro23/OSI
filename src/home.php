@@ -74,7 +74,7 @@
     <!--- Main--------------------------->
     <main class="text_page">
         <section class="margin_section padding_side">
-            <h1 class="text_h text_h1"> Recruter nos étudiants</h1>
+            <h1 class="text_h "> Recruter nos étudiants</h1>
             <p> Toute l’année nos étudiants sont à l’écoute d’opportunités.</p>
             <p> Vous pouvez recruter des étudiants de Bachelor en stage temps complet de juin à septembre, et des étudiants de Mastère en alternance (contrat de professionnalisation) tout au long de l’année. </p>
         </section>
@@ -86,44 +86,74 @@
                     <div class="flap_store_element_content">
                         <img class="flap_store_element_logo" src="../img/logo_ingesup.png">
                         <div class="flap_store_element_title">
-                            <h3 class="text_h_blue text_h3">INFORMATIQUE</h3>
-                            <h3 class="text_h_blue text_h3">INGESUP</h3>
+                            <h3 class=" ">INFORMATIQUE</h3>
+                            <h3 class=" ">INGESUP</h3>
                         </div>
+                        <div class="flap_store_element_description margin_section">
+                            <p> Developpement Web</p>
+                            <p> Developpement Logiciel</p>
+                            <p> Infrastructure Réseau</p>
+                        </div>
+                        <a href="list/1" class="flap_store_element_link">+</a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_business">
                     <div class="flap_store_element_content">
                         <img class="flap_store_element_logo" src="../img/logo_business.png">
                         <div class="flap_store_element_title">
-                            <h3 class="text_h_blue text_h3">DIGITAL</h3>
-                            <h3 class="text_h_blue text_h3">BUSINESS SCHOOL</h3>
+                            <h3 class=" ">DIGITAL</h3>
+                            <h3 class=" ">BUSINESS SCHOOL</h3>
                         </div>
+                        <div class="flap_store_element_description margin_section">
+                            <p> Developpement Web</p>
+                            <p> Developpement Logiciel</p>
+                            <p> Infrastructure Réseau</p>
+                        </div>
+                        <a href="list/2" class="flap_store_element_link">+</a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_jeuxvideo">
                     <div class="flap_store_element_content">
                         <img class="flap_store_element_logo" src="../img/logo_jeuxvideo.png">
                         <div class="flap_store_element_title">
-                            <h3 class="text_h_blue text_h3">ANIMATION 3D</h3>
-                            <h3 class="text_h_blue text_h3">JEUX VIDEO</h3>
+                            <h3 class=" ">ANIMATION 3D</h3>
+                            <h3 class=" ">JEUX VIDEO</h3>
                         </div>
+                        <div class="flap_store_element_description margin_section">
+                            <p> Developpement Web</p>
+                            <p> Developpement Logiciel</p>
+                            <p> Infrastructure Réseau</p>
+                        </div>
+                        <a href="list/4" class="flap_store_element_link">+</a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_web">
                     <div class="flap_store_element_content">
                         <img class="flap_store_element_logo" src="../img/logo_web.png">
                         <div class="flap_store_element_title">
-                            <h3 class="text_h_blue text_h3">GRAPHISME</h3>
-                            <h3 class="text_h_blue text_h3">DESIGN</h3>
+                            <h3 class=" ">GRAPHISME</h3>
+                            <h3 class=" ">DESIGN</h3>
                         </div>
+                        <div class="flap_store_element_description margin_section">
+                            <p> Developpement Web</p>
+                            <p> Developpement Logiciel</p>
+                            <p> Infrastructure Réseau</p>
+                        </div>
+                        <a href="list/5" class="flap_store_element_link">+</a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_audiovisuel">
                     <div class="flap_store_element_content">
                         <img class="flap_store_element_logo" src="../img/logo_audiovisuel.png">
                         <div class="flap_store_element_title">
-                            <h3 class="text_h_blue text_h3">AUDIOVISUEL</h3>
+                            <h3 class=" ">AUDIOVISUEL</h3>
                         </div>
+                        <div class="flap_store_element_description margin_section">
+                            <p> Developpement Web</p>
+                            <p> Developpement Logiciel</p>
+                            <p> Infrastructure Réseau</p>
+                        </div>
+                        <a href="list/3" class="flap_store_element_link">+</a>
                     </div>
                 </div>
             </div>

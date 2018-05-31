@@ -81,24 +81,34 @@
         <!--- Main--------------------------->
         <main class="text_page">
             <section class="margin_section padding_side">
-                <h1 class="text_h text_h1"> <?=($profils[$idProfil]->getTitle()) ?></h1>
+                <h1 class="text_h "> <?=($profils[$idProfil]->getTitle()) ?></h1>
+            </section>
+
+            <section class="margin_section padding_side text_page_left markdown">
+                <p><?php $parsedown = new Parsedown();
+                        print $parsedown->text($profils[$idProfil]->getDescription())
+                    ?>
+                </p>
             </section>
 
             <section class="margin_section padding_side text_page_left">
-                <p><?php $parsedown = new Parsedown();
-                            print $parsedown->text($profils[$idProfil]->getDescription()) ?></p>
-                <p><?php for ($i=0; $i < sizeof($profils[$idProfil]->getSkills()); $i++) {
-                        print($profils[$idProfil]->getSkills()[$i]);
-                        if ($i != sizeof($profils[$idProfil]->getSkills())-1) {
-                            printf('//');
+                <p><?php
+                        $output="";
+                        for ($i=0; $i < sizeof($profils[$idProfil]->getSkills()); $i++) {
+                            $output.=$profils[$idProfil]->getSkills()[$i];
+                            if ($i != sizeof($profils[$idProfil]->getSkills())-1) {
+                                $output.='<span> // </span>';
+                            }
+
                         }
-                    }?></p>
+                        echo $output;
+                    ?></p>
             </section>
 
             <section class="margin_section padding_side filter">
-                <h2 class="text_h text_h2"> Contact</h2>
 
                 <form class="form" action="" method="post">
+                    <h2 class="text_h text_h2"> Contact</h2>
                     <input type="hidden" name="formSubmit" value="mail">
                     <input type="hidden" name="idForm" value="2">
                     <h4 class="text_h  text_page_left form_element"><?=($profils[$idProfil]->getTitle()) ?></h4>
