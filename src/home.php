@@ -37,6 +37,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="href="../public/fontawesome-free-5.0.13"/>
 </head>
 
 <body>
