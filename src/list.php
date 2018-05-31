@@ -49,6 +49,40 @@
 
 
  <body>
+     <script>
+     document.addEventListener("DOMContentLoaded",function(){
+         console.log("[DOM] Loaded")
+
+         isAddDisplayed = false;
+         isFilterDisplayed = false;
+
+        document.getElementById('btn_filter').addEventListener("click", function(){
+         document.getElementById('form_add').classList.add("hide_form");
+         if (isFilterDisplayed == true) {
+             document.getElementById('form_filter').classList.add("hide_form");
+             isFilterDisplayed = false;
+             isAddDisplayed = false;
+         } else {
+             document.getElementById('form_filter').classList.remove("hide_form");
+             isFilterDisplayed = true;
+             isAddDisplayed = false;
+         }
+        });
+
+        document.getElementById('btn_add').addEventListener("click", function(){
+         document.getElementById('form_filter').classList.add("hide_form");
+         if (isAddDisplayed == true) {
+             document.getElementById('form_add').classList.add("hide_form");
+             isAddDisplayed = false;
+             isFilterDisplayed = false;
+         } else {
+             document.getElementById('form_add').classList.remove("hide_form");
+             isAddDisplayed = true;
+             isFilterDisplayed = false;
+         }
+        });
+    })
+     </script>
      <!--- Header --------------------------->
      <header class="header text_headfoot">
          <nav class="header_ahead">
@@ -90,12 +124,12 @@
          </section>
 
          <section class="margin_section padding_side btns_form">
-             <a href="#" class="btn btn_blue text_btn btn_filter btns_form_element"> Filter </a>
-             <a href="#" class="btn btn_red text_btn bttn_add btns_form_element"> Ajouter </a>
+             <a id="btn_filter" class="btn btn_blue text_btn btns_form_element"> Filter </a>
+             <a id="btn_add" class="btn btn_red text_btn  btns_form_element"> Ajouter </a>
          </section>
 
          <!---Filter--------------------->
-         <section class="margin_section padding_side filter">
+         <section id="form_filter" class="margin_section padding_side filter hide_form">
              <form class="form" action="" method="post">
                  <h2 class="text_h text_h_white"> Filtrer les resultats</h2>
                  <div class="form_element">
@@ -144,7 +178,7 @@
          </section>
 
          <!---ADD--------------------->
-         <section class="margin_section padding_side add">
+         <section id="form_add" class="margin_section padding_side add hide_form">
              <form class="form" action="<?=getURL()?>" method="post">
                  <input type="hidden" name="formSubmit" value="add">
                  <input type="hidden" name="idForm" value="2">
