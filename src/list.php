@@ -14,11 +14,6 @@
     //     var_dump($comps);
     // }
 
-    // if (isset($_POST['search'])) {
-    //     $offersFilter = searchOffers($_POST['search']);
-    //     var_dump($profils);
-    // }
-
  ?>
  <!doctype html>
  <html lang="en">

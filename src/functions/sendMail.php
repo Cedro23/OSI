@@ -25,6 +25,7 @@ require_once("../vendor/autoload.php");
 
         // Send the message
         $result = $mailer->send($message);
+        echo '<script>alert("Votre demande de contact a bien été envoyée !");</script>';
     }
 
 ?>
