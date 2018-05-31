@@ -51,9 +51,6 @@ hr{
     color: #e94e6d;
     font-weight: 700;
 }
-.text_h_blue{
-    color: #23b2a4;
-}
 
 h1{
     font-size: 3.6rem;
@@ -66,11 +63,21 @@ h2{
 h3{
     font-size: 2.2rem;
     margin-bottom: 1%;
+
 }
 h4{
     font-size: 1.8rem;
 }
 
+.flap_store_element_title h3{
+    color: #23b2a4;
+}
+.result h3{
+    color: #e94e6d;
+}
+.markdown h2{
+    margin: 7% 0% 2% 0%;
+}
 .form h4{
     color: #fff;
     margin-bottom: 1%;
@@ -85,6 +92,9 @@ h4{
     font-size: 2rem;
 }
 
+span {
+    color: #e94e6d;
+}
 @media screen and (max-device-width: 500px) {
     .text_h1{
         margin-bottom: 5%;

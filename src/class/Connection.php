@@ -100,24 +100,31 @@
         }
 
         function addOfferSkills($_id, $_skills){
+            $values = "";
+            $index= 0;
+            foreach ($_skills as $skill) {
+                $values.="(:offer_id,:skill_".$skill.")";
+                if($index < sizeof($_skills)-1)$values.=",";
+                $index+=1;
+            }
+            
             $statement = $this->connection->prepare("INSERT INTO osi_offer_skill (offer_id,skill_id)
-                VALUES (:offer_id,:skill_id);
+                VALUES ".$values.";
             ");
             foreach ($_skills as $skill) {
                 $statement->bindValue(':offer_id',$_id);
-                $statement->bindValue(':skill_id',$skill);
+                $statement->bindValue(':skill_'.$skill,$skill);
             }
             $statement->execute();
         }
 
         function updateOffer($_posts){
             $statement = $this->connection->prepare("UPDATE osi_offer
-                SET id=':id',title=':title',year=':year',formation=':formation',contract=':contract',description=':description',period=':period'
+                SET id=:id,title=:title,year=:year,formation=:formation,contract=:contract,description=:description,period=:period
                 WHERE id = :id
             ");
             foreach ($_posts as $key => $post) {
                 if($key != "skills")$statement->bindValue(':'.$key,$post);
-                var_dump($key);
             }
             $statement->execute();
             $this->deleteSkills($_posts["id"]);

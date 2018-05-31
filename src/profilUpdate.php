@@ -85,7 +85,7 @@
                 </div>
                 <!--Description -->
                 <div class="form_element text_page_left">
-                    <h4 class="text_h  ">Description</h4>
+                    <h4 class="text_h ">Description</h4>
                     <textarea name="description" rows="8" cols="80" placeholder="" ><?= $profils[$idProfil]->getDescription()?></textarea>
                 </div>
 
@@ -137,7 +137,7 @@
                 </div>
                 <!--Submit -->
                 <div class="form_element">
-                    <button type="submit" class="btn btn_blue btn_submit">Ajouter</button>
+                    <button type="submit" class="btn btn_blue btn_submit">Modifier</button>
                 </div>
             </form>
         </section>
