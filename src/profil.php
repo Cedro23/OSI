@@ -43,7 +43,6 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="../css/style.css"/>
-        <link rel="stylesheet" href="../font-awesome/css/fontawesome.min.css"/>
     </head>
     <body>
         <!--- Header --------------------------->
