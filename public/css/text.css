@@ -78,6 +78,9 @@ h4{
 .markdown h2{
     margin: 7% 0% 2% 0%;
 }
+.form h2{
+    color: #fff;
+}
 .form h4{
     color: #fff;
     margin-bottom: 1%;

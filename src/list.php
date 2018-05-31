@@ -226,9 +226,9 @@
                                 echo $output;
                             ?>
                         </p>
-                        <a href="profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
-                        <a href="profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
-                        <a href="profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
+                        <a href="/profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
+                        <a href="/profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
+                        <a href="/profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
                      </li>
                  <?php endforeach; ?>
              </ul>
