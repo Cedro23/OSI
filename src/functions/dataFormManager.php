@@ -2,8 +2,13 @@
 
 require_once(__DIR__.'/../class.php');
 
+
 //check url for form action
 function checkURLForm(){
+    if (isset($_POST["delete"])){
+        getConnection()->deleteOffer($_POST["delete"]);
+    }
+
     $session = getSession();
     if (isset($_POST["formSubmit"])){
         $id = $_POST["idForm"];

@@ -49,13 +49,16 @@
     background-image: url("../img/background_flap_web.jpg");
 }
 .flap_store_element_link{
+    text-align: center;
     align-self: auto;
+    color: #23b2a4;
     padding: 20% ;
 }
 /*hover*/
 .flap_store_element:hover{
     background-color: white;
     background-image: none;
+    padding: 5%;
 }
 .flap_store_element:hover > .flap_store_element_content{
     align-self: auto;
@@ -68,6 +71,7 @@
 .flap_store_element:hover .flap_store_element_description{
     display: flex;
     flex-flow: column;
+    margin-top: 10%;
 }
 
 
@@ -133,5 +137,5 @@
     flex: 2;
 }
 .result_widget{
-    display: none;
+    text-align: center;
 }

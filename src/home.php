@@ -37,7 +37,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css"/>
-    <link rel="stylesheet" href="href="../public/fontawesome-free-5.0.13"/>
+    <link rel="stylesheet" href="../fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.css"/>
 </head>
 
 <body>
@@ -95,7 +95,7 @@
                             <p> Developpement Logiciel</p>
                             <p> Infrastructure Réseau</p>
                         </div>
-                        <a href="list/1" class="flap_store_element_link">+</a>
+                        <a href="list/1" class="flap_store_element_link"><i class="fas fa-plus-circle fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_business">
@@ -110,7 +110,7 @@
                             <p> Developpement Logiciel</p>
                             <p> Infrastructure Réseau</p>
                         </div>
-                        <a href="list/2" class="flap_store_element_link">+</a>
+                        <a href="list/2" class="flap_store_element_link"><i class="fas fa-plus-circle fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_jeuxvideo">
@@ -125,7 +125,7 @@
                             <p> Developpement Logiciel</p>
                             <p> Infrastructure Réseau</p>
                         </div>
-                        <a href="list/4" class="flap_store_element_link">+</a>
+                        <a href="list/4" class="flap_store_element_link"><i class="fas fa-plus-circle fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_web">
@@ -140,7 +140,7 @@
                             <p> Developpement Logiciel</p>
                             <p> Infrastructure Réseau</p>
                         </div>
-                        <a href="list/5" class="flap_store_element_link">+</a>
+                        <a href="list/5" class="flap_store_element_link"><i class="fas fa-plus-circle fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_audiovisuel">
@@ -154,7 +154,7 @@
                             <p> Developpement Logiciel</p>
                             <p> Infrastructure Réseau</p>
                         </div>
-                        <a href="list/3" class="flap_store_element_link">+</a>
+                        <a href="list/3" class="flap_store_element_link"><i class="fas fa-plus-circle fa-5x"></i></a>
                     </div>
                 </div>
             </div>

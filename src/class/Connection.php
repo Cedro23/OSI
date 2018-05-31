@@ -107,7 +107,7 @@
                 if($index < sizeof($_skills)-1)$values.=",";
                 $index+=1;
             }
-            
+
             $statement = $this->connection->prepare("INSERT INTO osi_offer_skill (offer_id,skill_id)
                 VALUES ".$values.";
             ");
@@ -133,17 +133,19 @@
 
         function deleteSkills($_id){
             $statement = $this->connection->prepare("DELETE FROM osi_offer_skill
-                WHERE offer_id = :_id ;
+                WHERE offer_id = :_id
             ");
             $statement->bindValue(':_id', $_id);
+            $statement->execute();
         }
 
         function deleteOffer($_id){
             $statement = $this->connection->prepare("DELETE FROM osi_offer
-                WHERE id = :_id ;
+                WHERE id = :_id
             ");
             $statement->bindValue(':_id', $_id);
-            $this->deleteSkills($_posts["id"]);
+            $statement->execute();
+            $this->deleteSkills($_id);
         }
     }
  ?>

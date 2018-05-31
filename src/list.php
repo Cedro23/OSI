@@ -44,21 +44,11 @@
 
      <!-- CSS -->
      <link rel="stylesheet" href="../css/style.css"/>
-     <link rel="stylesheet" href="../public/fontawesome-free-5.0.13"/>
+     <link rel="stylesheet" href="../fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.css"/>
  </head>
 
 
  <body>
-     <script>
-     $(".filter").addClass("hide_form");
-     $(".add").addClass("hide_form");
-     $(".btn_filter").click(function(){
-         $(".filter").removeClass("hide_form");
-     })
-     $(".btn_add").click(function(){
-         $(".add").removeClass("hide_form");
-     })
-     </script>
      <!--- Header --------------------------->
      <header class="header text_headfoot">
          <nav class="header_ahead">
@@ -134,7 +124,7 @@
                  <div class="form_element form_check text_page_left">
                      <div class="form_check_title">
                          <h4 class="form_check_title_text text_h_white title_text text_h ">Compétences</h4>
-                         <a href="" class="form_check_title_btn"><i class="fas fangle-down"></i></a>
+                         <a href="" class="form_check_title_btn"><i class="fas fa-angle-down fa-lg"></i></a>
                      </div>
                      <div class="form_check_options">
                          <?php
@@ -191,7 +181,7 @@
                  <div class="form_element form_check text_page_left">
                      <div class="form_check_title">
                          <h4 class="form_check_title_text text_h  text_h_white">Compétences</h4>
-                         <a href="" class="form_check_title_btn"><i class="fas fa-angle-down"></i></a>
+                         <a href="" class="form_check_title_btn"><i class="fas fa-angle-down fa-lg"></i></a>
                      </div>
                      <div class="form_check_options">
                          <?php
@@ -223,6 +213,7 @@
                      <li class="result">
                          <h3 class="text_h result_element result_element_2"><a href="profil/<?=$item->getId()?>"><?= $item->getTitle()?></a></h3>
                          <p class="result_element"><?= $item->getContract() ?></p>
+                         <p class="result_element"><?= $item->getYear() ?></p>
                          <p class="result_element result_element_2">
                             <?php
                                 $i = 0;
@@ -237,9 +228,12 @@
                                 echo $output;
                             ?>
                         </p>
-                        <a href="/profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
-                        <a href="/profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
-                        <a href="/profil/<?=$item->getId()?>" class=" result_element btn btn_blue text_btn"> button </a>
+                        <a href="/profil/<?=$item->getId()?>" class=" result_element result_widget "> <i class="fas fa-plus-circle fa-3x"></i> </a>
+                        <a href="/profilUpdate/<?=$item->getId()?>" class=" result_element result_widget"> <i class="fas fa-pen-square fa-3x"></i> </a>
+                        <form class="result_element result_widget" action="" method="post">
+                            <input type="hidden" value="<?=$item->getId()?>" name ="delete">
+                            <button type="submit" name="button" class=" "><i class="fas fa-times fa-3x"> </i></button>
+                        </form>
                      </li>
                  <?php endforeach; ?>
              </ul>

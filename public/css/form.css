@@ -70,6 +70,7 @@
 }
 .form_check_title_btn{
     flex: 1;
+    color: white;
     visibility: hidden;
 }
 
@@ -133,6 +134,11 @@ input,textarea,select,label{
 option{
     background-color: transparent;
     color: #000;
+}
+
+button{
+    background-color: transparent;
+    border:none;
 }
 
 /*select*/
