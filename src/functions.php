@@ -19,12 +19,17 @@ $skills;
 if(isset($idFormation)){
     initOffers();
     initSkills();
-    initProfils();
+    initProfils($offers);
 
     checkURLForm();
 
     initOffers();
-    initProfils();
+    if (isset($_POST['search'])) {
+        $offersFilter = searchOffers($_POST['search']);
+        initProfils($offersFilter);
+    }else{
+        initProfils($offers);
+    }
 }
 
 
@@ -49,10 +54,9 @@ function initOffers(){
     }
 }
 
-function initProfils(){
+function initProfils($_offers){
     global $profils;
-    global $offers;
-    $profils = updateProfil($offers, getConnection());
+    $profils = updateProfil($_offers, getConnection());
 }
 //get current URL page
 function getURL(){
