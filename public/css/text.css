@@ -127,6 +127,9 @@ span {
 /*header*/
 .text_header_title{
     white-space: nowrap;
+}
+
+.text_header_title a{
     font-size: 2rem;
 }
 

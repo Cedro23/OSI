@@ -7,7 +7,7 @@ require_once("functions/searchOffers.php");
 
 $connection = new Connection("mysql:dbname=osi;host=127.0.0.1", "root", "");
 $session = new Session();
-$offers = $connection->getTableOffer();
+$offers;
 $profils;
 
 $contracts = $connection->getTableContract();
@@ -19,17 +19,9 @@ $skills;
 if(isset($idFormation)){
     initOffers();
     initSkills();
-    initProfils($offers);
+    initProfils();
 
     checkURLForm();
-
-    initOffers();
-    if (isset($_POST['search'])) {
-        $offersFilter = searchOffers($_POST['search']);
-        initProfils($offersFilter);
-    }else{
-        initProfils($offers);
-    }
 }
 
 
@@ -54,9 +46,10 @@ function initOffers(){
     }
 }
 
-function initProfils($_offers){
+function initProfils(){
     global $profils;
-    $profils = updateProfil($_offers, getConnection());
+    global $offers;
+    $profils = updateProfil($offers, getConnection());
 }
 //get current URL page
 function getURL(){

@@ -34,13 +34,14 @@
     flex-flow: column;
     justify-content: center;
     text-align: center;
+    margin :auto 2%;
 }
 .header_ahead_menu_title{
-    
+
 }
 
-.header_ahead_element_select{
-
+.header_ahead_element_select>a{
+    border-bottom: 2px solid white;
 }
 
 /*img*/

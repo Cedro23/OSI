@@ -48,12 +48,6 @@
 .flap_store_element_web{
     background-image: url("../img/background_flap_web.jpg");
 }
-.flap_store_element_link{
-    text-align: center;
-    align-self: auto;
-    color: #23b2a4;
-    padding: 20% ;
-}
 /*hover*/
 .flap_store_element:hover{
     background-color: white;
@@ -83,6 +77,9 @@
     .flap_store_element{
         height: 40vh;
         justify-content: center;
+    }
+    .flap_store_element_logo{
+        width: 100%;
     }
 }
 
@@ -136,6 +133,12 @@
 .result_element_2{
     flex: 2;
 }
-.result_widget{
-    text-align: center;
+
+@media screen and (max-device-width: 900px) {
+    .result{
+        flex-flow: column;
+    }
+    .result_element.icon{
+        align-self: center;
+    }
 }

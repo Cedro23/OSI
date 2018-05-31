@@ -42,29 +42,26 @@
                 <img class="header_ahead_logo_img" src="../img/logo_ynov_campus_rvb_blanc.png" alt="Logo Ynov">
             </picture>
             <ul class="header_ahead_element text_header_title header_ahead_menu">
-                 <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">YNOV LYON</a>
-                 </li>
-                 <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">FORMATIONS</a>
-                 </li>
-                 <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">ENTREPRISES</a>
-                     <hr class="header_ahead_element_select"></hr>
-                 </li>
-                 <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">BLOG</a>
-                 </li>
-                 <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title btn btn_blue btn_header" href="">CANDIDATER</a>
-                 </li>
-                 <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">CONTACT</a>
-                 </li>
-             </ul>
-         </nav>
-         <div class="header_ahead_submenu">
-         </div>
+                <li class="header_ahead_menu_element">
+                    <a class="" href="">YNOV LYON</a>
+                </li>
+                <li class="header_ahead_menu_element">
+                    <a class="" href="">FORMATIONS</a>
+                </li>
+                <li class="header_ahead_menu_element header_ahead_element_select">
+                    <a class="" href="home/">ENTREPRISES</a>
+                </li>
+                <li class="header_ahead_menu_element">
+                    <a class="" href="">BLOG</a>
+                </li>
+                <li class="header_ahead_menu_element">
+                    <a class="" href="">CANDIDATER</a>
+                </li>
+                <li class="header_ahead_menu_element">
+                    <a class="" href="">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main  class="text_page">

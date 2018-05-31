@@ -49,27 +49,25 @@
             </picture>
             <ul class="header_ahead_element text_header_title header_ahead_menu">
                 <li class="header_ahead_menu_element">
-                    <a class="header_ahead_menu_title" href="">YNOV LYON</a>
+                    <a class="" href="">YNOV LYON</a>
                 </li>
                 <li class="header_ahead_menu_element">
-                    <a class="header_ahead_menu_title" href="">FORMATIONS</a>
+                    <a class="" href="">FORMATIONS</a>
+                </li>
+                <li class="header_ahead_menu_element header_ahead_element_select">
+                    <a class="" href="home/">ENTREPRISES</a>
                 </li>
                 <li class="header_ahead_menu_element">
-                    <a class="header_ahead_menu_title" href="">ENTREPRISES</a>
+                    <a class="" href="">BLOG</a>
                 </li>
                 <li class="header_ahead_menu_element">
-                    <a class="header_ahead_menu_title" href="">BLOG</a>
+                    <a class="" href="">CANDIDATER</a>
                 </li>
                 <li class="header_ahead_menu_element">
-                    <a class="header_ahead_menu_title" href="">CANDIDATER</a>
-                </li>
-                <li class="header_ahead_menu_element">
-                    <a class="header_ahead_menu_title" href="">CONTACT</a>
+                    <a class="" href="">CONTACT</a>
                 </li>
             </ul>
         </nav>
-        <div class="header_ahead_submenu">
-        </div>
     </header>
 
     <!--- Main--------------------------->
@@ -95,7 +93,7 @@
                             <p> Developpement Logiciel</p>
                             <p> Infrastructure Réseau</p>
                         </div>
-                        <a href="list/1" class="flap_store_element_link"><i class="fas fa-plus-circle fa-5x"></i></a>
+                        <a href="/list/1" class="icon icon_plus"><i class="fas fa-plus-circle fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_business">
@@ -110,7 +108,7 @@
                             <p> Developpement Logiciel</p>
                             <p> Infrastructure Réseau</p>
                         </div>
-                        <a href="list/2" class="flap_store_element_link"><i class="fas fa-plus-circle fa-5x"></i></a>
+                        <a href="/list/2" class="icon icon_plus"><i class="fas fa-plus-circle fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_jeuxvideo">
@@ -125,7 +123,7 @@
                             <p> Developpement Logiciel</p>
                             <p> Infrastructure Réseau</p>
                         </div>
-                        <a href="list/4" class="flap_store_element_link"><i class="fas fa-plus-circle fa-5x"></i></a>
+                        <a href="/list/4" class="icon icon_plus"><i class="fas fa-plus-circle fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_web">
@@ -140,7 +138,7 @@
                             <p> Developpement Logiciel</p>
                             <p> Infrastructure Réseau</p>
                         </div>
-                        <a href="list/5" class="flap_store_element_link"><i class="fas fa-plus-circle fa-5x"></i></a>
+                        <a href="/list/5" class="icon icon_plus"><i class="fas fa-plus-circle fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="flap_store_element flap_store_element_audiovisuel">
@@ -154,7 +152,7 @@
                             <p> Developpement Logiciel</p>
                             <p> Infrastructure Réseau</p>
                         </div>
-                        <a href="list/3" class="flap_store_element_link"><i class="fas fa-plus-circle fa-5x"></i></a>
+                        <a href="/list/3" class="icon icon_plus"><i class="fas fa-plus-circle fa-5x"></i></a>
                     </div>
                 </div>
             </div>
