@@ -14,7 +14,7 @@ $contracts = $connection->getTableContract();
 
 $formations = $connection->getTableFormation();
 $years = $connection->getTableYear();
-$skills = $connection->getTableSkill($idFormation);
+$skills;
 
 if(isset($idFormation)){
     initOffers();

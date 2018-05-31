@@ -69,7 +69,7 @@
 
     <main  class="text_page">
         <section class="margin_section padding_side">
-            <form class="form update" action="list" method="post">
+            <form class="form update" action="<?=$idProfil?>" method="post">
                 <!--Hiden input ---------------------->
                 <input type="hidden" name="formSubmit" value="update">
                 <input type="hidden" name="idForm" value="2">
@@ -86,13 +86,13 @@
                 <!--Description -->
                 <div class="form_element text_page_left">
                     <h4 class="text_h  ">Description</h4>
-                    <textarea name="description" rows="8" cols="80" placeholder="<?= $profils[$idProfil]->getDescription()?>"></textarea>
+                    <textarea name="description" rows="8" cols="80" placeholder="" ><?= $profils[$idProfil]->getDescription()?></textarea>
                 </div>
 
                 <div class="form_element form_element_row">
                     <!--Contract -->
                     <div class="form_select">
-                        <h4 class="text_h   form_select_element">Contrat</h4>
+                        <h4 class="text_h form_select_element">Contrat</h4>
                         <select class="form_select_element" name="contract">
 
                             <option value="<?= $offers[$idProfil]["contract"]?>"><?= $profils[$idProfil]->getContract()?> </option>

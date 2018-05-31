@@ -53,6 +53,7 @@ class FormAdd extends Form
         if(!$this->checkPost("description")) return false;
         if(!$this->checkPost("period")) return false;
         if(!$this->getSkills()) return false;
+
         return true;
     }
     public function callFormFunction(){
@@ -63,8 +64,9 @@ class FormAdd extends Form
 class FormUpdate extends FormAdd
 {
     public function getPostData(){
-        if(!checkPost("id"))return false;
-        return parrent::getPostData();
+        if(!$this->checkPost("id"))return false;
+        parent::getPostData();
+        return true;
     }
 
     public function callFormFunction(){
