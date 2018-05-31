@@ -27,6 +27,11 @@ p{
 a{
     color: inherit;
     text-decoration: inherit;
+    font-size: 1.6rem;
+}
+
+button{
+    font-size: 1.6rem;
 }
 
 hr{
@@ -134,5 +139,6 @@ span {
 /*button*/
 .text_btn{
     color: #ffff;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
 }

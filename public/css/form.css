@@ -12,8 +12,20 @@
     flex-flow: column;
 }
 
+/*------------------Btn Form----------------*/
+.btns_form{
+    display: flex;
+    flex-flow: row;
+}
 
+.btns_form_element{
+    margin: 5%;
+    flex: 1;
+}
 /*------------------FORM----------------*/
+.hide_form{
+    display: none;
+}
 .form{
     display: flex;
     flex-flow: column;
@@ -80,12 +92,19 @@
     .form_check_title_btn{
         visibility: visible;
     }
+    input,select{
+        width: 100%;
+    }
 
 }
 
 @media screen and (max-device-width: 500px) {
     .form{
         padding: 5% 10% 0% 10%;
+    }
+
+    .btns_form{
+        flex-flow: column;
     }
 }
 

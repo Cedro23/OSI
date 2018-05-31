@@ -137,7 +137,7 @@
                         <textarea name="comments" rows="8" cols="80" placeholder="Commentaires"></textarea>
                     </div>
                     <div class="form_element">
-                        <button type="submit" class="btn btn_submit">Envoyer</button>
+                        <button type="submit" class="btn btn_red btn_submit">Envoyer</button>
                     </div>
                 </form>
             </section>

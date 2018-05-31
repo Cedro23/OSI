@@ -44,10 +44,24 @@
 
      <!-- CSS -->
      <link rel="stylesheet" href="../css/style.css"/>
+
+      <!-- JS -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
  </head>
 
 
  <body>
+     <script>
+     $(".filter").addClass("hide_form");
+     $(".add").addClass("hide_form");
+     $(".btn_filter").click(function(){
+         $(".filter").removeClass("hide_form");
+     })
+     $(".btn_add").click(function(){
+         $(".add").removeClass("hide_form");
+     })
+     </script>
      <!--- Header --------------------------->
      <header class="header text_headfoot">
          <nav class="header_ahead">
@@ -86,6 +100,11 @@
              <h1 class="text_h ">Chercher le bon profil - <?=getFormations()[$idFormation]["name"]?></h1>
              <p> Toute l’année nos étudiants sont à l’écoute d’opportunités.</p>
              <p> Vous pouvez recruter des étudiants de Bachelor en stage temps complet de juin à septembre, et des étudiants de Mastère en alternance (contrat de professionnalisation) tout au long de l’année. </p>
+         </section>
+
+         <section class="margin_section padding_side btns_form">
+             <a href="#" class="btn btn_blue text_btn btn_filter btns_form_element"> Filter </a>
+             <a href="#" class="btn btn_red text_btn bttn_add btns_form_element"> Ajouter </a>
          </section>
 
          <!---Filter--------------------->

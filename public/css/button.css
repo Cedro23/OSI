@@ -1,6 +1,7 @@
 .btn:hover{
     background-color: transparent;
-    border-width: 5px;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .btn{
@@ -10,6 +11,7 @@
     border-radius: 25px;
     color: white;
 }
+
 .btn_header{
     padding: 5%;
 }
@@ -37,6 +39,12 @@
     width: 100%;
 }
 
+.btn_filter{
+
+}
+.bttn_add{
+    
+}
 .btn_mobile{
     display: none;
 }
