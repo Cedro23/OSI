@@ -91,7 +91,7 @@ function getProfils(){
 
 function updateProfil($_offers, $_connection)
 {
-    $profils;
+    $profils = null;
     foreach ($_offers as $key=> $item) {
         $itemSkills = NULL;
         $skills = $_connection->getTableUniqSkill($key);
