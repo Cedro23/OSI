@@ -124,7 +124,7 @@
          </section>
 
          <section class="margin_section padding_side btns_form">
-             <a id="btn_filter" class="btn btn_blue text_btn btns_form_element"> Filter </a>
+             <a id="btn_filter" class="btn btn_blue text_btn btns_form_element"> Filtrer </a>
              <a id="btn_add" class="btn btn_red text_btn  btns_form_element"> Ajouter </a>
          </section>
 
@@ -182,7 +182,7 @@
              <form class="form" action="<?=getURL()?>" method="post">
                  <input type="hidden" name="formSubmit" value="add">
                  <input type="hidden" name="idForm" value="2">
-                 <input type="hidden" name="formation" value="1">
+                 <input type="hidden" name="formation" value="<?= $idFormation ?>">
                  <h2 class="text_h text_h_white"> Ajouter une offre</h2>
                  <div class="form_element text_page_left">
                      <h4 class="text_h  text_h_white">Titre</h4>

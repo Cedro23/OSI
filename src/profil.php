@@ -1,12 +1,11 @@
 <?php
-    require_once("class.php");
     require_once("functions.php");
     require_once("../vendor/autoload.php");
 
 
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
     foreach ($offers as $key=>$field) {
-        if ($key==1){
+        if ($key==$idProfil){
             $description="Profil de l'offre: ".$field['description'];
             $title=$field['title'] ;
             $id=$key;
@@ -33,7 +32,7 @@
         <link rel="canonical" href=<?php print($url) ?> />
     	<meta property="og:type" content="website">
     	<meta property="og:title" content=<?php print($title) ?>>
-    	<meta property="og :description" content=<?php print($description) ?>>
+    	<meta property="og:description" content=<?php print($description) ?>>
         <meta property="og:url"  content=<?php print($url)?>>
     	<meta property="og:locale" content="fr-FR">
     	<script type="text/javascript" async src=https://www.google-analytics.com/analytics.js></script>
@@ -43,6 +42,8 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="../css/style.css"/>
+        <link rel="stylesheet" href="../fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.css"/>
+
     </head>
     <body>
         <!--- Header --------------------------->
@@ -81,6 +82,7 @@
         <main class="text_page">
             <section class="margin_section padding_side">
                 <h1 class="text_h "> <?=($profils[$idProfil]->getTitle()) ?></h1>
+                <a href="/profilUpdate/<?= $profils[$idProfil]->getId()?>" class=" result_element result_widget"> <i class="fas fa-pen-square fa-2x"></i> </a>
             </section>
 
             <section class="margin_section padding_side text_page_left markdown">
