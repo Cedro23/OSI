@@ -199,8 +199,10 @@
              </form>
          </section>
 
+         <?php if (sizeof($profils)>0): ?>
          <section class="padding_side results text_page_left">
              <ul class="results_list">
+
                  <?php foreach ($profils as $item): ?>
                      <li class="result">
                          <h3 class="text_h result_element result_element_2"><a href="profil/<?=$item->getId()?>"><?= $item->getTitle()?></a></h3>
@@ -226,6 +228,11 @@
                  <?php endforeach; ?>
              </ul>
          </section>
+     <?php else: ?>
+         <section class="margin_section">
+             <p>Il n'y a aucun resultats correspondant</p>
+         </section>
+     <?php endif; ?>
      </main>
 
  </body>
