@@ -122,8 +122,30 @@
             return $offer;
         }
 
-        public function getBySkills($_skills){
+        public function getBySkills($_skills, $_idFormation){
+            $values = "(";
+            $index= 0;
 
+            foreach ($_skills as $skill) {
+                $values.=":skill_".$skill;
+                if($index < sizeof($_skills)-1)$values.=",";
+                $index+=1;
+            }
+            $values.= ")";
+            var_dump($values);
+
+            $statement = $this->connection->prepare("SELECT * FROM osi_offer
+                WHERE formation = :_idFormation
+                AND id = osi_offer_skill.offer_id
+                AND osi_offer_skill.skill_id IN (1,2)/*".$values."*/;
+            ");
+
+            $statement->bindValue(':_idFormation', $_idFormation);
+            foreach ($_skills as $skill) {
+                $statement->bindValue(':skill_'.$skill,$skill);
+            }
+
+            $statement->execute();
         }
 
 
