@@ -18,7 +18,7 @@ Dans ce fichier vous pourrez trouver comment mettre en place notre projet.
 
 Pour pouvoir analyser les différentes pages il faut remplacer l'id déjà présent par son propre ID de suivi dans le code se trouvant dans les balises <head> de chaque page comme dans l'image ci-dessous mais vous devez remplacer ce qu'il y a dans les cercles blancs par votre propre ID de suivi.
   
-  **[Id de Suivi](scriptGoogleAnalytics.JPG)**
+  **[Id de Suivi](B1_Ing_DelbecqLesueurGontard_Doc/Ressources/scriptGoogleAnalytics.JPG)**
 
 Il faut aussi penser à vérifier si la mise en place du Google Analytics a fonctionné. Pour cela il faut accéder à son site et vérifier si notre visite est enregistrée dans les rapports en temps réel.
 
