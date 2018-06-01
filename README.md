@@ -16,7 +16,9 @@ Dans ce fichier vous pourrez trouver comment mettre en place notre projet.
    + Saisissez l'URL du site Web, vous ne pouvez pas créer de propriété si le format de l'URL n'est pas correct.
    + Il faut créer une propriété dans Google Analytics. Pour cela il faut se connecter sur Google Analytics. Lors de la création de la propriété il faut faire attention à l'URL de notre site, s'il n'est pas valide la propriété ne pourra pas être créée, ainsi qu'à la génération de l'ID de suivi, un ID = un site.
 
-Pour pouvoir analyser les différentes pages il faut remplacer l'id déjà présent par son propre ID de suivi dans le code se trouvant dans les balises <head> de chaque page.
+Pour pouvoir analyser les différentes pages il faut remplacer l'id déjà présent par son propre ID de suivi dans le code se trouvant dans les balises <head> de chaque page comme dans l'image ci-dessous mais vous devez remplacer ce qu'il y a dans les cercles blancs par votre propre ID de suivi.
+  
+  **[Id de Suivi](scriptGoogleAnalytics.JPG)**
 
 Il faut aussi penser à vérifier si la mise en place du Google Analytics a fonctionné. Pour cela il faut accéder à son site et vérifier si notre visite est enregistrée dans les rapports en temps réel.
 
