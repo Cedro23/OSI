@@ -34,7 +34,7 @@ $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
                         </div>
                         <div class="form_element">
                             <h4 class="text_h  text_h_white">Password *  <span class="error icon"><?= $passwordErr?></span></h4>
-                            <input type="text" name="password" value="" placeholder="password"/>
+                            <input type="password" name="password" value="" placeholder="password"/>
                         </div>
                         <div class="form_element">
                             <button type="submit" class="btn btn_blue btn_submit">Se connecter</button>
