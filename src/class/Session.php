@@ -21,5 +21,16 @@ class Session
     public function setFormID($_id){
         $_SESSION["formID"] = $_id;
     }
+
+    public function connectAdmin($_isConnect){
+        $_SESSION['admin'] = $_isConnect;
+    }
+
+    public function getConnectionAdmin(){
+        if (isset($_SESSION["admin"])==false){
+            $_SESSION["admin"] = false;
+        }
+        return $_SESSION['admin'];
+    }
 }
  ?>
