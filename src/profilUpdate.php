@@ -31,7 +31,7 @@
     <link rel="canonical" href=<?php print($url) ?> />
     <meta property="og:type" content="website">
     <meta property="og:title" content=<?php print( "Modifiez l'offre:".$profils[$idProfil]->getTitle()) ?>>
-    <meta property="og:description" content=<?php print($description) ?>>
+    <meta property="og:description" content=<?php  ?>>
     <meta property="og:url"  content=<?php print($url)?>>
     <meta property="og:locale" content="fr-FR">
     <script type="text/javascript" async src=https://www.google-analytics.com/analytics.js></script>

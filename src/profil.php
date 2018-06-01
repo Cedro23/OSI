@@ -81,7 +81,7 @@
             <!--Profil Title -->
             <section class="margin_section padding_side">
                 <h1 class="text_h "> <?=($profils[$idProfil]->getTitle()) ?></h1>
-                <a href="/profilUpdate/<?= $profils[$idProfil]->getId()?>" class="icon"> <i class="fas fa-pen-square fa-3x"></i> </a>
+                <a href="/editProfil/<?= $profils[$idProfil]->getId()?>" class="icon"> <i class="fas fa-pen-square fa-3x"></i> </a>
             </section>
 
             <!--Description -->
