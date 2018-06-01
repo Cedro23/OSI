@@ -1,7 +1,7 @@
 <?php
     $userErr = $passwordErr ="";
     require_once("functions.php");
-
+$url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
  ?>
 
 
@@ -11,7 +11,11 @@
         <meta charset="utf-8">
         <meta name="robots" content="noindex"/>
         <meta name="robots" content="nofollow"/>
-        <title></title>
+        <meta property="og:url"  content=<?php print($url)?>>
+        <meta property="og:locale" content="fr-FR">
+        <meta property="og:title" content="Login">
+        <meta property="og :description" content="Connecte toi au compte administrateur avec ton login et ton mot de passe">
+        <title>Login</title>
         <link rel="stylesheet" href="../css/style.css"/>
         <link rel="stylesheet" href="../fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.css"/>
 

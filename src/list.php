@@ -29,7 +29,6 @@
      <meta name="author" content="">
 
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="robots" content="noodp"/>
      <link rel="canonical" href=<?php print($url) ?> />
      <meta property="og:type" content="website">
      <meta property="og:title" content="Listes des offres de Stage/CDI/Alternance par type de formation ">
