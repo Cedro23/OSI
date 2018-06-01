@@ -10,15 +10,15 @@ Paragraphe p : MontSerratLight, Serif
 Bouton : MontSerratBold, Serif
 
 
-    **Taille**
+**Taille**
 Font size : 1.6em
 
-H1 :3.6 rem (36px)
-H2 :3.0 rem (30 px), 2.0 rem(20 px)
-Paragraphe p : 1.8 rem (18px)
-Bouton: 1.2 rem (12px)
-Titre entete : 1.8 rem (18px)
-Titre footer / sous titre entête : 2.5rem 22px ;
+    * H1 :3.6 rem (36px)
+    * H2 :3.0 rem (30 px), 2.0 rem(20 px)
+    * Paragraphe p : 1.8 rem (18px)
+    * Bouton: 1.2 rem (12px)
+    * Titre entete : 1.8 rem (18px)
+    * Titre footer / sous titre entête : 2.5rem 22px ;
 
 **Colorimétrie**
   #e94e6d, rgb(35, 178, 165): h1, h2, bouton
@@ -58,7 +58,7 @@ Sur la page de l’offre sera également présent l’icône de modification exp
 Page log-in :
 Formulaire de connection avec le login et le mot de passe obligatoire.  
 Page de modification de profil :
-•	Formulaire pré-rempli avec le titre/ la description en markdown pour permettre à l’administrateur de mettre des titres ou des listes à puces par exemple pour plus de lisibilité.
-•	Gros bouton très visible d’envoie du formulaire.
-•	Pas d’envoie du formulaire tant que tous les champs obligatoires renseignés par une petite étoile ne sont pas rempli et à côté de chaque champs non conforme sera présent un warning pour dire que ce champs n’a pas été rempli ou pas correctement
-•	Enfin si un champs n’a pas été rempli et qu’il a appuyer sur le bouton pour envoyer le formulaire, les données dans les champs sont conservé pour lui éviter de tout réecrire.
+    * Formulaire pré-rempli avec le titre/ la description en markdown pour permettre à l’administrateur de mettre des titres ou des listes à puces par exemple pour plus de lisibilité.
+    * Gros bouton très visible d’envoie du formulaire.
+	* Pas d’envoi du formulaire tant que tous les champs obligatoires renseignés par une petite étoile ne sont pas rempli et à côté de chaque champs non conforme sera présent un warning pour dire que ce champs n’a pas été rempli ou pas correctement
+	* Enfin si un champs n’a pas été rempli et qu’il a appuyer sur le bouton pour envoyer le formulaire, les données dans les champs sont conservé pour lui éviter de tout réecrire.
