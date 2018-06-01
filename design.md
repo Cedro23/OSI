@@ -35,7 +35,7 @@ Font size : 1.6em
 Page qui s’insert bien dans la rubrique Recruter nos Etudiants déjà existante sur le site d’**ynovlyon**.
 Premier filtrage par **formation**-> Lorsque notre souris est sur la formation de l’étudiant, on peut voir le titre des offres avec une grosse icone **+** qui donne envie à l’utilisateur de cliquer cela le conduira à la page list avec toutes les offres de contrat concernant la formation concernée
 
-**[WireFrame Page Home](B1_Ing_DelbecqLesueurGontard_Doc\Ressources\Index.png)**
+**[WireFrame Page Home](B1_Ing_DelbecqLesueurGontard_Doc/Ressources/Index.png)**
 ## Page list
 Dans la barre de navigation en gros il y a un bouton login pour se connecter en tant qu’**administrateur**. Nous l’avons mis dans la barre de navigation car c’est la première chose qu’on voit et qui attire le regard quand on arrive sur une page : Permet à l’administrateur de ne pas avoir a chercher et de descendre dans la page pour pouvoir se connecter.
 **Titre : Recrutez-nos étudiant- titre de la formation** pour que l’utilisateur sache à tout instant la formation concernée par la liste d’offre
@@ -46,14 +46,14 @@ Le titre de l’offre est plus gros et d’une **autre couleur** pour d’une pa
 Possibilité de **filtrer les offres** avec (en mode utilisateur) un gros bouton filtrer qui appelle également à cliquer. A partir d’ici il sera possible de filtrer par **mot clé** par **niveau** (B1, B2,B3,M1et M2), par **contrat** , par **période** et par **technologie**.
 En effet en général un recruteur sait exactement le type de profil qu’il recherche et c’est pour rendre sa recherche plus **agréable** et **rapide** que nous avons instauré ce système.
 
-**[WireFrame Page List](B1_Ing_DelbecqLesueurGontard_Doc\Ressources\Liste.png)**
+**[WireFrame Page List](B1_Ing_DelbecqLesueurGontard_Doc/Ressources/Liste.png)**
 ## Page profil
 
 Sur la page **profil** en tout premier lieu nous avons décider de mettre un titre bien voyant et centré pour qu’il n’échappe pas au regard de l’utilisateur mais aussi de la personne en charge de l’**administration** qui aura accès a la page de l’offre depuis le **mail** qu’elle aura reçu si le recruteur rempli le formulaire si joint a la page. La personne en charge de l’administration aura tout de suite le contexte de l’offre
 En seconde position vient la description écrit en gros ce qui permet aux personne malvoyante de pouvoir la lire assez clairement et avec un espace suffisant entre les lignes pour permettre à l’utilisateur de ne pas se perdre dans sa lecture d’une ligne à l’autre.
 En bas de la page et en plus petit sera écrit la liste des compétences requises pour cette offre séparé par deux slashs d’une couleur différente du texte pour une question de lisibilité.
 
-**[WireFrame Page Profil](B1_Ing_DelbecqLesueurGontard_Doc\Ressources\Profil.png)**
+**[WireFrame Page Profil](B1_Ing_DelbecqLesueurGontard_Doc/Ressources/Profil.png)**
 ## En mode Administrateur    
 
 Sur la page list, il y a beaucoup d’offre de présente et l’administrateur sait l’offre qu’il cherche et n’a pas besoin de parcourir toute la liste. C’est pour faciliter sa recherche qu’il pourra,comme l’utilisateur, accéder l’onglet filtrer.
