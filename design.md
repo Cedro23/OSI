@@ -21,12 +21,12 @@ Font size : 1.6em
  * Titre footer / sous titre entête : 2.5rem 22px ;
 
 **Colorimétrie**
-  #e94e6d, rgb(35, 178, 165): h1, h2, bouton
-  #23b2a4, rgb(73,0, 43): bouton, fond filtre, ajout offre
-  #000000 : Fond navbar lors du scroll, couleur typo sur fond clair, info form
-  #ffffff : Fond page, couleur typo sur fond foncé/coloré, fond sur image
-  #363636, rgb(54, 54, 54): fond footer, strong
-  #ededed, rgb(237, 237, 237): label form ou placeholder
+ * #e94e6d, rgb(35, 178, 165): h1, h2, bouton
+ * #23b2a4, rgb(73,0, 43): bouton, fond filtre, ajout offre
+ * #000000 : Fond navbar lors du scroll, couleur typo sur fond clair, info form
+ * #ffffff : Fond page, couleur typo sur fond foncé/coloré, fond sur image
+ * #363636, rgb(54, 54, 54): fond footer, strong
+ * #ededed, rgb(237, 237, 237): label form ou placeholder
 
 ## Général:
  Possibilité de naviguer en tab index : Pratique pour l’utilisateur et pour également pour les personnes atteintes d’un handicap
