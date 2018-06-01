@@ -22,3 +22,11 @@ Pour pouvoir analyser les différentes pages il faut remplacer l'id déjà prés
 Il faut aussi penser à vérifier si la mise en place du Google Analytics a fonctionné. Pour cela il faut accéder à son site et vérifier si notre visite est enregistrée dans les rapports en temps réel.
 
 ## Google Search Console
+La Google Search Console va nous servir à obtenir les données, les outils et les diagnostics nécessaires pour gérer notre site Web.
+ * Pour commencer, cliquez sur le bouton "Connexion" ci-dessus.
+Il va nous permettre de :
+ * Analyser les clics depuis la recherche Google.
+ * Recevoir des notifications lorsque des problèmes ou des erreurs critiques se produisent.
+ * Vérifier si l'interprétation de note contenu par Google est correcte.
+Pour pouvoir bénéficier des services de la google Search console, vous devez confirmer que vous êtes bien le propriétaire via le site suivant: [searchConsole](https://www.google.com/webmasters/tools/home)
+  
