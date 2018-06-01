@@ -40,11 +40,11 @@
         public function getTableUniqSkill($_id)
         {
             $statement = $this->connection->prepare("
-                SELECT `name` FROM `osi_skill`,`osi_offer_skill` WHERE osi_offer_skill.offer_id = :_id AND osi_offer_skill.skill_id = osi_skill.id
+                SELECT osi_skill.id, `name` FROM `osi_skill`,`osi_offer_skill` WHERE osi_offer_skill.offer_id = :_id AND osi_offer_skill.skill_id = osi_skill.id
             ");
             $statement->bindValue(':_id', $_id);
             $statement->execute();
-            $UniqSkill = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $UniqSkill = $statement->fetchAll(PDO::FETCH_GROUP|PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE);
             return $UniqSkill;
         }
 

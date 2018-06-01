@@ -13,9 +13,10 @@
 
 }
 
-.icon.error{
-    color: red;
+.error.icon{
+    padding: 0% 2% 0% 2%;
 }
+
 .flap_store_element .icon{
     align-self: center;
     padding: 20%;

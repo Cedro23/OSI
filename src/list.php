@@ -1,6 +1,6 @@
 <?php
-    $titleErr = $descriptionErr = $contractErr = $yearErr = $skillsErr="";
-    $title = $description = $contract = $year = ""; $skillsCheck=[];
+    $titleErr = $descriptionErr = $contractErr = $yearErr = $skillsErr= $periodErr ="";
+    $title = $description = $contract = $year = $period =""; $skillsCheck=[];
     $searchFilter = $contractFilter = $yearFilter = ""; $skillsFilter=[];
     $backgrounds[1] = "flap_store_element_ingesup";
     $backgrounds[2] = "flap_store_element_business";
@@ -135,7 +135,7 @@
          </section>
 
          <!---Filter--------------------->
-         <section id="form_filter" class="margin_section padding_side filter hide_form">
+         <section id="form_filter" class="margin_section padding_side hide_form">
              <form class="form" action="" method="post">
                  <!--- Hidden Input--------------------------->
                  <input type="hidden" name="formSubmit" value="filter">
@@ -193,7 +193,7 @@
          </section>
 
          <!---ADD--------------------->
-         <section id="form_add" class="margin_section padding_side add ">
+         <section id="form_add" class="margin_section padding_side">
              <form class="form" action="<?=htmlspecialchars(getURL())?>" method="post">
                  <!--- Hidden Input--------------------------->
                  <input type="hidden" name="formSubmit" value="add">
@@ -204,15 +204,14 @@
                  <h2 class="text_h text_h_white"> Ajouter une offre</h2>
                  <!--Profil Title -->
                  <div class="form_element text_page_left">
-                     <h4 class="text_h  text_h_white">Titre *</h4>
+                     <h4 class="text_h  text_h_white">Titre *  <span class="error icon"><?= $titleErr?></span></h4>
                      <input type="text" name="title" value="<?= $title?>" placeholder="Titre">
-                     <span class="error icon"><i class="fas fa-exclamation-circle fa-2x"></i><?= $titleErr?></span>
                  </div>
                  <!--Description -->
                  <div class="form_element text_page_left">
-                     <h4 class="text_h  text_h_white">Description *</h4>
+                     <h4 class="text_h  text_h_white">Description * <span class="error icon"><?= $descriptionErr?></span></h4>
                      <textarea name="description" rows="8" cols="80" placeholder="Description"><?= $description?></textarea>
-                     <span class="error"><?= $descriptionErr?></span>
+
                  </div>
                  <div class="form_element form_element_row">
                      <!--Contract -->
@@ -224,7 +223,7 @@
                                  echo '<option value="'.$key.'">'.$option["name"].'</option>';
                              } ?>
                          </select>
-                         <span class="error"><?= $contractErr?></span>
+                         <span class="error icon"><?= $contractErr?></span>
                      </div>
                      <!--Year -->
                      <div class="form_select">
@@ -235,15 +234,14 @@
                                  echo '<option value="'.$key.'">'.$option["name"].'</option>';
                              } ?>
                          </select>
-                         <span class="error"><?= $yearErr?></span>
+                         <span class="error icon"><?= $yearErr?></span>
                      </div>
                  </div>
                  <!--Skills -->
                  <div class="form_element form_check text_page_left">
                      <div class="form_check_title">
-                         <h4 class="form_check_title_text text_h  text_h_white">Compétences *</h4>
+                         <h4 class="form_check_title_text text_h  text_h_white">Compétences * <span class="error icon"><?= $skillsErr?></span></h4>
                          <a href="" class="form_check_title_btn"><i class="fas fa-angle-down fa-lg"></i></a>
-                         <span class="error"><?= $skillsErr?></span>
                      </div>
                      <div class="form_check_options">
                          <?php foreach ($skills as $key => $skill): ?>
@@ -256,8 +254,8 @@
                  </div>
                  <!--Period -->
                  <div class="form_element text_page_left">
-                     <h4 class="text_h  text_h_white">Periode *</h4>
-                     <input type="text" name="period" value="" placeholder="periode">
+                     <h4 class="text_h  text_h_white">Periode * <span class="error icon"><?= $periodErr?></span></h4>
+                     <input type="text" name="period" value="<?=$period ?>" placeholder="periode">
                  </div>
                  <!--Submit -->
                  <div class="form_element">

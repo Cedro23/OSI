@@ -5,7 +5,7 @@ class FormAdd extends Form
         $postsCheck = [];
         if(!$this->checkPost("title")){
             global $titleErr;
-            $titleErr = "Entrez le titre du profil";
+            $titleErr = '<i class="fas fa-exclamation-circle fa-lg"></i> Entrez le titre du profil';
             $postsCheck[] = "false";
         } else {
             global $title;
@@ -14,7 +14,7 @@ class FormAdd extends Form
         }
         if(!$this->checkPost("contract")){
             global $contractErr;
-            $contractErr = "Entrez un contrat";
+            $contractErr = '<i class="fas fa-exclamation-circle fa-lg"></i> Entrez un contrat';
             $postsCheck[] = "false";
         } else {
             global $contract;
@@ -23,7 +23,7 @@ class FormAdd extends Form
         }
         if(!$this->checkPost("year")){
             global $yearErr;
-            $yearErr = "Entrez une année";
+            $yearErr = '<i class="fas fa-exclamation-circle fa-lg"></i> Entrez une année';
             $postsCheck[] = "false";
         } else {
             global $year;
@@ -33,7 +33,7 @@ class FormAdd extends Form
         if(!$this->checkPost("formation")) return false;
         if(!$this->checkPost("description")){
             global $descriptionErr;
-            $descriptionErr = "Entrez une description";
+            $descriptionErr = '<i class="fas fa-exclamation-circle fa-lg"></i> Entrez une description';
             $postsCheck[] = "false";
         } else {
             global $description;
@@ -42,7 +42,7 @@ class FormAdd extends Form
         }
         if(!$this->checkPost("period")){
             global $periodErr;
-            $periodErr = "Entrez une periode";
+            $periodErr = '<i class="fas fa-exclamation-circle fa-lg"></i> Entrez une periode';
             $postsCheck[] = "false";
         } else {
             global $period;
@@ -51,7 +51,7 @@ class FormAdd extends Form
         }
         if(!$this->getSkills()){
             global $skillsErr;
-            $skillsErr = "Entrez un contrat";
+            $skillsErr = '<i class="fas fa-exclamation-circle fa-lg"></i> Cochez au moins une compétence';
             $postsCheck[] = "false";
         } else {
             global $skillsCheck;

@@ -101,7 +101,7 @@
             </section>
 
             <!--- Contact Form--------------------------->
-            <section class="margin_section padding_side filter">
+            <section id="form_contact" class="margin_section padding_side">
                 <form class="form" action="" method="post">
                     <h2 class="text_h text_h2"> Contact</h2>
                     <!--Hiden input ---------------------->

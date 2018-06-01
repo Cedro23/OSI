@@ -1,15 +1,14 @@
 /*------------------FILTER----------------*/
-.filter{
+#form_filter{
     background-color: #23b2a4;
 }
 /*------------------ADD PROFIL----------------*/
-.add{
+#form_add{
     background-color: #e94e6d;
 }
 /*------------------CONTACT----------------*/
-.contact{
-    display: flex;
-    flex-flow: column;
+#form_contact{
+    background-color: #23b2a4;
 }
 
 /*------------------Btn Form----------------*/
