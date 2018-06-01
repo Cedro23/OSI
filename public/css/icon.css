@@ -22,8 +22,7 @@
     padding: 20%;
 }
 .flap_store_element .icon_plus ::before{
-    color: white;
-    background-color: #23b2a4;
+    color: #23b2a4;
 }
 
 @media screen and (max-device-width: 1024px) {

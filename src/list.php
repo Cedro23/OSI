@@ -102,9 +102,9 @@
                      <?php if($session->getConnectionAdmin() == false){
                                 echo '<a class="btn btn_blue btn_header" href="/admin">Login</a>';
                             }else {
-                             echo '<form class="result_element icon" action="" method="post">
-                                 <input type="hidden" value="<?=$item->getId()?>" name ="disconnect">
-                                 <button type="submit" name="button" class="btn btn_blue btn_header"> Logout </button>
+                             echo '<form class="btn btn_blue btn_header" action="" method="post">
+                                 <input type="hidden" value="" name ="disconnect">
+                                 <button type="submit" name="button" class="btn_header"> Logout </button>
                              </form>';
                          }
                       ?>
@@ -285,10 +285,10 @@
                             ?>
                         </p>
                         <a href="/profil/<?=$item->getId()?>" class=" result_element icon icon_plus"> <i class="fas fa-plus-circle fa-3x"></i> </a>
-                        <a href="/editProfil/<?=$item->getId()?>" class=" result_element icon <?= ($session->getConnectionAdmin() == true)?"hide":"" ?>"> <i class="fas fa-pen-square fa-3x"></i> </a>
+                        <a href="/editProfil/<?=$item->getId()?>" class=" result_element icon <?= ($session->getConnectionAdmin() == true)?"":"hide" ?>"> <i class="fas fa-pen-square fa-3x"></i> </a>
                         <form class="result_element icon" action="" method="post">
                             <input type="hidden" value="<?=$item->getId()?>" name ="delete">
-                            <button type="submit" name="button" class="<?= ($session->getConnectionAdmin() == true)?"hide":"" ?>"> <a><i class="fas fa-times fa-3x"> </i></a> </button>
+                            <button type="submit" name="button" class="<?= ($session->getConnectionAdmin() == true)?"":"hide" ?>"> <a><i class="fas fa-times fa-3x"> </i></a> </button>
                         </form>
                      </li>
                  <?php endforeach; ?>

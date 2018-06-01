@@ -2,10 +2,6 @@
     $userErr = $passwordErr ="";
     require_once("functions.php");
 
-    if (isset($_POST['username']) and isset($_POST['password'])) {
-        logAdmin($_POST['username'],$_POST['password']);
-    }
-
  ?>
 
 
@@ -38,7 +34,6 @@
                             <button type="submit" class="btn btn_blue btn_submit">Se connecter</button>
                         </div>
                     </div>
-
                 </form>
             </section>
         </main>

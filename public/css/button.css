@@ -14,6 +14,7 @@
 
 .btn_header{
     padding: 5%;
+    color: white;
 
 }
 
@@ -52,6 +53,7 @@
 .btn_mobile{
     display: none;
 }
+
 
 @media screen and (max-device-width: 1024px) {
     .btn_mobile{

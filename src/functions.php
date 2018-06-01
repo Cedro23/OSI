@@ -16,6 +16,9 @@ $formations = $connection->getTableFormation();
 $years = $connection->getTableYear();
 $skills;
 
+if($url[0] == 'admin'){
+    checkURLForm();
+}
 if(isset($idFormation)){
     initOffers();
     initSkills();

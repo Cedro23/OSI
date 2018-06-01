@@ -17,8 +17,10 @@ class FormAdmin extends Form
             $passwordErr = '<i class="fas fa-exclamation-circle fa-lg"></i>Mauvais mot de passe';
             return false;
         }
+        return true;
     }
     public function callFormFunction(){
+        var_dump("log");
         logAdmin($this->posts['username'],$this->posts['password']);
         header("Location: /home/");
     }

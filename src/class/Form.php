@@ -3,6 +3,7 @@ require_once("formsClass/FormAdd.php");
 require_once("formsClass/FormUpdate.php");
 require_once("formsClass/FormFilter.php");
 require_once("formsClass/FormMail.php");
+require_once("formsClass/FormAdmin.php");
 class Form
 {
     protected $posts = [];

@@ -10,14 +10,17 @@ function checkURLForm(){
     }
     if (isset($_POST["disconnect"])){
         $session->connectAdmin(false);
+        var_dump("aller");
     }
 
     $session = getSession();
     if (isset($_POST["formSubmit"])){
         $id = $_POST["idForm"];
+
         if ($id != $session->getFormID()){
             $form = createForm();
             if(isset($form) == false) return;
+
             if($form->getPostData()){
                 $form->callFormFunction();
 

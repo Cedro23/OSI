@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 /*-------------------TEXT----------------*/
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
 /*page*/
 .text_page{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
     color: #000;
     font-size: 1.8rem;
     text-align: center;
