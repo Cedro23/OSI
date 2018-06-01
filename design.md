@@ -34,6 +34,7 @@ Font size : 1.6em
 ## Page Home
 Page qui s’insert bien dans la rubrique Recruter nos Etudiants déjà existante sur le site d’**ynovlyon**.
 Premier filtrage par **formation**-> Lorsque notre souris est sur la formation de l’étudiant, on peut voir le titre des offres avec une grosse icone **+** qui donne envie à l’utilisateur de cliquer cela le conduira à la page list avec toutes les offres de contrat concernant la formation concernée
+
 **[WireFrame Page Home](WireFrameHome.png)**
 ## Page list
 Dans la barre de navigation en gros il y a un bouton login pour se connecter en tant qu’**administrateur**. Nous l’avons mis dans la barre de navigation car c’est la première chose qu’on voit et qui attire le regard quand on arrive sur une page : Permet à l’administrateur de ne pas avoir a chercher et de descendre dans la page pour pouvoir se connecter.
@@ -52,7 +53,7 @@ Sur la page **profil** en tout premier lieu nous avons décider de mettre un tit
 En seconde position vient la description écrit en gros ce qui permet aux personne malvoyante de pouvoir la lire assez clairement et avec un espace suffisant entre les lignes pour permettre à l’utilisateur de ne pas se perdre dans sa lecture d’une ligne à l’autre.
 En bas de la page et en plus petit sera écrit la liste des compétences requises pour cette offre séparé par deux slashs d’une couleur différente du texte pour une question de lisibilité.
 
-**[WireFrame Page Profil](WireFrameProfils.png)**
+**[WireFrame Page Profil](WireFrameProfil.png)**
 ## En mode Administrateur    
 
 Sur la page list, il y a beaucoup d’offre de présente et l’administrateur sait l’offre qu’il cherche et n’a pas besoin de parcourir toute la liste. C’est pour faciliter sa recherche qu’il pourra,comme l’utilisateur, accéder l’onglet filtrer.
