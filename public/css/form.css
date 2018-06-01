@@ -50,6 +50,7 @@
     margin: 0% 5% 5% 0%;
     margin-right: 5%;
     text-align: left;
+    white-space: nowrap;
 }
 
 
@@ -115,7 +116,6 @@
         flex-flow: column;
     }
 }
-
 
 /*input*/
 input,textarea,select{

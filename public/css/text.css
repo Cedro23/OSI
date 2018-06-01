@@ -103,6 +103,15 @@ h4{
 span {
     color: #e94e6d;
 }
+
+.error{
+    color: white;
+}
+
+span.error{
+    color: white;
+}
+
 @media screen and (max-device-width: 500px) {
     .text_h1{
         margin-bottom: 5%;

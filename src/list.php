@@ -1,5 +1,7 @@
 <?php
-
+    $titleErr = $descriptionErr = $contractErr = $yearErr = $skillsErr="";
+    $title = $description = $contract = $year = ""; $skillsCheck=[];
+    $searchFilter = $contractFilter = $yearFilter = ""; $skillsFilter=[];
     $backgrounds[1] = "flap_store_element_ingesup";
     $backgrounds[2] = "flap_store_element_business";
     $backgrounds[3] = "flap_store_element_audiovisuel";
@@ -56,7 +58,7 @@
 
 
  <body>
-     <script>
+    <script>
      document.addEventListener("DOMContentLoaded",function(){
          console.log("[DOM] Loaded")
 
@@ -144,14 +146,14 @@
                  <h2 class="text_h text_h_white"> Filtrer les resultats</h2>
                  <!--Profil Title -->
                  <div class="form_element">
-                     <input type="text" name="search" value="" placeholder="Rechercher">
+                     <input type="text" name="search" value="<?=$searchFilter?>" placeholder="Rechercher">
                  </div>
                  <div class="form_element form_element_row">
                      <!--Contract -->
                      <div class="form_select">
                          <h4 class="text_h  text_h_white form_select_element">Contrat</h4>
                          <select class="form_select_element" name="contract">
-                             <option value=""> </option>
+                             <option value="<?= $contract?>"> <?= ($contract == "")? "" : $contracts[$contract]['name']?> </option>
                              <?php foreach ($contracts as $key=>$option ) {
                                  echo '<option value="'.$key.'">'.$option["name"].'</option>';
                              } ?>
@@ -161,7 +163,7 @@
                      <div class="form_select">
                          <h4 class="text_h  text_h_white form_select_element">Année</h4>
                          <select class="form_select_element" name="year">
-                             <option value=""> </option>
+                             <option value="<?= $year?>"> <?= ($year == "")? "" : $years[$year]['name']?> </option>
                              <?php foreach ($years as $key=>$option ) {
                                  echo '<option value="'.$key.'">'.$option["name"].'</option>';
                              } ?>
@@ -175,14 +177,12 @@
                          <a class="form_check_title_btn"><i class="fas fa-angle-down fa-lg"></i></a>
                      </div>
                      <div class="form_check_options">
-                         <?php
-                            foreach ($skills as $key => $skill) {
-                                echo '<div class="option">
-                                    <input type="checkbox" id="'.$skill["name"].'" name="skills[]" value="'.$key.'">
-                                    <label for="'.$skill["name"].'">'.$skill["name"].'</label>
-                                </div>';
-                            }
-                          ?>
+                         <?php foreach ($skills as $key => $skill): ?>
+                             <div class="option">
+                                 <input type="checkbox" id="<?=$skill["name"]?>" name="skills[]" value="<?=$key?>" <?= (array_key_exists($key,$skillsFilter))? "checked" : "" ?>>
+                                 <label for="<?=$skill["name"]?>"><?=$skill["name"]?></label>
+                             </div>
+                         <?php endforeach; ?>
                      </div>
                  </div>
                  <!--Submit -->
@@ -193,8 +193,8 @@
          </section>
 
          <!---ADD--------------------->
-         <section id="form_add" class="margin_section padding_side add hide_form">
-             <form class="form" action="<?=getURL()?>" method="post">
+         <section id="form_add" class="margin_section padding_side add ">
+             <form class="form" action="<?=htmlspecialchars(getURL())?>" method="post">
                  <!--- Hidden Input--------------------------->
                  <input type="hidden" name="formSubmit" value="add">
                  <input type="hidden" name="idForm" value="2">
@@ -204,57 +204,59 @@
                  <h2 class="text_h text_h_white"> Ajouter une offre</h2>
                  <!--Profil Title -->
                  <div class="form_element text_page_left">
-                     <h4 class="text_h  text_h_white">Titre</h4>
-                     <input type="text" name="title" value="" placeholder="Titre">
+                     <h4 class="text_h  text_h_white">Titre *</h4>
+                     <input type="text" name="title" value="<?= $title?>" placeholder="Titre">
+                     <span class="error icon"><i class="fas fa-exclamation-circle fa-2x"></i><?= $titleErr?></span>
                  </div>
                  <!--Description -->
                  <div class="form_element text_page_left">
-                     <h4 class="text_h  text_h_white">Description</h4>
-                     <textarea name="description" rows="8" cols="80" placeholder="Description"></textarea>
+                     <h4 class="text_h  text_h_white">Description *</h4>
+                     <textarea name="description" rows="8" cols="80" placeholder="Description"><?= $description?></textarea>
+                     <span class="error"><?= $descriptionErr?></span>
                  </div>
                  <div class="form_element form_element_row">
                      <!--Contract -->
                      <div class="form_select">
-                         <h4 class="text_h  text_h_white form_select_element">Contrat</h4>
+                         <h4 class="text_h  text_h_white form_select_element">Contrat *</h4>
                          <select class="form_select_element" name="contract">
-                             <option value=""> </option>
+                             <option value="<?= $contract?>"><?= ($contract == "")? "" : $contracts[$contract]['name']?> </option>
                              <?php foreach ($contracts as $key=>$option ) {
                                  echo '<option value="'.$key.'">'.$option["name"].'</option>';
                              } ?>
                          </select>
+                         <span class="error"><?= $contractErr?></span>
                      </div>
                      <!--Year -->
                      <div class="form_select">
-                         <h4 class="text_h  text_h_white form_select_element">Année</h4>
+                         <h4 class="text_h  text_h_white form_select_element">Année *</h4>
                          <select class="form_select_element" name="year">
-                             <option value=""> </option>
+                             <option value="<?= $year?>"> <?= ($year == "")? "" : $years[$year]['name']?> </option>
                              <?php foreach ($years as $key=>$option) {
                                  echo '<option value="'.$key.'">'.$option["name"].'</option>';
                              } ?>
                          </select>
+                         <span class="error"><?= $yearErr?></span>
                      </div>
                  </div>
                  <!--Skills -->
                  <div class="form_element form_check text_page_left">
                      <div class="form_check_title">
-                         <h4 class="form_check_title_text text_h  text_h_white">Compétences</h4>
+                         <h4 class="form_check_title_text text_h  text_h_white">Compétences *</h4>
                          <a href="" class="form_check_title_btn"><i class="fas fa-angle-down fa-lg"></i></a>
+                         <span class="error"><?= $skillsErr?></span>
                      </div>
                      <div class="form_check_options">
-                         <?php
-                            foreach ($skills as $key => $skill) {
-                                echo '<div class="option">
-                                    <input type="checkbox" id="'.$skill["name"].'" name="skills[]" value="'.$key.'">
-                                    <label for="'.$skill["name"].'">'.$skill["name"].'</label>
-                                </div>';
-                            }
-
-                          ?>
+                         <?php foreach ($skills as $key => $skill): ?>
+                             <div class="option">
+                                 <input type="checkbox" id="<?=$skill["name"]?>" name="skills[]" value="<?=$key?>" <?= (array_key_exists($key,$skillsCheck))? "checked" : "" ?>>
+                                 <label for="<?=$skill["name"]?>"><?=$skill["name"]?></label>
+                             </div>
+                         <?php endforeach; ?>
                      </div>
                  </div>
                  <!--Period -->
                  <div class="form_element text_page_left">
-                     <h4 class="text_h  text_h_white">Periode</h4>
+                     <h4 class="text_h  text_h_white">Periode *</h4>
                      <input type="text" name="period" value="" placeholder="periode">
                  </div>
                  <!--Submit -->
@@ -270,7 +272,7 @@
 
                  <?php foreach ($profils as $item): ?>
                      <li class="result">
-                         <h3 class="text_h result_element result_element_2"><a href="profil/<?=$item->getId()?>"><?= $item->getTitle()?></a></h3>
+                         <h3 class="text_h result_element result_element_2"><a href="/profil/<?=$item->getId()?>"><?= $item->getTitle()?></a></h3>
                          <p class="result_element"><?= $item->getContract() ?></p>
                          <p class="result_element"><?= $item->getYear() ?></p>
                          <p class="result_element result_element_2">
