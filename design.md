@@ -62,3 +62,18 @@ Sur la page de l’offre sera également présent l’icône de modification exp
   * Gros bouton très visible d’envoie du formulaire.
   * Pas d’envoi du formulaire tant que tous les champs obligatoires renseignés par une petite étoile ne sont pas rempli et à côté de chaque champs non conforme sera présent un warning pour dire que ce champs n’a pas été rempli ou pas correctement
   * Enfin si un champs n’a pas été rempli et qu’il a appuyer sur le bouton pour envoyer le formulaire, les données dans les champs sont conservés pour lui éviter de tout réecrire.
+  
+ # Référencement
+
+## Liste des méta-données qui permettent un meilleur référencement
+   * meta charset="utf-8"
+   * meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+   * meta name="description" content=""
+   * **link rel="canonical" href=url** && meta property="**og:url**" content="": **Réecriture d'url** sur chaque page pour un meilleur référencement.
+   * **meta property="og:type" content="website"**: type de la page
+   * **meta property="og:title" content="">** :Pour l'offre c'est le titre de l'offre donc dynamique et permet un meilleur référencement puisqu'il est réécris dans la balise **<title>**  et présent également dans les balises **h1** de la page.Regroupe les mots clé des pages.
+   * **meta property="og:description" content=""**: Pour l'offre c'est la descriptiption de l'offre donc **dynamique** et  **différent** pour chaque offre
+   * **meta property="og:locale" content="fr-FR"**
+   * <script type="text/javascript" async src=https://www.google-analytics.com/analytics.js></script>: Sert a google analytics donc la mesure du trafic
+   * <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+   * **meta name="robots" content="noindex"/> && <meta name="robots" content="nofollow"**: Uniquement sur les pages qu'on ne veux pas indexer pour indiquer au robot qu'il **ne faut pas** les indexer
