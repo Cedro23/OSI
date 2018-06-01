@@ -104,7 +104,7 @@
                      <a class="" href="">FORMATIONS</a>
                  </li>
                  <li class="header_ahead_menu_element header_ahead_element_select">
-                     <a class="" href="home/">ENTREPRISES</a>
+                     <a class="" href="/home/">ENTREPRISES</a>
                  </li>
                  <li class="header_ahead_menu_element">
                      <a class="" href="">BLOG</a>
@@ -291,7 +291,7 @@
                         <a href="/profilUpdate/<?=$item->getId()?>" class=" result_element icon"> <i class="fas fa-pen-square fa-3x"></i> </a>
                         <form class="result_element icon" action="" method="post">
                             <input type="hidden" value="<?=$item->getId()?>" name ="delete">
-                            <button type="submit" name="button" class=" "><i class="fas fa-times fa-3x"> </i></button>
+                            <button type="submit" name="button" class=" "> <a><i class="fas fa-times fa-3x"> </i></a> </button>
                         </form>
                      </li>
                  <?php endforeach; ?>

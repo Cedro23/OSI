@@ -114,15 +114,18 @@ class FormFilter extends Form{
 
             if($value !=""){
                 $newOffers = $this->switchFilterValues($key);
+                var_dump($newOffers);
                 if($offersFilter != null){
                     $offersFilter = array_filter($offersFilter, function($_offerId) use($newOffers){
                         return (array_key_exists($_offerId,$newOffers)!== false)? true : false;
                     },ARRAY_FILTER_USE_KEY);
                 }else{
                     $offersFilter = $newOffers;
+
                 }
             }
         }
+
         global $offers;
         $offers = $offersFilter;
         initProfils();
@@ -138,6 +141,9 @@ class FormFilter extends Form{
                 return getConnection()->getByContract($this->posts[$_key],$idFormation);
             case 'year':
                 return getConnection()->getByYear($this->posts[$_key],$idFormation);
+            case 'skills':
+                return getConnection()->getBySkills($this->posts[$_key],$idFormation);
+                break;
             default:
                 // code...
                 break;

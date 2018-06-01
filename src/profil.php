@@ -60,7 +60,7 @@
                         <a class="" href="">FORMATIONS</a>
                     </li>
                     <li class="header_ahead_menu_element header_ahead_element_select">
-                        <a class="" href="home/">ENTREPRISES</a>
+                        <a class="" href="/home/">ENTREPRISES</a>
                     </li>
                     <li class="header_ahead_menu_element">
                         <a class="" href="">BLOG</a>
