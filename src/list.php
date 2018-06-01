@@ -131,7 +131,7 @@
 
          <section class="margin_section padding_side btns_form">
              <a id="btn_filter" class="btn btn_blue text_btn btns_form_element"> Filtrer </a>
-             <a id="btn_add" class="btn btn_red text_btn  btns_form_element"> Ajouter </a>
+             <a id="btn_add" class="btn btn_red text_btn  btns_form_element <?= ($session->getConnectionAdmin() == true)?"hide":"" ?>"> Ajouter </a>
          </section>
 
          <!---Filter--------------------->
@@ -193,7 +193,7 @@
          </section>
 
          <!---ADD--------------------->
-         <section id="form_add" class="margin_section padding_side add ">
+         <section id="form_add" class="margin_section padding_side add hide_form">
              <form class="form" action="<?=htmlspecialchars(getURL())?>" method="post">
                  <!--- Hidden Input--------------------------->
                  <input type="hidden" name="formSubmit" value="add">
@@ -290,10 +290,10 @@
                             ?>
                         </p>
                         <a href="/profil/<?=$item->getId()?>" class=" result_element icon icon_plus"> <i class="fas fa-plus-circle fa-3x"></i> </a>
-                        <a href="/editProfil/<?=$item->getId()?>" class=" result_element icon"> <i class="fas fa-pen-square fa-3x"></i> </a>
+                        <a href="/editProfil/<?=$item->getId()?>" class=" result_element icon <?= ($session->getConnectionAdmin() == true)?"hide":"" ?>"> <i class="fas fa-pen-square fa-3x"></i> </a>
                         <form class="result_element icon" action="" method="post">
                             <input type="hidden" value="<?=$item->getId()?>" name ="delete">
-                            <button type="submit" name="button" class=" "> <a><i class="fas fa-times fa-3x"> </i></a> </button>
+                            <button type="submit" name="button" class="<?= ($session->getConnectionAdmin() == true)?"hide":"" ?>"> <a><i class="fas fa-times fa-3x"> </i></a> </button>
                         </form>
                      </li>
                  <?php endforeach; ?>
