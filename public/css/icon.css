@@ -1,0 +1,30 @@
+
+.icon{
+    text-align: center;
+}
+
+.icon_plus{
+    color: #23b2a4;
+}
+.icon_edit{
+
+}
+.icon_delete{
+
+}
+
+.flap_store_element .icon{
+    align-self: center;
+    padding: 20%;
+}
+.flap_store_element .icon_plus ::before{
+    color: white;
+    background-color: #23b2a4;
+}
+
+@media screen and (max-device-width: 1024px) {
+    .flap_store_element .icon{
+        align-self: center;
+        padding: 10%;
+    }
+}

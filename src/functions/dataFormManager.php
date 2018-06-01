@@ -17,6 +17,7 @@ function checkURLForm(){
             if(isset($form) == false) return;
             if($form->getPostData()){
                 $form->callFormFunction();
+                var_dump(getProfils());
             }
         }
     }
@@ -36,6 +37,9 @@ function createForm(){
             return new FormMail();
             break;
 
+        case 'filter':
+            return new FormFilter();
+            break;
         default:
             return null;
             break;

@@ -54,37 +54,37 @@
                 </picture>
                 <ul class="header_ahead_element text_header_title header_ahead_menu">
                     <li class="header_ahead_menu_element">
-                        <a class="header_ahead_menu_title" href="">YNOV LYON</a>
+                        <a class="" href="">YNOV LYON</a>
                     </li>
                     <li class="header_ahead_menu_element">
-                        <a class="header_ahead_menu_title" href="">FORMATIONS</a>
+                        <a class="" href="">FORMATIONS</a>
+                    </li>
+                    <li class="header_ahead_menu_element header_ahead_element_select">
+                        <a class="" href="/home/">ENTREPRISES</a>
                     </li>
                     <li class="header_ahead_menu_element">
-                        <a class="header_ahead_menu_title" href="">ENTREPRISES</a>
-                        <hr class="header_ahead_element_select"></hr>
+                        <a class="" href="">BLOG</a>
                     </li>
                     <li class="header_ahead_menu_element">
-                        <a class="header_ahead_menu_title" href="">BLOG</a>
+                        <a class="" href="">CANDIDATER</a>
                     </li>
                     <li class="header_ahead_menu_element">
-                        <a class="header_ahead_menu_title" href="">CANDIDATER</a>
-                    </li>
-                    <li class="header_ahead_menu_element">
-                        <a class="header_ahead_menu_title" href="">CONTACT</a>
+                        <a class="" href="">CONTACT</a>
                     </li>
                 </ul>
             </nav>
-            <div class="header_ahead_submenu">
-            </div>
         </header>
 
         <!--- Main--------------------------->
         <main class="text_page">
+            <!--- Profil--------------------------->
+            <!--Profil Title -->
             <section class="margin_section padding_side">
                 <h1 class="text_h "> <?=($profils[$idProfil]->getTitle()) ?></h1>
-                <a href="/profilUpdate/<?= $profils[$idProfil]->getId()?>" class=" result_element result_widget"> <i class="fas fa-pen-square fa-2x"></i> </a>
+                <a href="/profilUpdate/<?= $profils[$idProfil]->getId()?>" class="icon"> <i class="fas fa-pen-square fa-3x"></i> </a>
             </section>
 
+            <!--Description -->
             <section class="margin_section padding_side text_page_left markdown">
                 <p><?php $parsedown = new Parsedown();
                         print $parsedown->text($profils[$idProfil]->getDescription())
@@ -92,6 +92,7 @@
                 </p>
             </section>
 
+            <!--Skills -->
             <section class="margin_section padding_side text_page_left">
                 <p><?php
                         $output="";
@@ -106,38 +107,47 @@
                     ?></p>
             </section>
 
+            <!--- Contact Form--------------------------->
             <section class="margin_section padding_side filter">
-
                 <form class="form" action="" method="post">
                     <h2 class="text_h text_h2"> Contact</h2>
+                    <!--Hiden input ---------------------->
                     <input type="hidden" name="formSubmit" value="mail">
                     <input type="hidden" name="idForm" value="2">
-                    <h4 class="text_h  text_page_left form_element"><?=($profils[$idProfil]->getTitle()).' - ID : '.$idProfil ?></h4>
 
+                    <!--Visible input --------------------->
+                    <!--title -->
+                    <h4 class="text_h  text_page_left form_element"><?=($profils[$idProfil]->getTitle()).' - ID : '.$idProfil ?></h4>
                     <div class=" form_element form_element_row">
+                        <!--Mail -->
                         <div class="form_check">
                             <h4 class="text_h text_page_left"> Mail</h4>
                             <input type="text" name="mail" value="" placeholder="Mail">
                         </div>
+                        <!--Number -->
                         <div class="form_check">
                             <h4 class="text_h text_page_left"> Number</h4>
                             <input type="text" name="num" value="" placeholder="Numero Telephone">
                         </div>
                     </div>
                     <div class=" form_element form_element_row">
+                        <!--First Name -->
                         <div class="form_check">
                             <h4 class="text_h  text_page_left"> Prénom</h4>
                             <input type="text" name="firstName" value="" placeholder="Prénom">
                         </div>
+                        <!--Last Name -->
                         <div class="form_check">
                             <h4 class="text_h  text_page_left"> Nom</h4>
                             <input type="text" name="lastName" value="" placeholder="Nom">
                         </div>
                     </div>
+                    <!--Comment -->
                     <div class="form_element text_page_left">
                         <h4 class="text_h  text_page_left"> Commentaires</h4>
                         <textarea name="comments" rows="8" cols="80" placeholder="Commentaires"></textarea>
                     </div>
+                    <!--Submit -->
                     <div class="form_element">
                         <button type="submit" class="btn btn_red btn_submit">Envoyer</button>
                     </div>

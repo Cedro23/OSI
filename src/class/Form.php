@@ -9,7 +9,11 @@ class Form
     }
 
     protected function checkPost(string $_str){
-        if ($_POST[$_str] == "" || isset($_POST[$_str]) == false){
+        if(isset($_POST[$_str]) == false){
+            return false;
+        }
+        else if ($_POST[$_str] == "" ){
+            $this->posts[$_str] = "";
             return false;
         }else{
             $this->posts[$_str] = $_POST[$_str];
@@ -18,7 +22,11 @@ class Form
     }
 
     protected function getSkills(){
-        if ($_POST["skills"] == "" || isset($_POST["skills"]) == false){
+        if(isset($_POST["skills"]) == false){
+            return false;
+        }
+        else if ($_POST["skills"] == "" ){
+            $this->posts["skills"] = "";
             return false;
         }else{
             $this->posts["skills"] = [];
@@ -34,10 +42,6 @@ class Form
     }
 
     public function getPostData(){
-
-    }
-
-    public function callBdd(){
 
     }
 }
@@ -58,6 +62,8 @@ class FormAdd extends Form
     }
     public function callFormFunction(){
         getConnection()->addOffer($this->posts);
+        initOffers();
+        initProfils();
     }
 }
 
@@ -71,6 +77,8 @@ class FormUpdate extends FormAdd
 
     public function callFormFunction(){
         getConnection()->updateOffer($this->posts);
+        initOffers();
+        initProfils();
     }
 }
 
@@ -89,6 +97,58 @@ class FormMail extends Form
         global $idProfil;
         $comment = (isset($this->posts['comments']) == true)? $this->posts['comments'] : " ";
         sendMail($idProfil, getProfils()[$idProfil]->getTitle(), $this->posts['num'], $this->posts['mail'], $this->posts['firstName'], $this->posts['lastName'], $comment);
+    }
+}
+
+class FormFilter extends Form{
+    public function getPostData(){
+        $this->checkPost("search");
+        $this->checkPost("contract");
+        $this->checkPost("year");
+        $this->getSkills();
+        return true;
+    }
+
+    public function callFormFunction(){
+        $offersFilter = null;
+        foreach ($this->posts as $key => $value) {
+
+            if($value !=""){
+                $newOffers = $this->switchFilterValues($key);
+                var_dump($newOffers);
+                if($offersFilter != null){
+                    $offersFilter = array_filter($offersFilter, function($_offerId) use($newOffers){
+                        return (array_key_exists($_offerId,$newOffers)!== false)? true : false;
+                    },ARRAY_FILTER_USE_KEY);
+                }else{
+                    $offersFilter = $newOffers;
+
+                }
+            }
+        }
+
+        global $offers;
+        $offers = $offersFilter;
+        initProfils();
+    }
+
+    private function switchFilterValues($_key){
+        global $idFormation;
+
+        switch ($_key) {
+            case 'search':
+                return getConnection()->getBySearch($this->posts[$_key],$idFormation);
+            case 'contract':
+                return getConnection()->getByContract($this->posts[$_key],$idFormation);
+            case 'year':
+                return getConnection()->getByYear($this->posts[$_key],$idFormation);
+            case 'skills':
+                return getConnection()->getBySkills($this->posts[$_key],$idFormation);
+                break;
+            default:
+                // code...
+                break;
+        }
     }
 }
 

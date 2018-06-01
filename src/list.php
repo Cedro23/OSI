@@ -1,4 +1,11 @@
 <?php
+
+    $backgrounds[1] = "flap_store_element_ingesup";
+    $backgrounds[2] = "flap_store_element_business";
+    $backgrounds[3] = "flap_store_element_audiovisuel";
+    $backgrounds[4] = "flap_store_element_jeuxvideo";
+    $backgrounds[5] = "flap_store_element_web";
+
     if($idFormation <1) header('Location: home');
     require_once("functions.php");
 
@@ -84,35 +91,32 @@
     })
      </script>
      <!--- Header --------------------------->
-     <header class="header text_headfoot">
+     <header class="header text_headfoot <?=$backgrounds[$idFormation]?>">
          <nav class="header_ahead">
              <picture class="header_ahead_element header_ahead_logo">
                  <img class="header_ahead_logo_img" src="../img/logo_ynov_campus_rvb_blanc.png" alt="Logo Ynov">
              </picture>
              <ul class="header_ahead_element text_header_title header_ahead_menu">
                  <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">YNOV LYON</a>
+                     <a class="" href="">YNOV LYON</a>
                  </li>
                  <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">FORMATIONS</a>
+                     <a class="" href="">FORMATIONS</a>
+                 </li>
+                 <li class="header_ahead_menu_element header_ahead_element_select">
+                     <a class="" href="/home/">ENTREPRISES</a>
                  </li>
                  <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">ENTREPRISES</a>
-                     <hr class="header_ahead_element_select"></hr>
+                     <a class="" href="">BLOG</a>
                  </li>
                  <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">BLOG</a>
+                     <a class="" href="">CANDIDATER</a>
                  </li>
                  <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title btn btn_blue btn_header" href="">CANDIDATER</a>
-                 </li>
-                 <li class="header_ahead_menu_element">
-                     <a class="header_ahead_menu_title" href="">CONTACT</a>
+                     <a class="" href="">CONTACT</a>
                  </li>
              </ul>
          </nav>
-         <div class="header_ahead_submenu">
-         </div>
      </header>
 
      <!--- Main--------------------------->
@@ -131,11 +135,19 @@
          <!---Filter--------------------->
          <section id="form_filter" class="margin_section padding_side filter hide_form">
              <form class="form" action="" method="post">
+                 <!--- Hidden Input--------------------------->
+                 <input type="hidden" name="formSubmit" value="filter">
+                 <input type="hidden" name="idForm" value="2">
+                 <input type="hidden" name="formation" value="<?= $idFormation ?>">
+
+                 <!--- Visible Input--------------------------->
                  <h2 class="text_h text_h_white"> Filtrer les resultats</h2>
+                 <!--Profil Title -->
                  <div class="form_element">
                      <input type="text" name="search" value="" placeholder="Rechercher">
                  </div>
                  <div class="form_element form_element_row">
+                     <!--Contract -->
                      <div class="form_select">
                          <h4 class="text_h  text_h_white form_select_element">Contrat</h4>
                          <select class="form_select_element" name="contract">
@@ -145,6 +157,7 @@
                              } ?>
                          </select>
                      </div>
+                     <!--Year -->
                      <div class="form_select">
                          <h4 class="text_h  text_h_white form_select_element">Année</h4>
                          <select class="form_select_element" name="year">
@@ -155,10 +168,11 @@
                          </select>
                      </div>
                  </div>
+                 <!--Skills -->
                  <div class="form_element form_check text_page_left">
                      <div class="form_check_title">
                          <h4 class="form_check_title_text text_h_white title_text text_h ">Compétences</h4>
-                         <a href="" class="form_check_title_btn"><i class="fas fa-angle-down fa-lg"></i></a>
+                         <a class="form_check_title_btn"><i class="fas fa-angle-down fa-lg"></i></a>
                      </div>
                      <div class="form_check_options">
                          <?php
@@ -171,6 +185,7 @@
                           ?>
                      </div>
                  </div>
+                 <!--Submit -->
                  <div class="form_element">
                      <button type="submit" class="btn btn_red btn_submit">Rechercher</button>
                  </div>
@@ -180,19 +195,25 @@
          <!---ADD--------------------->
          <section id="form_add" class="margin_section padding_side add hide_form">
              <form class="form" action="<?=getURL()?>" method="post">
+                 <!--- Hidden Input--------------------------->
                  <input type="hidden" name="formSubmit" value="add">
                  <input type="hidden" name="idForm" value="2">
                  <input type="hidden" name="formation" value="<?= $idFormation ?>">
+
+                 <!--- Visible Input--------------------------->
                  <h2 class="text_h text_h_white"> Ajouter une offre</h2>
+                 <!--Profil Title -->
                  <div class="form_element text_page_left">
                      <h4 class="text_h  text_h_white">Titre</h4>
                      <input type="text" name="title" value="" placeholder="Titre">
                  </div>
+                 <!--Description -->
                  <div class="form_element text_page_left">
                      <h4 class="text_h  text_h_white">Description</h4>
                      <textarea name="description" rows="8" cols="80" placeholder="Description"></textarea>
                  </div>
                  <div class="form_element form_element_row">
+                     <!--Contract -->
                      <div class="form_select">
                          <h4 class="text_h  text_h_white form_select_element">Contrat</h4>
                          <select class="form_select_element" name="contract">
@@ -202,6 +223,7 @@
                              } ?>
                          </select>
                      </div>
+                     <!--Year -->
                      <div class="form_select">
                          <h4 class="text_h  text_h_white form_select_element">Année</h4>
                          <select class="form_select_element" name="year">
@@ -212,6 +234,7 @@
                          </select>
                      </div>
                  </div>
+                 <!--Skills -->
                  <div class="form_element form_check text_page_left">
                      <div class="form_check_title">
                          <h4 class="form_check_title_text text_h  text_h_white">Compétences</h4>
@@ -229,10 +252,12 @@
                           ?>
                      </div>
                  </div>
+                 <!--Period -->
                  <div class="form_element text_page_left">
                      <h4 class="text_h  text_h_white">Periode</h4>
                      <input type="text" name="period" value="" placeholder="periode">
                  </div>
+                 <!--Submit -->
                  <div class="form_element">
                      <button type="submit" class="btn btn_blue btn_submit">Ajouter</button>
                  </div>
@@ -262,11 +287,11 @@
                                 echo $output;
                             ?>
                         </p>
-                        <a href="/profil/<?=$item->getId()?>" class=" result_element result_widget "> <i class="fas fa-plus-circle fa-3x"></i> </a>
-                        <a href="/profilUpdate/<?=$item->getId()?>" class=" result_element result_widget"> <i class="fas fa-pen-square fa-3x"></i> </a>
-                        <form class="result_element result_widget" action="" method="post">
+                        <a href="/profil/<?=$item->getId()?>" class=" result_element icon icon_plus"> <i class="fas fa-plus-circle fa-3x"></i> </a>
+                        <a href="/profilUpdate/<?=$item->getId()?>" class=" result_element icon"> <i class="fas fa-pen-square fa-3x"></i> </a>
+                        <form class="result_element icon" action="" method="post">
                             <input type="hidden" value="<?=$item->getId()?>" name ="delete">
-                            <button type="submit" name="button" class=" "><i class="fas fa-times fa-3x"> </i></button>
+                            <button type="submit" name="button" class=" "> <a><i class="fas fa-times fa-3x"> </i></a> </button>
                         </form>
                      </li>
                  <?php endforeach; ?>

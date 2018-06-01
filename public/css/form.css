@@ -68,6 +68,8 @@
 .form_check_title_text{
     flex: 7;
 }
+
+
 .form_check_title_btn{
     flex: 1;
     color: white;
@@ -93,6 +95,11 @@
     .form_check_title_btn{
         visibility: visible;
     }
+
+    .form_check_title:active + .form_check_options{
+        display: flex;
+    }
+
     input,select{
         width: 100%;
     }
@@ -164,13 +171,6 @@ button{
     color: #000;
     border-color: #000;
 }
-/*.update textarea,input {
-    font-size: 2rem;
-}
-.update input,textarea,select,label {
-    color: black;
-    border-color: black;
-}*/
 
 [type="checkbox"] {
     box-shadow: none;
