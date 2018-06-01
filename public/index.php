@@ -6,7 +6,7 @@
         $url = explode('/',$_GET['url']);
     }
 
-    if ($url == '' or $url[0] == 'home') {
+    if ($url[0] == 'home') {
         require '../src/home.php';
     } elseif ($url[0] == 'list') {
         $idFormation = (isset($url[1]) and is_numeric($url[1]))? $url[1] : 0 ;

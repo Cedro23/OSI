@@ -25,13 +25,16 @@ function checkURLForm(){
                 $form->callFormFunction();
 
             }else{
-                echo('<script>
-                 document.addEventListener("DOMContentLoaded",function(){
-                     console.log("[DOM] Loaded")
+                if($session->getConnectionAdmin() == true)
+                {
+                    echo('<script>
+                     document.addEventListener("DOMContentLoaded",function(){
+                         console.log("[DOM] Loaded")
 
-                     document.getElementById(\'form_add\').classList.remove("hide_form");
-                })
-                 </script>');
+                         document.getElementById(\'form_add\').classList.remove("hide_form");
+                    })
+                     </script>');
+                }
             }
         }
     }
