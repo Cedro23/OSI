@@ -4,4 +4,4 @@ Allow: http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/list/
 Allow: http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/
 Allow:http://www.ynovlyon.com/fr/entreprises/recruter-nos-etudiants/profil
 Allow: /public/img
-Sitemap:http://www.ynovlyon.com/sitemap.xml
+Sitemap:http://www.ynovlyon.com/sitemap
