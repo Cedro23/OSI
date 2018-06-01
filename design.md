@@ -79,7 +79,7 @@ Sur la page de l’offre sera également présent l’icône de modification exp
    * **meta name="robots" content="noindex"/> && <meta name="robots" content="nofollow"**: Uniquement sur les pages qu'on ne veux pas indexer pour indiquer au robot qu'il **ne faut pas** les indexer
                                                        
  ## Mots Clés
- ### Page list(filtre
+ ### Page list(filtre)
   * Développement web/ logiciel/ mobile
   * Réseaux
   * Cybersécurité
