@@ -17,7 +17,6 @@ Dans ce fichier vous pourrez trouver comment mettre en place notre projet.
    + Il faut créer une propriété dans Google Analytics. Pour cela il faut se connecter sur Google Analytics. Lors de la création de la propriété il faut faire attention à l'URL de notre site, s'il n'est pas valide la propriété ne pourra pas être créée, ainsi qu'à la génération de l'ID de suivi, un ID = un site.
 
 Pour pouvoir analyser les différentes pages il faut remplacer l'id déjà présent par son propre ID de suivi dans le code se trouvant dans les balises <head> de chaque page.
- ![image meta](meta.JPG)
 
 Il faut aussi penser à vérifier si la mise en place du Google Analytics a fonctionné. Pour cela il faut accéder à son site et vérifier si notre visite est enregistrée dans les rapports en temps réel.
 
@@ -28,5 +27,17 @@ Il va nous permettre de :
  * Analyser les clics depuis la recherche Google.
  * Recevoir des notifications lorsque des problèmes ou des erreurs critiques se produisent.
  * Vérifier si l'interprétation de note contenu par Google est correcte.
-Pour pouvoir bénéficier des services de la google Search console, vous devez confirmer que vous êtes bien le propriétaire via le site suivant: [searchConsole](https://www.google.com/webmasters/tools/home)
+Pour pouvoir bénéficier des services de la google Search console, vous devez confirmer que vous êtes bien le propriétaire via le site suivant: [searchConsole](https://www.google.com/webmasters/tools/home) et suivez les étapes .
+
+## Base de donnée
+Pour accéder à la base de donnée, sur phpmyadmin créez une nouvelle base de donnée du nom de **osi** et importez le fichier **osi.sql** présent à la racine du projet. 
+
+## Fichier de configuration
+
+  Dans le fichier config.json dans authors vous pouvez créer des admnistateurs modifier le nom des administrateurs dans authors puis name ainsi que le mail de ceux-ci dans authors puis email.
+  Dans require "erusev/parsedown" "swiftmailer/swiftmailer "vous pouvez changer la version pour mettre la dernière version en date.
+ 
+ 
+
+
   
