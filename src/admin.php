@@ -9,6 +9,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="robots" content="noindex"/>
+        <meta name="robots" content="nofollow"/>
         <title></title>
         <link rel="stylesheet" href="../css/style.css"/>
         <link rel="stylesheet" href="../fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.css"/>
