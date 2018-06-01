@@ -3,14 +3,9 @@
     require_once("../vendor/autoload.php");
 
 
+    $title=$profils[$idProfil]->getTitle();
+    $description="Profil de l'offre: ".$profils[$idProfil]->getDescription();
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
-    foreach ($offers as $key=>$field) {
-        if ($key==$idProfil){
-            $description="Profil de l'offre: ".$field['description'];
-            $title=$field['title'] ;
-            $id=$key;
-        }
-    }
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -26,13 +21,11 @@
         </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-    	<meta name="robots" content="noodp"/>
+        <meta name="description" content="<?php print($description) ?>">
         <link rel="canonical" href=<?php print($url) ?> />
     	<meta property="og:type" content="website">
-    	<meta property="og:title" content=<?php print($title) ?>>
-    	<meta property="og:description" content=<?php print($description) ?>>
+    	<meta property="og:title" content="<?php print($title) ?>">
+    	<meta property="og:description" content="<?php print($description) ?>">
         <meta property="og:url"  content=<?php print($url)?>>
     	<meta property="og:locale" content="fr-FR">
     	<script type="text/javascript" async src=https://www.google-analytics.com/analytics.js></script>
@@ -81,7 +74,7 @@
             <!--Profil Title -->
             <section class="margin_section padding_side">
                 <h1 class="text_h "> <?=($profils[$idProfil]->getTitle()) ?></h1>
-                <a href="/profilUpdate/<?= $profils[$idProfil]->getId()?>" class="icon"> <i class="fas fa-pen-square fa-3x"></i> </a>
+                <a href="/editProfil/<?= $profils[$idProfil]->getId()?>" class="icon"> <i class="fas fa-pen-square fa-3x"></i> </a>
             </section>
 
             <!--Description -->

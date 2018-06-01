@@ -1,9 +1,8 @@
 <?php
     require_once("functions.php");
-
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
-
-
+    $title= "Modification du profil: ".$profils[$idProfil]->getTitle();
+    $description="Modification de l'offre:".$profils[$idProfil]->getDescription();
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,23 +14,15 @@
 
       gtag('config', 'UA-119962245-1');
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119962245-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-119962245-1');
-    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="robots" content="noodp"/>
+    <meta name="description" content="<?php printf($description)?>">
+    <meta name="robots" content="noindex"/>
+    <meta name="robots" content="nofollow"/>
     <link rel="canonical" href=<?php print($url) ?> />
     <meta property="og:type" content="website">
-    <meta property="og:title" content=<?php print( "Modifiez l'offre:".$profils[$idProfil]->getTitle()) ?>>
-    <meta property="og:description" content=<?php print($description) ?>>
+    <meta property="og:title" content="<?php printf($title) ?>">
+    <meta property="og:description" content="<?php printf($description) ?>">
     <meta property="og:url"  content=<?php print($url)?>>
     <meta property="og:locale" content="fr-FR">
     <script type="text/javascript" async src=https://www.google-analytics.com/analytics.js></script>

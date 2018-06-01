@@ -16,8 +16,8 @@
         $idFormation = 0;
         require '../src/profil.php';
     } elseif ($url[0] == 'sitemap') {
-        require '../sitemap.php';
-    } elseif ($url[0] == 'profilUpdate'and is_numeric($url[1]) and isset($url[1])) {
+            require '../sitemap.php';
+    } elseif ($url[0] == 'editProfil'and is_numeric($url[1]) and isset($url[1])) {
         $idProfil = $url[1];
         $idFormation = 0;
         require '../src/profilUpdate.php';
