@@ -1,18 +1,10 @@
 <?php
     require_once("functions.php");
 
-    $isAdmin = false;
-
     if (isset($_POST['username']) and isset($_POST['password'])) {
-        $logins = $connection->getTableLogin();
-
-            if ($_POST['username'] == $logins[1]['username']) {
-                if ($_POST['password'] == $logins[1]['password']) {
-                    $isAdmin = true;
-                }
-            }
+        logAdmin($_POST['username'],$_POST['password']);
     }
-    var_dump($isAdmin);
+
  ?>
 
 
@@ -24,11 +16,10 @@
     </head>
     <body>
         <form class="" action="" method="post">
-            Username :<br>
-            <input type="text" name="username" value="" placeholder="username">
-            <br>Password :<br>
-            <input type="password" name="password" value="" placeholder="password">
-            <br>
+            <label for="username">Username :</label>
+            <input type="text" name="username" id="username" value="" />
+            <label for="password">Mot de passe :</label>
+            <input type="password" name="password" id="password" value="" />
             <button type="submit" name="btn_login">Se connecter</button>
         </form>
     </body>

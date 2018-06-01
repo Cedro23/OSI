@@ -24,8 +24,15 @@ if(isset($idFormation)){
     checkURLForm();
 }
 
-function connectAdmin(){
-
+function logAdmin($_username, $_password){
+    $session = getSession();
+    $connection = getConnection();
+    $logins = $connection->getTableLogin();
+    if ($_username == $logins[1]['username']) {
+        if ($_password == $logins[1]['password']) {
+            $session->connectAdmin(true);
+        }
+    }
 }
 
 function initSkills(){
