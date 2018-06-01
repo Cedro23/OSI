@@ -1,7 +1,8 @@
 <?php
-    require_once("class.php");
     require_once("functions.php");
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,6 +78,9 @@
             <p> Toute l’année nos étudiants sont à l’écoute d’opportunités.</p>
             <p> Vous pouvez recruter des étudiants de Bachelor en stage temps complet de juin à septembre, et des étudiants de Mastère en alternance (contrat de professionnalisation) tout au long de l’année. </p>
         </section>
+
+
+
 
         <section class="margin_section">
             <h2 class="text_h text_h2"> Choisir la formation</h2>

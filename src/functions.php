@@ -24,6 +24,9 @@ if(isset($idFormation)){
     checkURLForm();
 }
 
+function connectAdmin(){
+
+}
 
 function initSkills(){
     global $skills;

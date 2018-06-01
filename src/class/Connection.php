@@ -37,6 +37,15 @@
             return $offer;
         }
 
+        public function getTableLogin(){
+            $statement = $this->connection->prepare("
+                SELECT * FROM osi_login
+            ");
+            $statement->execute();
+            $logins = $statement->fetchAll(PDO::FETCH_GROUP|PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE);
+            return $logins;
+        }
+
         public function getTableUniqSkill($_id)
         {
             $statement = $this->connection->prepare("

@@ -21,6 +21,8 @@
         $idProfil = $url[1];
         $idFormation = 0;
         require '../src/profilUpdate.php';
+    } elseif ($url[0] == 'admin') {
+        require '../src/admin.php';
     } else {
         require '../src/Error404.php';
     }
