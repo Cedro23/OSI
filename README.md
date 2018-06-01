@@ -17,7 +17,7 @@ Dans ce fichier vous pourrez trouver comment mettre en place notre projet.
    + Il faut créer une propriété dans Google Analytics. Pour cela il faut se connecter sur Google Analytics. Lors de la création de la propriété il faut faire attention à l'URL de notre site, s'il n'est pas valide la propriété ne pourra pas être créée, ainsi qu'à la génération de l'ID de suivi, un ID = un site.
 
 Pour pouvoir analyser les différentes pages il faut remplacer l'id déjà présent par son propre ID de suivi dans le code se trouvant dans les balises <head> de chaque page.
- ![Zozor](http://uploads.siteduzero.com/files/420001_421000/420263.png)
+ ![image meta](meta.JPG)
 
 Il faut aussi penser à vérifier si la mise en place du Google Analytics a fonctionné. Pour cela il faut accéder à son site et vérifier si notre visite est enregistrée dans les rapports en temps réel.
 
