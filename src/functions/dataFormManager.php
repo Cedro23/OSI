@@ -19,7 +19,13 @@ function checkURLForm(){
                 $form->callFormFunction();
 
             }else{
-                
+                print('<script>
+                 document.addEventListener("DOMContentLoaded",function(){
+                     console.log("[DOM] Loaded")
+
+                     document.getElementById(\'form_add\').classList.remove("hide_form");
+                })
+                 </script>');
             }
         }
     }

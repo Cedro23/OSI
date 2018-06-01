@@ -13,16 +13,6 @@
 
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
-    // if (isset($_POST['contract']) or isset($_POST['year']) or isset($_POST['skills'])) {
-    //     $contract = $_POST['contract'];
-    //     $year = $_POST['year'];
-    //     $comps = $_POST['skills'];
-    //     $search = $_POST['search'];
-    //     var_dump($contract);
-    //     var_dump($year);
-    //     var_dump($comps);
-    // }
-
  ?>
  <!doctype html>
  <html lang="en">
