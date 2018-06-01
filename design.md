@@ -71,7 +71,7 @@ Sur la page de l’offre sera également présent l’icône de modification exp
    * meta name="description" content=""
    * **link rel="canonical" href=url** && meta property="**og:url**" content="": **Réecriture d'url** sur chaque page pour un meilleur référencement.
    * **meta property="og:type" content="website"**: type de la page
-   * **meta property="og:title" content="">** :Pour l'offre c'est le titre de l'offre donc dynamique et permet un meilleur référencement puisqu'il est réécris dans la balise **<title>**  et présent également dans les balises ** "<h1>" ** de la page.Regroupe les mots clé des pages.
+   * **meta property="og:title" content="">** :Pour l'offre c'est le titre de l'offre donc dynamique et permet un meilleur référencement puisqu'il est réécris dans la balise **<title>**  et présent également dans les balises ** h1** de la page.Regroupe les mots clé des pages.
    * **meta property="og:description" content=""**: Pour l'offre c'est la descriptiption de l'offre donc **dynamique** et  **différent** pour chaque offre
     	<meta property="og:locale" content="fr-FR">
    * <script type="text/javascript" async src=https://www.google-analytics.com/analytics.js></script>: Sert a google analytics donc la mesure du trafic
