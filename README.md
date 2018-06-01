@@ -1,8 +1,7 @@
 # OSI
-#README.md
 
 Dans ce fichier vous pourrez trouver comment mettre en place notre projet.
-
+##GoogleAnalytics
 ##Google Analytics
 
     Afin de mesurer le **trafic de notre** site, devra être implémenté un suivi par Google Analytics.
