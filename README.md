@@ -35,7 +35,11 @@ Pour accéder à la base de donnée, sur phpmyadmin créez une nouvelle base de 
 ## Fichier de configuration
 
   Dans le fichier config.json dans authors vous pouvez créer des admnistateurs modifier le nom des administrateurs dans authors puis name ainsi que le mail de ceux-ci dans authors puis email.
-  Dans require "erusev/parsedown" "swiftmailer/swiftmailer "vous pouvez changer la version pour mettre la dernière version en date.
+ Pour que l'envoie de mail fonctionne, il vous faut installer SwiftMailer et ParseDown.
+ Enfin le **login** et le **mot de passe** administateurs sont pour l'instant: 
+   * **Mail** : stageynovB1@gmail.com
+   * **Mdp** : stageynov1gesup
+  
  
  
 
