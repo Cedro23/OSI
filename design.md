@@ -77,3 +77,36 @@ Sur la page de l’offre sera également présent l’icône de modification exp
    * <script type="text/javascript" async src=https://www.google-analytics.com/analytics.js></script>: Sert a google analytics donc la mesure du trafic
    * <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
    * **meta name="robots" content="noindex"/> && <meta name="robots" content="nofollow"**: Uniquement sur les pages qu'on ne veux pas indexer pour indiquer au robot qu'il **ne faut pas** les indexer
+                                                       
+ ## Mots Clés
+ ### Page list(filtre
+  * Développement web/ logiciel/ mobile
+  * Réseaux
+  * Cybersécurité
+  * Expert Big Data
+  * Java
+  * C#
+  * PHP
+  * SQL
+  *Symphony
+ ### Moteur de Recherche
+  * Offre stage informatique/ art/ graphic design/ Web et communication/business 
+  * Stagiaire/ Alternant master 2 spécialisé développement logiciel Lyon
+  * Trouver stagiaire/Alternant domaine du business Lyon
+  * Recherche étudiant Stage/Alternance
+  * Recruter étudiant Stage/Alternance
+  * Liste des offres de stage/alternance art Lyon
+Recherche de contrat Professionnel
+  * Recruter étudiant Ynov
+  * Stage étudiant informatique
+  * Contrat pro bachelor
+  * Contrat pro étudiant Master
+  * Contrat pro étudiant Master
+  * Stage étudiant Art
+  * Stage Informatique
+  * Stage/contrat/alternance étudiant commerce
+  * Stage/contrat/alternance étudiant audioVisuel
+  * Stage étudiant business school
+  * Stage étudiant Animation3D
+  * Stage étudiant Jeu vidéo
+
