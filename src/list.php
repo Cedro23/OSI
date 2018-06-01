@@ -92,20 +92,22 @@
                  <li class="header_ahead_menu_element">
                      <a class="" href="">YNOV LYON</a>
                  </li>
-                 <li class="header_ahead_menu_element">
-                     <a class="" href="">FORMATIONS</a>
-                 </li>
                  <li class="header_ahead_menu_element header_ahead_element_select">
                      <a class="" href="/home/">ENTREPRISES</a>
                  </li>
                  <li class="header_ahead_menu_element">
-                     <a class="" href="">BLOG</a>
-                 </li>
-                 <li class="header_ahead_menu_element">
-                     <a class="" href="">CANDIDATER</a>
-                 </li>
-                 <li class="header_ahead_menu_element">
                      <a class="" href="">CONTACT</a>
+                 </li>
+                 <li class="header_ahead_menu_element">
+                     <?php if($session->getConnectionAdmin() == false){
+                                echo '<a class="btn btn_blue btn_header" href="/admin">Login</a>';
+                            }else {
+                             echo '<form class="result_element icon" action="" method="post">
+                                 <input type="hidden" value="<?=$item->getId()?>" name ="disconnect">
+                                 <button type="submit" name="button" class="btn btn_blue btn_header"> Logout </button>
+                             </form>';
+                         }
+                      ?>
                  </li>
              </ul>
          </nav>
@@ -121,7 +123,7 @@
 
          <section class="margin_section padding_side btns_form">
              <a id="btn_filter" class="btn btn_blue text_btn btns_form_element"> Filtrer </a>
-             <a id="btn_add" class="btn btn_red text_btn  btns_form_element <?= ($session->getConnectionAdmin() == true)?"hide":"" ?>"> Ajouter </a>
+             <a id="btn_add" class="btn btn_red text_btn  btns_form_element <?= ($session->getConnectionAdmin() == true)?"":"hide" ?>"> Ajouter </a>
          </section>
 
          <!---Filter--------------------->

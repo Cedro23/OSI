@@ -10,6 +10,14 @@
 #form_contact{
     background-color: #23b2a4;
 }
+/*------------------ADMIN----------------*/
+#form_admin{
+    background-image: url("../img/background_recruter.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 100vh;
+}
 
 /*------------------Btn Form----------------*/
 .btns_form{

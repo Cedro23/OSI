@@ -8,6 +8,9 @@ function checkURLForm(){
     if (isset($_POST["delete"])){
         getConnection()->deleteOffer($_POST["delete"]);
     }
+    if (isset($_POST["disconnect"])){
+        $session->connectAdmin(false);
+    }
 
     $session = getSession();
     if (isset($_POST["formSubmit"])){
@@ -47,6 +50,9 @@ function createForm(){
 
         case 'filter':
             return new FormFilter();
+            break;
+        case 'admin':
+            return new FormAdmin();
             break;
         default:
             return null;

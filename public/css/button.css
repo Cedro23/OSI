@@ -14,11 +14,15 @@
 
 .btn_header{
     padding: 5%;
+
 }
 
 .btn_blue:hover{
     color:#23b2a4;
     border-color: #23b2a4;
+}
+.btn_blue:hover.btn_header{
+    color: white;
 }
 .btn_blue{
     background-color: #23b2a4;
@@ -43,7 +47,7 @@
 
 }
 .bttn_add{
-    
+
 }
 .btn_mobile{
     display: none;
