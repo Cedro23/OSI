@@ -126,14 +126,15 @@
 
          <!---Filter--------------------->
          <section id="form_filter" class="margin_section padding_side hide_form">
-             <form class="form" action="" method="post">
+            <form class="form" action="" method="post">
+                <h2 class="text_h text_h_white"> Filtrer les resultats</h2>
+            <div class="form_content">
                  <!--- Hidden Input--------------------------->
                  <input type="hidden" name="formSubmit" value="filter">
                  <input type="hidden" name="idForm" value="2">
                  <input type="hidden" name="formation" value="<?= $idFormation ?>">
 
                  <!--- Visible Input--------------------------->
-                 <h2 class="text_h text_h_white"> Filtrer les resultats</h2>
                  <!--Profil Title -->
                  <div class="form_element">
                      <input type="text" name="search" value="<?=$searchFilter?>" placeholder="Rechercher">
@@ -179,19 +180,22 @@
                  <div class="form_element">
                      <button type="submit" class="btn btn_red btn_submit">Rechercher</button>
                  </div>
+             </div>
              </form>
          </section>
 
          <!---ADD--------------------->
          <section id="form_add" class="margin_section padding_side hide_form">
-             <form class="form" action="<?=htmlspecialchars(getURL())?>" method="post">
+            <form class="form" action="<?=htmlspecialchars(getURL())?>" method="post">
+                <h2 class="text_h text_h_white"> Ajouter une offre</h2>
+            <div class="form_content">
                  <!--- Hidden Input--------------------------->
                  <input type="hidden" name="formSubmit" value="add">
                  <input type="hidden" name="idForm" value="2">
                  <input type="hidden" name="formation" value="<?= $idFormation ?>">
 
                  <!--- Visible Input--------------------------->
-                 <h2 class="text_h text_h_white"> Ajouter une offre</h2>
+
                  <!--Profil Title -->
                  <div class="form_element text_page_left">
                      <h4 class="text_h  text_h_white">Titre *  <span class="error icon"><?= $titleErr?></span></h4>
@@ -251,6 +255,7 @@
                  <div class="form_element">
                      <button type="submit" class="btn btn_blue btn_submit">Ajouter</button>
                  </div>
+             </div>
              </form>
          </section>
 

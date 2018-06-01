@@ -87,7 +87,7 @@ h4{
     color: #fff;
 }
 .form h4{
-    color: #fff;
+    color: #000;
     margin-bottom: 1%;
 }
 
@@ -105,7 +105,7 @@ span {
 }
 
 span.error{
-    color: white;
+    color: #e94e6d;;
 }
 
 @media screen and (max-device-width: 500px) {

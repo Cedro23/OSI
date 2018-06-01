@@ -19,7 +19,7 @@ function checkURLForm(){
                 $form->callFormFunction();
 
             }else{
-                print('<script>
+                echo('<script>
                  document.addEventListener("DOMContentLoaded",function(){
                      console.log("[DOM] Loaded")
 

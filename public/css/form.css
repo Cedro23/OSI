@@ -18,6 +18,7 @@
 }
 
 .btns_form_element{
+    background-color: white;
     margin: 5%;
     flex: 1;
 }
@@ -26,13 +27,17 @@
     display: none;
 }
 .form{
+    padding: 5% 20% 5% 20%;
+}
+.form_content{
     display: flex;
     flex-flow: column;
-    padding: 5% 20% 0% 20%;
+    background-color: #fff;
 }
 
 .form_element{
     padding: 5%;
+
 }
 .form_element_row{
     display: flex;
@@ -133,8 +138,8 @@ textarea, input{
 }
 
 input,textarea,select,label{
-    color: #fff;
-    border-color: #fff;
+    color: #000;
+    border-color: #000;
 }
 
 option{
@@ -147,29 +152,6 @@ button{
     border:none;
 }
 
-/*select*/
-.update select{
-    color: #000;
-    border-color: #000;
-}
-
-/*checkbox*/
-.update label{
-    color: #000;
-    border-color: #000;
-}
-
-/*textarea*/
-.update textarea{
-    color: #000;
-    border-color: #000;
-}
-
-/*input*/
-.update input{
-    color: #000;
-    border-color: #000;
-}
 
 [type="checkbox"] {
     box-shadow: none;

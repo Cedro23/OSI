@@ -1,4 +1,7 @@
 <?php
+    $mailErr = $lastNameErr = $firstNameErr = "";
+    $mail = $lastName = $firstName = $comments= $num="";
+
     require_once("functions.php");
     require_once("../vendor/autoload.php");
 
@@ -104,6 +107,7 @@
             <section id="form_contact" class="margin_section padding_side">
                 <form class="form" action="" method="post">
                     <h2 class="text_h text_h2"> Contact</h2>
+                <div class="form_content">
                     <!--Hiden input ---------------------->
                     <input type="hidden" name="formSubmit" value="mail">
                     <input type="hidden" name="idForm" value="2">
@@ -114,36 +118,37 @@
                     <div class=" form_element form_element_row">
                         <!--Mail -->
                         <div class="form_check">
-                            <h4 class="text_h text_page_left"> Mail</h4>
-                            <input type="text" name="mail" value="" placeholder="Mail">
+                            <h4 class="text_h text_page_left"> Mail * <span class="error icon"><?= $mailErr?></h4>
+                            <input type="text" name="mail" value="<?= $mail?>" placeholder="Mail">
                         </div>
                         <!--Number -->
                         <div class="form_check">
                             <h4 class="text_h text_page_left"> Number</h4>
-                            <input type="text" name="num" value="" placeholder="Numero Telephone">
+                            <input type="text" name="num" value="<?= $num?>" placeholder="Numero Telephone">
                         </div>
                     </div>
                     <div class=" form_element form_element_row">
                         <!--First Name -->
                         <div class="form_check">
-                            <h4 class="text_h  text_page_left"> Prénom</h4>
-                            <input type="text" name="firstName" value="" placeholder="Prénom">
+                            <h4 class="text_h  text_page_left"> Prénom * <span class="error icon"><?= $firstNameErr?></h4>
+                            <input type="text" name="firstName" value="<?= $firstName?>" placeholder="Prénom">
                         </div>
                         <!--Last Name -->
                         <div class="form_check">
-                            <h4 class="text_h  text_page_left"> Nom</h4>
-                            <input type="text" name="lastName" value="" placeholder="Nom">
+                            <h4 class="text_h  text_page_left"> Nom * <span class="error icon"><?= $lastNameErr?></h4>
+                            <input type="text" name="lastName" value="<?= $lastName?>" placeholder="Nom">
                         </div>
                     </div>
                     <!--Comment -->
                     <div class="form_element text_page_left">
                         <h4 class="text_h  text_page_left"> Commentaires</h4>
-                        <textarea name="comments" rows="8" cols="80" placeholder="Commentaires"></textarea>
+                        <textarea name="comments" rows="8" cols="80" placeholder="Commentaires"><?= $comments?></textarea>
                     </div>
                     <!--Submit -->
                     <div class="form_element">
                         <button type="submit" class="btn btn_red btn_submit">Envoyer</button>
                     </div>
+                </div>
                 </form>
             </section>
         </main>
