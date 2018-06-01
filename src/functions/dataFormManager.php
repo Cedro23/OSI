@@ -17,7 +17,7 @@ function checkURLForm(){
             if(isset($form) == false) return;
             if($form->getPostData()){
                 $form->callFormFunction();
-                var_dump(getProfils());
+                // var_dump(getProfils());
             }
         }
     }

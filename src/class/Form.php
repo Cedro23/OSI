@@ -114,14 +114,12 @@ class FormFilter extends Form{
 
             if($value !=""){
                 $newOffers = $this->switchFilterValues($key);
-                var_dump($newOffers);
                 if($offersFilter != null){
                     $offersFilter = array_filter($offersFilter, function($_offerId) use($newOffers){
                         return (array_key_exists($_offerId,$newOffers)!== false)? true : false;
                     },ARRAY_FILTER_USE_KEY);
                 }else{
                     $offersFilter = $newOffers;
-
                 }
             }
         }

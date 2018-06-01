@@ -132,20 +132,22 @@
                 $index+=1;
             }
             $values.= ")";
-            var_dump($values);
 
-            $statement = $this->connection->prepare("SELECT * FROM osi_offer
+            $statement = $this->connection->prepare("SELECT id,title,year,formation,contract,description,period
+                FROM osi_offer,osi_offer_skill
                 WHERE formation = :_idFormation
                 AND id = osi_offer_skill.offer_id
-                AND osi_offer_skill.skill_id IN (1,2)/*".$values."*/;
+                AND osi_offer_skill.skill_id IN ".$values.";
             ");
 
             $statement->bindValue(':_idFormation', $_idFormation);
             foreach ($_skills as $skill) {
-                $statement->bindValue(':skill_'.$skill,$skill);
+                $statement->bindValue(':skill_'.$skill, $skill);
             }
 
             $statement->execute();
+            $offer = $statement->fetchAll(PDO::FETCH_GROUP|PDO::FETCH_ASSOC|PDO::FETCH_UNIQUE);
+            return $offer;
         }
 
 
