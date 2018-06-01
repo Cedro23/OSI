@@ -46,7 +46,7 @@ En effet en général un recruteur sait exactement le type de profil qu’il rec
 
 ## Page profil
 
-Sur la page profil en tout premier lieu nous avons décider de mettre un titre bien voyant et centré pour qu’il n’échappe pas au regard de l’utilisateur mais aussi de la personne en charge de l’administration qui aura accès a la page de l’offre depuis le mail qu’elle aura reçu si le recruteur rempli le formulaire si joint a la page. La personne en charge de l’administration aura tout de suite le contexte de l’offre
+Sur la page **profil** en tout premier lieu nous avons décider de mettre un titre bien voyant et centré pour qu’il n’échappe pas au regard de l’utilisateur mais aussi de la personne en charge de l’**administration** qui aura accès a la page de l’offre depuis le **mail** qu’elle aura reçu si le recruteur rempli le formulaire si joint a la page. La personne en charge de l’administration aura tout de suite le contexte de l’offre
 En seconde position vient la description écrit en gros ce qui permet aux personne malvoyante de pouvoir la lire assez clairement et avec un espace suffisant entre les lignes pour permettre à l’utilisateur de ne pas se perdre dans sa lecture d’une ligne à l’autre.
 En bas de la page et en plus petit sera écrit la liste des compétences requises pour cette offre séparé par deux slashs d’une couleur différente du texte pour une question de lisibilité.
 
@@ -55,10 +55,10 @@ En bas de la page et en plus petit sera écrit la liste des compétences requise
 Sur la page list, il y a beaucoup d’offre de présente et l’administrateur sait l’offre qu’il cherche et n’a pas besoin de parcourir toute la liste. C’est pour faciliter sa recherche qu’il pourra,comme l’utilisateur, accéder l’onglet filtrer.
 Différemment de la page list d’un utilisateur, dans la liste d’offre, pour chacune d’entre elles, à côté du bouton pour accéder à la page de l’offre,sera présent deux icones une pour modifier l’offre et accéder à la page de modification d’offre et l’autre pour supprimer l’offre sans être obligé d’aller voir le détail de l’offre ou d’être obligé de saisir le titre de l’offre à supprimer ou modifier. C’est dans un souçis de praticité et de faciliter la navigation de l’administrateur que nous avons procédé de cette manière
 Sur la page de l’offre sera également présent l’icône de modification explicite en gros en dessous du titre pour qu’on ne puisse pas émettre de doute sur comment accéder à la page de modification de l’offre.
-Page log-in :
+**Page log-in**
 Formulaire de connection avec le login et le mot de passe obligatoire.  
 Page de modification de profil :
-    * Formulaire pré-rempli avec le titre/ la description en markdown pour permettre à l’administrateur de mettre des titres ou des listes à puces par exemple pour plus de lisibilité.
+    * Formulaire pré-rempli avec le titre/ la description en markdown pour permettre à l’administrateur de mettre des titres ou des listes à   puces par exemple pour plus de lisibilité.
     * Gros bouton très visible d’envoie du formulaire.
 	* Pas d’envoi du formulaire tant que tous les champs obligatoires renseignés par une petite étoile ne sont pas rempli et à côté de chaque champs non conforme sera présent un warning pour dire que ce champs n’a pas été rempli ou pas correctement
-	* Enfin si un champs n’a pas été rempli et qu’il a appuyer sur le bouton pour envoyer le formulaire, les données dans les champs sont conservé pour lui éviter de tout réecrire.
+	* Enfin si un champs n’a pas été rempli et qu’il a appuyer sur le bouton pour envoyer le formulaire, les données dans les champs sont conservés pour lui éviter de tout réecrire.
