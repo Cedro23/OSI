@@ -52,7 +52,8 @@ En effet en général un recruteur sait exactement le type de profil qu’il rec
 Sur la page **profil** en tout premier lieu nous avons décider de mettre un titre bien voyant et centré pour qui n’échappe pas au regard de l’utilisateur mais aussi de la personne en charge de l’**administration** qui aura accès a la page de l’offre depuis le **mail** qu’elle aura reçu si le recruteur rempli le **formulaire de contact** si joint a la page. La personne en charge de l’administration aura tout de suite le contexte de l’offre et ne devra pas demander au recruteur par quelle offre il est interressé.
 En seconde position vient la description écrit en gros ce qui permet aux personne malvoyante de pouvoir la lire assez clairement et avec un espace suffisant entre les lignes pour permettre à l’utilisateur de ne pas se perdre dans sa lecture d’une ligne à l’autre.
 En bas de la page et en plus petit sera écrit la liste des compétences requises pour cette offre séparé par deux slashs d’une couleur différente du texte pour une question de lisibilité.
-**Formulaire de contact :** Champs obigatoires indiqué par une *****, si tt les champs ne sont pas rempli, indication du champs qui est pas rempli a coté de celui-ci. Ne supprime pas ce qui a déjà été rempli en cas d'erreur.
+
+**Formulaire de contact :** Champs obigatoires indiqué par une **étoile**, si tt les champs ne sont pas rempli, indication du champs qui est pas rempli a coté de celui-ci. Ne supprime pas ce qui a déjà été rempli en cas d'erreur.
 
 
 **[WireFrame Page Profil](B1_Ing_DelbecqLesueurGontard_Doc/Ressources/Profil.png)**
