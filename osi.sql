@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 30 mai 2018 à 13:18
+-- Généré le :  ven. 01 juin 2018 à 16:04
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.1.9
 
@@ -71,6 +71,27 @@ INSERT INTO `osi_formation` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `osi_login`
+--
+
+DROP TABLE IF EXISTS `osi_login`;
+CREATE TABLE IF NOT EXISTS `osi_login` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `osi_login`
+--
+
+INSERT INTO `osi_login` (`id`, `username`, `password`) VALUES
+(1, 'username', 'password');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `osi_niveau_etude`
 --
 
@@ -108,15 +129,20 @@ CREATE TABLE IF NOT EXISTS `osi_offer` (
   `description` text NOT NULL,
   `period` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `osi_offer`
 --
 
 INSERT INTO `osi_offer` (`id`, `title`, `year`, `formation`, `contract`, `description`, `period`) VALUES
-(1, 'Dev Web', 1, 1, 1, '## Description\n\nLes Ã©tudiants de premiÃ¨re annÃ©e cherchent un stage. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.\n\n## CompÃ©tences acquises\n\nLes Ã©tudiants ont rÃ©alisÃ© un **projet transvesal**. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.', '4 semaines'),
-(2, 'Dev Web en Alternance', 2, 1, 2, '## Description\n\nLes Ã©tudiants de deuxiÃ¨me annÃ©e cherchent une alternance. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.\n\n## CompÃ©tences acquises\n\nLes Ã©tudiants ont rÃ©alisÃ© un **projet Symfony**. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.', 'une semaine sur deux');
+(2, 'Dev Web en Alternance', 2, 1, 2, '## Description\n\nLes Ã©tudiants de deuxiÃ¨me annÃ©e cherchent une alternance. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.\n\n## CompÃ©tences acquises\n\nLes Ã©tudiants ont rÃ©alisÃ© un **projet Symfony**. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.', 'une semaine sur deux'),
+(6, 'Marketing ', 2, 2, 1, '##Description\r\n\r\nCeci est la description de l\'offre', '2 mois'),
+(7, 'Management  & finance en Alternance', 3, 2, 2, '##Description\r\n\r\nCeci est encore la description de l\'offre', '1 semaine sur 2 '),
+(8, 'Stage Developpement Web', 1, 1, 1, '##Description\r\n\r\n#Description de l\'offre', '6 semaines'),
+(9, 'Contrat pro Monteur', 5, 3, 3, '##Description\r\n\r\nCeci est toujours et encore la description de l\'offre.', '1 an'),
+(10, 'Stage Capture Son', 2, 3, 1, '##Description\r\n\r\nLa description gÃ¨re le markdown !!', '6 semaines'),
+(11, 'Stage Game Design', 2, 4, 1, '##Description\r\n\r\nToujours une petite description de l\'offre', '2 mois');
 
 -- --------------------------------------------------------
 
@@ -135,14 +161,22 @@ CREATE TABLE IF NOT EXISTS `osi_offer_skill` (
 --
 
 INSERT INTO `osi_offer_skill` (`offer_id`, `skill_id`) VALUES
-(1, 1),
-(1, 2),
-(1, 3),
 (2, 1),
 (2, 2),
 (2, 3),
 (2, 4),
-(2, 5);
+(2, 5),
+(3, 2),
+(3, 4),
+(6, 10),
+(7, 11),
+(7, 12),
+(8, 1),
+(8, 2),
+(8, 3),
+(9, 14),
+(10, 13),
+(11, 19);
 
 -- --------------------------------------------------------
 
@@ -156,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `osi_skill` (
   `name` varchar(255) NOT NULL DEFAULT '',
   `formation` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `osi_skill`
@@ -167,7 +201,17 @@ INSERT INTO `osi_skill` (`id`, `name`, `formation`) VALUES
 (2, 'Ergonomie', 1),
 (3, 'SEO', 1),
 (4, 'Symfony', 1),
-(5, 'Node.js', 1);
+(5, 'Node.js', 1),
+(10, 'Marketing', 2),
+(11, 'Management', 2),
+(12, 'Finance', 2),
+(13, 'Son', 3),
+(14, 'Video', 3),
+(15, 'Level Design', 4),
+(16, 'Animation 2D', 4),
+(17, 'Graphisme 2D', 5),
+(18, 'Graphisme 3D', 5),
+(19, 'Game Design', 4);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
