@@ -4,7 +4,7 @@ Dans ce fichier vous pourrez trouver comment mettre en place notre projet.
 
 ##Google Analytics
 
-    Afin de mesurer le trafic de notre site, devra être implémenté un suivi par Google Analytics.
+    Afin de mesurer le **trafic** de notre site, devra être implémenté un suivi par Google Analytics.
     Pour le mesurer, la personne en possession des droits administrateurs devra:
         *Si vous n'avez pas de compte google créez en un puis connectez vous a votre compte google.*
         *Aller sur le site de google Analytics*
