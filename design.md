@@ -34,6 +34,7 @@ Font size : 1.6em
 ## Page Home
 Page qui s’insert bien dans la rubrique Recruter nos Etudiants déjà existante sur le site d’**ynovlyon**.
 Premier filtrage par **formation**-> Lorsque notre souris est sur la formation de l’étudiant, on peut voir le titre des offres avec une grosse icone **+** qui donne envie à l’utilisateur de cliquer cela le conduira à la page list avec toutes les offres de contrat concernant la formation concernée
+[test](WireFrameHome.png)
 ## Page list
 Dans la barre de navigation en gros il y a un bouton login pour se connecter en tant qu’**administrateur**. Nous l’avons mis dans la barre de navigation car c’est la première chose qu’on voit et qui attire le regard quand on arrive sur une page : Permet à l’administrateur de ne pas avoir a chercher et de descendre dans la page pour pouvoir se connecter.
 **Titre : Recrutez-nos étudiant- titre de la formation** pour que l’utilisateur sache à tout instant la formation concernée par la liste d’offre
