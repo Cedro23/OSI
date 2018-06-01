@@ -37,7 +37,7 @@ Pour accéder à la base de donnée, sur phpmyadmin créez une nouvelle base de 
 ## Fichier de configuration
 
   Pour pouvoir utiliser le site correctement il faut à partir de wamp créer un virtual host avec pour chemin d'accès le dossier **public**.
-  A partir de là, le nom de domaine suivi de **/home** vous emmenera à la page d'accueil, **/list** suivi de **/1**,**2**,**3**,**4** ou **5** vous emmenera à la page de liste des profils selon la formation dans l'ordre de gauche à droite présenté sur la page d'acceuil. **/profil** suivi de **/** puis un numéro vous emmenera sur la page du profil correspondant au numero s'il existe. 
+  A partir de là, le nom de domaine suivi de **/home** vous emmenera à la page d'accueil, **/list** suivi de **/1**,**2**,**3**,**4** ou **5** vous emmenera à la page de liste des profils selon la formation dans l'ordre de gauche à droite présenté sur la page d'acceuil. **/profil** suivi de **/** puis un numéro vous emmenera sur la page du profil correspondant au numero s'il existe.
   Dans le fichier config.json dans authors vous pouvez créer des admnistateurs modifier le nom des administrateurs dans authors puis name ainsi que le mail de ceux-ci dans authors puis email.
  Pour que l'envoie de mail fonctionne, il vous faut installer SwiftMailer et ParseDown.
  Enfin le **login** et le **mot de passe** de l'adresse mail sont pour l'instant:
@@ -47,3 +47,6 @@ Pour accéder à la base de donnée, sur phpmyadmin créez une nouvelle base de 
   Et le **login** et le **mot de passe** de l'administrateur sont :
    * **Login** : username  
    * **Mdp** : password
+
+
+   Le filtrage des profils ne marche qui si **au moins une compétence** est sélectionnée.

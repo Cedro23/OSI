@@ -9,7 +9,7 @@ class FormUpdate extends FormAdd
 
     public function callFormFunction(){
         getConnection()->updateOffer($this->posts);
-        init();
+        $this->init();
     }
 }
 
